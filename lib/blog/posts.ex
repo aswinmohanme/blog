@@ -14,9 +14,9 @@ defmodule Blog.Posts do
   @tags @posts |> Enum.flat_map(& &1.tags) |> Enum.uniq() |> Enum.sort()
 
   def list_posts, do: @posts
-  def all_tags, do: @tags
+  def list_tags, do: @tags
 
-  def get_post_by_id!(id) do
+  def get_post!(id) do
     Enum.find(list_posts(), &(&1.id == id)) ||
       raise NotFoundError, "post with id=#{id} not found"
   end
