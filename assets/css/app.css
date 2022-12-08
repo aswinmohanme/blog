@@ -4,6 +4,47 @@
 
 /* This file is for your main application CSS */
 
+@layer base {
+  body {
+    @apply mx-auto max-w-3xl bg-stone-50 px-6 pt-12 pb-24 text-justify text-base  leading-6 text-gray-800 subpixel-antialiased;
+  }
+
+  article {
+    @apply prose mt-12 max-w-none prose-headings:text-lg prose-h2:mt-12 prose-h3:mt-6 prose-h3:text-base prose-h3:font-normal prose-h4:text-base prose-a:font-normal prose-a:text-gray-700 prose-a:no-underline prose-pre:rounded-none prose-pre:bg-stone-100 prose-pre:text-gray-700;
+  }
+
+  a {
+    @apply text-blue-700 hover:text-blue-800;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply block bg-gray-200 px-2;
+  }
+
+  h1 {
+    @apply bg-yellow-300;
+  }
+
+  h3 {
+    @apply inline-block;
+  }
+
+  code {
+    @apply border border-gray-300 px-2 font-sans font-normal;
+  }
+
+  pre {
+    @apply mb-8 mt-4 border-gray-400 p-4 pb-0 font-mono text-sm;
+  }
+
+  img {
+    @apply border border-stone-200;
+  }
+
+}
+
 /* Alerts and form errors used by phx.new */
 .alert {
   padding: 15px;

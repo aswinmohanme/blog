@@ -10,20 +10,23 @@
     <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
   </head>
   <body>
-    <header>
-      <section class="container">
-        <nav>
-          <ul>
-            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
-            <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
-              <li><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home) %></li>
-            <% end %>
-          </ul>
-        </nav>
-        <a href="https://phoenixframework.org/" class="phx-logo">
-          <img src={Routes.static_path(@conn, "/images/phoenix.png")} alt="Phoenix Framework Logo"/>
-        </a>
-      </section>
+    <header
+      class=" mt-12"
+    >
+      <h1>aswinmohan.me</h1>
+      <p class="mt-1">
+        handcrafted by someone who loves code (mobile, frontend, backend), design
+        and life.
+      </p>
+      <div class="mt-6 flex flex-col divide-y-2 border md:flex-row md:divide-x-2 md:divide-y-0">
+        <a class="px-2 py-1" href="./about">about</a>
+        <a class="px-2 py-1" href="./now">now</a>
+        <a class="px-2 py-1" href="./talks">talks</a>
+        <div class="py-4 md:flex-1"></div>
+        <a class="px-2 py-1" href="mailto:hey@aswinmohan.me">email</a>
+        <a class="px-2 py-1" href="https://github.com/aswinmohanme">github</a>
+        <a class="px-2 py-1" href="https://twitter.com/aswinmohanme">twitter</a>
+      </div>
     </header>
     <%= @inner_content %>
   </body>
