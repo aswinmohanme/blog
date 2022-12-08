@@ -14,6 +14,13 @@
       src={Routes.static_path(@conn, "/assets/app.js")}
     >
     </script>
+    <script
+      defer
+      data-domain="aswinmohan.me"
+      data-api="/stats/api/event"
+      src="/stats/js/script.js"
+    >
+    </script>
   </head>
   <body>
     <header class="">
@@ -23,10 +30,10 @@
         and life.
       </p>
       <div class="mt-6 flex flex-col divide-y-2 border md:flex-row md:divide-x-2 md:divide-y-0">
-        <%= live_redirect "home", to: Routes.page_path(@conn, :index), class: "px-2 py-1" %>
-        <%= live_redirect "about", to: Routes.page_path(@conn, :about), class: "px-2 py-1" %>
-        <%= live_redirect "now", to: Routes.page_path(@conn, :now), class: "px-2 py-1" %>
-        <%= live_redirect "talks", to: Routes.page_path(@conn, :talks), class: "px-2 py-1" %>
+        <%= live_redirect("home", to: Routes.page_path(@conn, :index), class: "px-2 py-1") %>
+        <%= live_redirect("about", to: Routes.page_path(@conn, :about), class: "px-2 py-1") %>
+        <%= live_redirect("now", to: Routes.page_path(@conn, :now), class: "px-2 py-1") %>
+        <%= live_redirect("talks", to: Routes.page_path(@conn, :talks), class: "px-2 py-1") %>
         <div class="py-4 md:flex-1"></div>
         <a class="px-2 py-1" href="mailto:hey@aswinmohan.me">email</a>
         <a class="px-2 py-1" href="https://github.com/aswinmohanme">github</a>
