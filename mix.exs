@@ -52,8 +52,6 @@ defmodule Blog.MixProject do
       {:tailwind, "~> 0.1", runtime: Mix.env() == :dev},
       {:mix_test_interactive, "~> 1.0", only: :dev, runtime: false},
       {:nimble_publisher, "~> 0.1.1"},
-      {:makeup_elixir, ">= 0.0.0"},
-      {:makeup_erlang, ">= 0.0.0"},
       {:plug_redirect, "~> 1.0"}
     ]
   end

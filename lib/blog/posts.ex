@@ -6,8 +6,7 @@ defmodule Blog.Posts do
   use NimblePublisher,
     build: Post,
     from: Application.app_dir(:blog, "priv/content/posts/**/*.md"),
-    as: :posts,
-    highlighters: [:makeup_elixir, :makeup_erlang]
+    as: :posts
 
   @posts Enum.sort_by(@posts, & &1.date, {:desc, Date})
 
