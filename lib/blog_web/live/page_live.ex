@@ -4,7 +4,7 @@ defmodule BlogWeb.PageLive do
   alias Blog.Posts
 
   def render(%{live_action: :index} = assigns) do
-    posts = Posts.all_posts()
+    posts = Posts.list_posts()
     Phoenix.View.render(BlogWeb.PageView, "index.html", assigns |> Map.put(:posts, posts))
   end
 
