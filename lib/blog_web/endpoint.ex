@@ -20,7 +20,7 @@ defmodule BlogWeb.Endpoint do
     at: "/",
     from: :blog,
     gzip: false,
-    only: ~w(assets fonts images favicon.ico robots.txt)
+    only: ~w(assets fonts images favicon.ico robots.txt resume.pdf)
   )
 
   # Code reloading can be explicitly enabled under the
