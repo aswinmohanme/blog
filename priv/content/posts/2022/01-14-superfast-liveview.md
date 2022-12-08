@@ -1,5 +1,6 @@
 %{
-  title: "🌟🌟 Superfast Webapps using NextJS, Vercel, LiveView and Fly.io",
+  title: "Superfast Webapps using NextJS, Vercel, LiveView and Fly.io",
+  rating: 2,
   tags: ~w(elixir phoenix nextjs flyio),
   description: "IndiePaper has a NextJS frontend which proxies requests to the LiveView backend. This means that I can easily edit and serve the marketing pages separtely and make it available even when the main site goes down. This post outlines the setup."
 }
@@ -46,20 +47,23 @@ We want all our requests to first go to Vercel and need Vercel to forward all re
 
 When a request hits our NextJS app it checks if the NextJS app has that route. If it has, then it fulfils that request. If there is no corresponding route, rather than showing a 404 page, Vercel then proxies the requests to our LiveView app hosted on our `app` subdomain, without changing the URL. Put this config in `next.config.js`.
 
+
+```elixir
 module.exports = {
   async rewrites() {
     return {
       // After checking all Next.js pages (including dynamic routes)
       // and static files we proxy any other requests
-      fallback: \[
+      fallback: [
         {
-          source: '/:path\*',
-          destination: \`https://app.example.com/:path\*\`,
+          source: '/:path*',
+          destination: `https://app.example.com/:path*`,
         },
-      \],
+      ],
     }
   }
 }
+```
         
 
 Websockets and Cookies
@@ -71,6 +75,7 @@ If you were using vanilla Phoenix apps, this was only necessary. But since we ar
 
 By default the LiveView WebSocket will be started in `wss://yourdomain.com/live`. But Vercel does not support proxying WebSockets. We need to directly connect to our app running on the \`app\` subdomain. Put this in your `app.js` file in LiveView. This sets the WebSocket connection on `app` when deployed and localhost when running locally.
 
+```elixir
 const host = window.location.host;
 let liveHost = "";
 
@@ -78,24 +83,26 @@ if (host === "yourdomain.com") {
   liveHost = "wss://app.yourdomain.com";
 }
 
-const socketHost = \`${liveHost}/live\`
+const socketHost = `${liveHost}/live`
 
 let liveSocket = new LiveSocket(socketHost, Socket, {
 ...
 }
+```
         
 
 ### Cookies
 
 Phoenix stores session information in cookies, which are sent along with every response. Since we are using the same domain as defined by `PHX_HOST`, cookies are sent correctly with the HTTP request. But cookies are not sent with the Websocket connection because we are hosting it on the `app` subdomain. By default, cookies are not shared between subdomains. Configure cookies to be shared across subdomains on your `endpoint.ex` file.
 
-@session\_options \[
+```
+@session_options [
 ...
 domain: ".yourdomain.com"
-\]
+]
 
-socket "/live", Phoenix.LiveView.Socket, websocket: \[connect\_info: \[session: @session\_options\]\]
-        
+socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
+```
 
 Remember to put the dot. It makes sure the cookies with your session information is shared.
 
@@ -103,13 +110,14 @@ Remember to put the dot. It makes sure the cookies with your session information
 
 In `runtime.exs` file be sure to add both your domains so your requests are not rejected.
 
-config :your\_app, YourAppWeb.Endpoint,
-    url: \[host: host, port: 443\],
-    check\_origin: \[
+```
+config :your_app, YourAppWeb.Endpoint,
+    url: [host: host, port: 443],
+    check_origin: [
         "https://#{host}",
         "https://app.#{host}"
-    \],
-        
+    ],
+```
 
 Results
 -------

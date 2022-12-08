@@ -31,12 +31,8 @@
     @apply inline-block;
   }
 
-  code {
-    @apply border border-gray-300 px-2 font-sans font-normal;
-  }
-
   pre {
-    @apply mb-8 mt-4 border-gray-400 p-4 pb-0 font-mono text-sm;
+    @apply mb-8 mt-4 border-gray-400 p-4 font-mono text-sm;
   }
 
   img {
