@@ -56,3 +56,19 @@
     </div>
   </div>
 </section>
+
+<section class="mt-16">
+  <h2>All Posts</h2>
+  <div class="mt-8 space-y-10">
+    <%= for post <- @posts do %>
+      <div class="">
+        <%= live_redirect post.title, to: Routes.post_show_path(@socket, :show, post.id) %>
+        <p class="mt-1">
+          <span class="border border-gray-200 px-2 py-0.5 text-sm"
+          ><%= post.date %></span>
+          <%= post.description %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</section>
