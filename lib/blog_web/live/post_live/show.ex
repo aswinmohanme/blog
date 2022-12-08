@@ -6,6 +6,6 @@ defmodule BlogWeb.PostLive.Show do
   @impl true
   def mount(%{"id" => post_id}, _, socket) do
     post = Posts.get_post_by_id!(post_id)
-    {:ok, assign(socket, post: post)}
+    {:ok, assign(socket, post: post, page_title: post.title)}
   end
 end
