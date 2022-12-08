@@ -48,9 +48,9 @@
   </div>
 </section>
 
-<section class="mt-16">
+<section class="mt-20">
   <h2>All Posts</h2>
-  <div class="mt-8 space-y-10">
+  <div class="mt-6 space-y-10">
     <%= for post <- @posts do %>
       <div class="">
         <%= live_redirect("#{String.duplicate("🌟", post.rating)} #{post.title}",
