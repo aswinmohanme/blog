@@ -1,0 +1,11 @@
+defmodule BlogWeb.PostLive.Show do
+  use BlogWeb, :live_view
+
+  alias Blog.Posts
+
+  @impl true
+  def mount(%{"id" => post_id}, _, socket) do
+    post = Posts.get_post_by_id!(post_id)
+    {:ok, assign(socket, post: post)}
+  end
+end
