@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="csrf-token" content={csrf_token_value()}>
-    <%= live_title_tag assigns[:page_title] || "Blog", suffix: " · Phoenix Framework" %>
-    <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css")}/>
-    <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content={csrf_token_value()} />
+    <%= live_title_tag(assigns[:page_title] || "Blog", suffix: " · Phoenix Framework") %>
+    <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css")} />
+    <script
+      defer
+      phx-track-static
+      type="text/javascript"
+      src={Routes.static_path(@conn, "/assets/app.js")}
+    >
+    </script>
   </head>
   <body>
-    <header
-      class=" mt-12"
-    >
-      <h1>aswinmohan.me</h1>
+    <header class=" mt-12">
+      <h1 class="bg-gray-300">aswinmohan.me</h1>
       <p class="mt-1">
         handcrafted by someone who loves code (mobile, frontend, backend), design
         and life.
       </p>
       <div class="mt-6 flex flex-col divide-y-2 border md:flex-row md:divide-x-2 md:divide-y-0">
+        <a class="px-2 py-1" href="./">home</a>
         <a class="px-2 py-1" href="./about">about</a>
         <a class="px-2 py-1" href="./now">now</a>
         <a class="px-2 py-1" href="./talks">talks</a>

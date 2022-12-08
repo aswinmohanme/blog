@@ -19,6 +19,7 @@ defmodule BlogWeb.Router do
 
     live_session :default do
       live "/", PageLive, :index
+      live "/about", PageLive, :about
     end
   end
 
