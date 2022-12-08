@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="csrf-token" content={csrf_token_value()} />
+
+    <%= if assigns[:meta_attrs], do: meta_tags(assigns[:meta_attrs]) %>
     <%= live_title_tag(assigns[:page_title] || "Aswin Mohan", suffix: " · aswinmohan.me") %>
+
     <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css")} />
     <script
       defer
@@ -14,6 +17,7 @@
       src={Routes.static_path(@conn, "/assets/app.js")}
     >
     </script>
+
     <script defer data-domain="aswinmohan.me" src="https://plausible.io/js/script.js">
     </script>
   </head>
