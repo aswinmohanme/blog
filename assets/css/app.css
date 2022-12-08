@@ -31,6 +31,10 @@
     @apply inline-block;
   }
 
+  code {
+    @apply font-normal;
+  }
+
   pre {
     @apply mb-8 mt-4 border-gray-400 p-4 font-mono text-sm;
   }

@@ -23,7 +23,7 @@ defmodule BlogWeb.Router do
       live "/now", PageLive, :now
       live "/talks", PageLive, :talks
 
-      live "/post/:id", PostLive.Show, :show
+      live "/posts/:id", PostLive.Show, :show
     end
   end
 
