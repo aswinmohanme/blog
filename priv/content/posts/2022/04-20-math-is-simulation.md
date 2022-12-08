@@ -1,7 +1,7 @@
 %{
   title: "Math is a Simulation of Reality",
-  tags: ~w(liveview phoenix flyio),
-  description: "I used Phoenix LiveView in Production for my last startup IndiePaper. This blog post outlines why I used LiveView, issues I came across, the good parts and gotchas to look out for.",
+  tags: ~w(math),
+  description: "Math is reality, but simulated with symbols on paper. It's a low level language for the physical world, it's representation and manipulation.",
 }
 ---
 
