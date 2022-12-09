@@ -1,12 +1,12 @@
 defmodule Blog.Posts.Post do
   @enforce_keys [:id, :title, :body, :description, :tags, :date]
-  defstruct [:id, :title, :body, :description, :tags, :date, :rating]
+  defstruct [:id, :title, :body, :description, :tags, :date, :rating, :draft]
 
   def build(filename, attrs, body) do
     [year, month_day_id] = filename |> Path.rootname() |> Path.split() |> Enum.take(-2)
     [month, day, id] = String.split(month_day_id, "-", parts: 3)
     date = Date.from_iso8601!("#{year}-#{month}-#{day}")
-    attrs = Map.put_new(attrs, :rating, 0)
+    attrs = Map.merge(%{rating: 0, draft: false}, attrs)
     struct!(__MODULE__, [id: id, date: date, body: body] ++ Map.to_list(attrs))
   end
 end

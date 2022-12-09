@@ -3,6 +3,8 @@ defmodule Blog.Posts do
 
   alias Blog.Posts.Post
 
+  @show_drafts Application.compile_env(:blog, :show_drafts, false)
+
   use NimblePublisher,
     build: Post,
     from: Application.app_dir(:blog, "priv/content/posts/**/*.md"),
@@ -10,10 +12,17 @@ defmodule Blog.Posts do
 
   @posts Enum.sort_by(@posts, & &1.date, {:desc, Date})
 
-  @tags @posts |> Enum.flat_map(& &1.tags) |> Enum.uniq() |> Enum.sort()
+  def list_posts do
+    if @show_drafts do
+      @posts
+    else
+      @posts |> Enum.reject(fn post -> post.draft end)
+    end
+  end
 
-  def list_posts, do: @posts
-  def list_tags, do: @tags
+  def list_tags do
+    list_posts() |> Enum.flat_map(& &1.tags) |> Enum.uniq() |> Enum.sort()
+  end
 
   def get_post!(id) do
     Enum.find(list_posts(), &(&1.id == id)) ||
