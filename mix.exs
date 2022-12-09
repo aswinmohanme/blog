@@ -52,7 +52,8 @@ defmodule Blog.MixProject do
       {:tailwind, "~> 0.1", runtime: Mix.env() == :dev},
       {:mix_test_interactive, "~> 1.0", only: :dev, runtime: false},
       {:nimble_publisher, "~> 0.1.1"},
-      {:plug_redirect, "~> 1.0"}
+      {:plug_redirect, "~> 1.0"},
+      {:plug_canonical_host, "~> 2.0"}
     ]
   end
 
