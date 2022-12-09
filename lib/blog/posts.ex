@@ -20,7 +20,7 @@ defmodule Blog.Posts do
       raise NotFoundError, "post with id=#{id} not found"
   end
 
-  def get_posts_by_tag!(tag) do
+  def list_posts_by_tag!(tag) do
     case Enum.filter(list_posts(), &(tag in &1.tags)) do
       [] -> raise NotFoundError, "posts with tag=#{tag} not found"
       posts -> posts
