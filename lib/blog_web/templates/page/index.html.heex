@@ -63,7 +63,7 @@
           to: Routes.post_show_path(@socket, :show, post.id)
         ) %>
         <p class="mt-1">
-          <span class="border border-gray-200 px-2 py-0.5 text-sm"><%= post.date %></span>
+          <span class="border border-gray-200 px-2 py-0.5 text-sm"><%= format_published_date(post.date) %></span>
           <%= post.description %>
         </p>
       </div>
