@@ -2,6 +2,8 @@
 // https://tailwindcss.com/docs/configuration
 
 let plugin = require('tailwindcss/plugin')
+const colors = require('tailwindcss/colors')
+
 
 module.exports = {
   content: [
@@ -21,6 +23,9 @@ module.exports = {
           "sans-serif",
         ],
         mono: ["Courier", "monospace"],
+      },
+      colors: {
+        primary: colors.gray,
       },
     },
   },

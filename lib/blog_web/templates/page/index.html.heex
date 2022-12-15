@@ -1,47 +1,47 @@
 <section class="mt-12 md:mt-16">
   <h2>Work</h2>
   <div class="mt-6 grid grid-cols-1 gap-y-4 gap-x-4 md:grid-cols-2">
-    <div class="border-primary-300 border px-4 py-2">
+    <div class="border px-4 py-2">
       <a href="https://nellopay.com" class="">Nello (Inactive)</a>
-      <p class="text-primary-400 mt-1 text-sm">
+      <p class="text-primary-700 mt-1 text-sm">
         A brand new payments app for everyone.
       </p>
     </div>
-    <div class="border-primary-300 border px-4 py-2">
+    <div class="border px-4 py-2">
       <a href="https://indiepaper.me/" class="">IndiePaper (Inactive)</a>
-      <p class="text-primary-400 mt-1 text-sm">
+      <p class="text-primary-700 mt-1 text-sm">
         A self-publishing platform for Indie Authors.
       </p>
     </div>
-    <div class="border-primary-300 border px-4 py-2">
+    <div class="border px-4 py-2">
       <a href="https://github.com/coronasafe/coronaRM">CoronaRM</a>
-      <p class="text-primary-400 mt-1 text-sm">
+      <p class="text-primary-700 mt-1 text-sm">
         A CRM for contact tracing implemented in Pathanamthitta, Kerala.
       </p>
     </div>
-    <div class="border-primary-300 border px-4 py-2">
+    <div class="border px-4 py-2">
       <a
         href="https://play.google.com/store/apps/details?id=me.aswinmohan.nophone&hl=en_IN&gl=US"
         class=""
       >
         LessPhone
       </a>
-      <p class="text-primary-400 mt-1 text-sm">
+      <p class="text-primary-700 mt-1 text-sm">
         A minimal Android Launcher to reduce phone use with over 250,000
         downloads.
       </p>
     </div>
-    <div class="border-primary-300 border px-4 py-2">
+    <div class="border px-4 py-2">
       <a class="" href="https://github.com/aswinmohanme/ultronOS">Ultron OS</a>
-      <p class="text-primary-400 mt-1 text-sm">
+      <p class="text-primary-700 mt-1 text-sm">
         A bootable Operating System as my high-school project.
       </p>
     </div>
-    <div class="border-primary-300 border px-4 py-2">
+    <div class="border px-4 py-2">
       <a class="" href="https://www.facebook.com/smalledtalker/videos/839002409489636">
         SweetTalk
       </a>
-      <p class="text-primary-400 mt-1 text-sm">
+      <p class="text-primary-700 mt-1 text-sm">
         A simple interpreted programming language.
       </p>
     </div>
@@ -50,19 +50,19 @@
 
 <section class="mt-20">
   <h2>All Posts</h2>
-  <div class="mt-6 flex items-center flex-wrap">
+  <div class="mt-4 flex items-center flex-wrap">
     <%= live_patch "all", to: Routes.page_path(@socket, :index), class: "block px-2 py-1 border shrink-0" %>
     <%=  for tag <- @tags do %>
       <%= live_patch tag, to: Routes.page_path(@socket, :index, tag: tag), class: "block px-2 py-1 border shrink-0" %>
     <% end %>
   </div>
-  <div class="mt-6 space-y-10">
+  <div class="mt-10 space-y-10">
     <%= for post <- @posts do %>
       <div class="">
         <%= live_redirect("#{String.duplicate("🌟", post.rating)} #{post.title}",
           to: Routes.post_show_path(@socket, :show, post.id)
         ) %>
-        <p class="mt-1">
+        <p class="mt-1 text-primary-700">
           <span class="border border-gray-200 px-2 py-0.5 text-sm"><%= format_published_date(post.date) %></span>
           <%= post.description %>
         </p>
