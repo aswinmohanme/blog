@@ -51,9 +51,15 @@
 <section class="mt-20">
   <h2>All Posts</h2>
   <div class="mt-4 flex items-center flex-wrap">
-    <%= live_patch "all", to: Routes.page_path(@socket, :index), class: "block px-2 py-1 border shrink-0" %>
-    <%=  for tag <- @tags do %>
-      <%= live_patch tag, to: Routes.page_path(@socket, :index, tag: tag), class: "block px-2 py-1 border shrink-0" %>
+    <%= live_patch("all",
+      to: Routes.page_path(@socket, :index),
+      class: "block px-2 py-1 border shrink-0"
+    ) %>
+    <%= for tag <- @tags do %>
+      <%= live_patch(tag,
+        to: Routes.page_path(@socket, :index, tag: tag),
+        class: "block px-2 py-1 border shrink-0"
+      ) %>
     <% end %>
   </div>
   <div class="mt-10 space-y-10">
@@ -63,7 +69,9 @@
           to: Routes.post_show_path(@socket, :show, post.id)
         ) %>
         <p class="mt-1 text-primary-700">
-          <span class="border border-gray-200 px-2 py-0.5 text-sm"><%= format_published_date(post.date) %></span>
+          <span class="border border-gray-200 pl-2 pr-1 py-0.5 text-sm mr-2">
+            <%= format_published_date(post.date) %>
+          </span>
           <%= post.description %>
         </p>
       </div>
