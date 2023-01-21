@@ -25,7 +25,7 @@ defmodule Blog.Posts do
   end
 
   def get_post!(id) do
-    Enum.find(list_posts(), &(&1.id == id)) ||
+    Enum.find(@posts, &(&1.id == id)) ||
       raise NotFoundError, "post with id=#{id} not found"
   end
 
