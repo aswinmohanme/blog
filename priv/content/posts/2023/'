@@ -63,7 +63,6 @@ Elixir is built on top of Erlang. So we have to setup Erlang first and then setu
     asdf list-all erlang
     
     asdf install erlang 25.2
-
     asdf global erlang 25.2
     ```
     
@@ -109,7 +108,6 @@ Every Elixir version has a list of Erlang versions that it supports. ASDF Elixir
     Since we have the OTP version `25` installed, we'll select the latest version that has been compiled with the OTP release.
     ```
     asdf install elixir 1.14.3-otp-25
-
     asdf global elixir 1.14.3-otp-25
     ```
     
@@ -122,89 +120,4 @@ Every Elixir version has a list of Erlang versions that it supports. ASDF Elixir
 
 Since we have setup Elixir we can setup Phoenix and Postgresql.
 
-
 ### Setup Phoenix
-
-* Before setting up Phoenix, reshim ASDF so the binaries are all linked up properly.
-
-    ```
-    asdf reshim elixir
-    ```
-
-* Install Hex
-
-    Hex is the package manager for Elixir and Erlang and `mix` is the tool for managing dependencies. You have to set it up to download Phoenix. Running this command installs or upgrades hex.
-    
-    ```
-    mix local.hex
-    ```
-
-* Install Phoenix
-
-    ```
-    mix archive.install hex phx_new
-    ```
-
-### Setup Postgresql
-
-Postgresql is the database of choice for new Phoenix apps. You have to set it up so you have access to a database on your developing machine.
-
-* Install Postgresql using Homebrew. We are using the latest version of Postgres. This installs the Postgresql and starts the service that runs in the background.
-  
-    ```
-    brew install postgresql@15
-    ```
-  
-  Restart Postgres to make sure the service is running. You only have to do this once.
-    ```
-    brew services restart postgresql@15  
-    ```
-
-* Create the default postgres user. Phoenix expects a default Postgres user to be present. Run `createuser` to create the user, make sure to substitute the version of Postgres.
-
-    ```
-     /opt/homebrew/opt/postgresql@15/bin/createuser -d postgres
-    ```
-
-## Test Installation
-
-To make sure we have everything installed properly, we are going to create a new test Phoenix project.
-
-* Run `mix phx.new test` in any directory. Answer `y` when prompted to install dependencies.
-* Change into the directory and run `mix ecto.setup` to setup the database.
-* Run `mix phx.server` in the directory. You will have your Phoenix server running on [http://localhost:4000](http://localhost:4000).
-
-Congrats, you just setup Elixir and Phoenix on your mac. Now it's time to make something with it.
-
-
-## Bonus: Setup NodeJS
-
-Even though we don't need NodeJS to get started with a Phoenix project, we may need it down the line to install Javascript dependencies from NPM. Since we already have ASDF setup, NodeJS is just two install commands away.
-
-* Add NodeJS Plugin to ASDF
-
-    ```
-    asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-    ```
-    
-* Install and set the latest LTS version. The LTS version will be the most stable and supported one.
-
-    ```
-    asdf install nodejs lts
-    
-    asdf global nodejs lts
-    
-    asdf reshim nodejs
-    ```
-
-That's it. You now have NodeJS setup in your system as well. You can now use `npm` to install new packages from NPM to your project.
-
-
-### Resources
-
-1. Homebrew - [https://brew.sh](https://brew.sh)
-2. ASDF Setup - [https://asdf-vm.com/guide/getting-started.html](https://asdf-vm.com/guide/getting-started.html)
-3. ASDF Erlang - [https://github.com/asdf-vm/asdf-erlang](https://github.com/asdf-vm/asdf-erlang)
-4. ASDF Elixir - [https://github.com/asdf-vm/asdf-elixir](https://github.com/asdf-vm/asdf-elixir)
-5. Phoenix Getting Started - [https://hexdocs.pm/phoenix/installation.html](https://hexdocs.pm/phoenix/installation.html)
-6. ASDF NodeJS - [https://github.com/asdf-vm/asdf-nodejs](https://github.com/asdf-vm/asdf-nodejs)
