@@ -11,11 +11,14 @@ Setting up your machine for development is the one tasks you do even before you 
 ## Setup Tools
 This guide assumes you have a fresh mac and we'll setup everything from the start. If you have already setup any of the tools mentioned feel free to skip that part. 
 
+### Before installation
+If you have your M1 mac setup with rosetta, make sure to run the installation process on a native terminal to prevent segmentation faults.
+
 ### Setup Homebrew
 Homebrew is the de-facto package manager on macOS. You can install most packages required for development and other applications with a single command. Follow the official instructions at [brew.sh](https://brew.sh) and setup Homebrew on the machine. The script will install XCode Command Line tools and setup the Homebrew directory on `/opt/homebrew`.
 
 ### Setup ASDF
-Development requires mutiple language runtimes to be present on the system. Multiple projects also require multiple versions of the same environment to be present. Previously we had to setup multiple tools to manage multiple environments, like `rbenv` for ruby, `nvm` for nodejs, each with it's own configurations and usage syntax. This lead to a lot of conflicts between the tools. ASDF is a single package manager with a plugin interface that can handle multiple languages and thier versions. ASDF keeps the versions of the different tools used in a `.tool-versions` file in the directory. We are going to use ASDF to setup Elixir and Erlang globally.
+Development requires multiple language runtimes to be present on the system. Multiple projects also require multiple versions of the same environment to be present. Previously we had to setup multiple tools to manage multiple environments, like `rbenv` for ruby, `nvm` for nodejs, each with it's own configurations and usage syntax. This lead to a lot of conflicts between the tools. ASDF is a single package manager with a plugin interface that can handle multiple languages and thier versions. ASDF keeps the versions of the different tools used in a `.tool-versions` file in the directory. We are going to use ASDF to setup Elixir and Erlang globally.
 
 Head on over to [asdf-vm.com/guide/getting-started.html](https://asdf-vm.com/guide/getting-started.html) and setup ASDF.
 
@@ -34,16 +37,16 @@ Elixir is built on top of Erlang. So we have to setup Erlang first and then setu
     asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
     ```
 
-* ASDF downloads source files and compiles Erlang on our machine. Install required dependencies for it. OpenSSL is required for secure communication and WxWidgets is needed for rendering out the debugger and observer.
+* ASDF downloads source files and compiles Erlang on our machine. Install required dependencies for it. OpenSSL is required for secure communication and WxWidgets is needed for rendering out the debugger and observer. Even if you have OpenSSL installed, you need version `1.1`.
 
     ```
     brew install openssl@1.1 wxwidgets
     ```
 
-* Optional: Since Erlang is compiled on our machine, it is recommended to set compile time flags to get an optimal binary. Erlang compile time flags are configured by setting the `KERL_CONFIGURE_OPTIONS` shell function. The below flags are used by [Jose Valim](https://twitter.com/josevalim/status/1507608988577316865?lang=en).
+* Optional: Since Erlang is compiled on our machine, it is recommended to set compile time flags to get an optimal binary. Erlang compile time flags are configured by setting the `KERL_CONFIGURE_OPTIONS` shell function. The below flags are used by [Jose Valim](https://twitter.com/josevalim/status/1507608988577316865?lang=en). These flags disable linking with Java, which is only required if you want to interface with Java.
 
     ```
-    export KERL_CONFIGURE_OPTIONS="--disable-debug --disable-silent-rules --without-javac --enable-shared-zlib --enable-dynamic-ssl-lib --enable-threads --enable-kernel-poll --enable-wx --enable-webview --enable-darwin-64bit --enable-gettimeofday-as-os-system-time" KERL_BUILD_DOCS="yes"
+    export KERL_CONFIGURE_OPTIONS="--disable-debug --disable-silent-rules --without-javac --enable-shared-zlib --enable-dynamic-ssl-lib --enable-threads --enable-kernel-poll --enable-wx --enable-webview --enable-darwin-64bit --enable-gettimeofday-as-os-system-time --with-ssl=$(brew --prefix openssl@1.1)" KERL_BUILD_DOCS="yes"
     ```
 
 * Download and install the latest version of Erlang and set it as the default global version.
@@ -139,7 +142,7 @@ Since we have setup Elixir we can setup Phoenix and Postgresql.
     mix local.hex
     ```
 
-* Install Phoenix
+* Install Phoenix project generators.
 
     ```
     mix archive.install hex phx_new
