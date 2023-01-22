@@ -1,24 +1,23 @@
 %{
-  title: "How to setup Elixir, Phoenix and Postgresql on MacOS",
-  tags: ~w(tailwindcss design),
-  description: "Learn how to setup Elixir, Phoenix and Postgres on your mac. We'll be using Homebrew and ASDF.",
-  draft: true
+  title: "How to setup Elixir, Phoenix and Postgresql on MacOS M1, M2",
+  tags: ~w(elixir phoenix environment),
+  description: "Learn how to setup Elixir, Phoenix and Postgres on your m1 based mac. We'll be using Homebrew and ASDF.",
 }
 ---
 
-Setting up your machine for development is the one tasks you do even before you start writing a single line of code. With the advent of package managers setting up your development environment has become considerably easier. In this post we'll look into how to setup your macOS machine for Elixir and Phoenix development using Homebrew and ASDF.
+In this blog post we'll see how to setup Erlang and Elixir on your M1, M2 Mac with Homebrew and ASDF. 
 
 ## Setup Tools
-This guide assumes you have a fresh mac and we'll setup everything from the start. If you have already setup any of the tools mentioned feel free to skip that part. 
+This guide assumes you have a fresh mac and we'll setup everything from the start. If you have already setup any of the tools mentioned, feel free to skip that part. 
 
 ### Before installation
-If you have your M1 mac setup with rosetta, make sure to run the installation process on a native terminal to prevent segmentation faults.
+If you have your M1 mac setup with rosetta, make sure to run the installation process on a native terminal to prevent segmentation faults while building.
 
 ### Setup Homebrew
 Homebrew is the de-facto package manager on macOS. You can install most packages required for development and other applications with a single command. Follow the official instructions at [brew.sh](https://brew.sh) and setup Homebrew on the machine. The script will install XCode Command Line tools and setup the Homebrew directory on `/opt/homebrew`.
 
 ### Setup ASDF
-Development requires multiple language runtimes to be present on the system. Multiple projects also require multiple versions of the same environment to be present. Previously we had to setup multiple tools to manage multiple environments, like `rbenv` for ruby, `nvm` for nodejs, each with it's own configurations and usage syntax. This lead to a lot of conflicts between the tools. ASDF is a single package manager with a plugin interface that can handle multiple languages and thier versions. ASDF keeps the versions of the different tools used in a `.tool-versions` file in the directory. We are going to use ASDF to setup Elixir and Erlang globally.
+Development requires multiple language runtimes to be present on the system. Multiple projects also require multiple versions of the same environment to be present. Previously we had to setup multiple tools to manage multiple environments, like `rbenv` for Ruby, `nvm` for NodeJS, each with it's own configurations and usage syntax. This lead to a lot of conflicts between the tools. ASDF is a single package manager with a plugin interface that can handle multiple languages and their versions. ASDF keeps the versions of the different tools used in a `.tool-versions` file in the directory. We are going to use ASDF to setup Elixir and Erlang globally.
 
 Head on over to [asdf-vm.com/guide/getting-started.html](https://asdf-vm.com/guide/getting-started.html) and setup ASDF.
 
@@ -72,11 +71,11 @@ Elixir is built on top of Erlang. So we have to setup Erlang first and then setu
     
 
 ### Setup Elixir
-Every Elixir version has a list of Erlang versions that it supports. ASDF Elixir downloads precompiled versions of the runtime. When installing Elixir version make sure you have a corresponding Erlang version installed first.
+Every Elixir version has a list of Erlang versions that it supports. ASDF Elixir downloads pre-compiled versions of the run-time. When installing Elixir version make sure you have a corresponding Erlang version installed first.
 
 * Check which version of Erlang is installed on your system.
   ```
-  asdf list erlang
+  asdf current erlang
   ```
   
   Take a note of the version number, which might come out as `25.2`. That means we have OTP version `25` installed by our system.
@@ -167,6 +166,12 @@ Postgresql is the database of choice for new Phoenix apps. You have to set it up
 
     ```
      /opt/homebrew/opt/postgresql@15/bin/createuser -d postgres
+    ```
+    
+    If you have already setup Homebrew before the M1 upgrade, it would have been installed on `/usr/local/homebrew`.
+    
+    ```
+    /usr/local/homebrew/opt/postgresql@15/bin/createuser -d postgres
     ```
 
 ## Test Installation
