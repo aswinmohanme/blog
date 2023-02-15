@@ -1,6 +1,6 @@
 %{
   title: "Superfast Webapps using NextJS, Vercel, LiveView and Fly.io",
-  rating: 2,
+  rating: 1,
   tags: ~w(elixir phoenix nextjs flyio),
   description: "IndiePaper has a NextJS frontend which proxies requests to the LiveView backend. This means that I can easily edit and serve the marketing pages separtely and make it available even when the main site goes down. This post outlines the setup."
 }
