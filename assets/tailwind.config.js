@@ -15,14 +15,14 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
-          "Avenir",
+          "GTF Good Sans TRIAL",
           "Helvetica Neue",
           "Helvetica",
           "Arial",
           "system-ui",
           "sans-serif",
         ],
-        mono: ["Courier", "monospace"],
+        mono: ["'Anka/Coder'", "monospace"],
       },
       colors: {
         primary: colors.gray,

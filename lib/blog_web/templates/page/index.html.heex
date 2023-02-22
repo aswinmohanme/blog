@@ -53,22 +53,24 @@
   <div class="mt-4 flex items-center flex-wrap">
     <%= live_patch("all",
       to: Routes.page_path(@socket, :index),
-      class: "block px-2 py-1 border shrink-0"
+      class: "block px-2 py-1 border shrink-0 text-primary-500"
     ) %>
     <%= for tag <- @tags do %>
       <%= live_patch(tag,
         to: Routes.page_path(@socket, :index, tag: tag),
-        class: "block px-2 py-1 border shrink-0"
+        class: "block px-2 py-1 border shrink-0 text-primary-500"
       ) %>
     <% end %>
   </div>
-  <div class="mt-10 space-y-10">
+  <div class="mt-10 space-y-12">
     <%= for post <- @posts do %>
       <div class="">
+        <p class="bg-blue-50 px-2">
         <%= live_redirect("#{String.duplicate("🌟", post.rating)} #{post.title}",
           to: Routes.post_show_path(@socket, :show, post.id)
         ) %>
-        <p class="mt-1 text-primary-700">
+        </p>
+        <p class="mt-2 text-primary-700">
           <span class="border border-gray-200 pl-2 pr-1 py-0.5 text-sm mr-2">
             <%= format_published_date(post.date) %>
           </span>
