@@ -6,14 +6,27 @@
 }
 ---
 
-UPI or United Payments Interface is the ubiquitous payment method in India. Learn how it works under the hood.
+UPI or United Payments Interface is the ubiquitous payment method in India. It is a smartphone first, realtime, instant account to account transfer service, owned and operated by the Indian Government. It is one of the most used consumer payment products in India with transaction value crossing $1 Trillion in FY 2021-2022.
+
+Even though the consumer experience is simple on the surface, the technical infrastructure making it possible was a decade long effort. In this blog post we will explain how UPI works under the hood, looking into the different entities and financial systems that makes UPI one of the fastest and most used payment system in India.
 
 ## The User Experience of UPI
-If you haven't used UPI and have only heard about it, this is how the UPI works.
+If you haven't used UPI and have heard about it, it's better to know how the UPI works for a consumer.
 
 * The Payer (person who wants to pay) opens up their UPI app and enters the UPI Id or scans the QR code of the Payee (person who receives the payment)
-* The Payer then enters the amount and selects the bank account that they want to send the money from
+* The Payer then enters the amount and selects the bank account that they want to send the money from.
 * The UPI app then asks for the UPI pin and in around three seconds the money is sent.
+
+This flow is similar for paying merchants as well.
+
+### Why UPI is so succesful in India
+UPI is succeful in India due to many reasons
+
+* Easy to setup, you need a bank account and the mobile number associated with the bank accounts
+* Everyone uses UPI, UPI was mandated by RBI to be supported by everyone.
+* Zero cost. Sending and reciving payments with UPI is zero cost. It even has zero MDR.
+
+Now we can take a look at how UPI works techically.
 
 
 ## How a UPI transaction takes place.
@@ -32,7 +45,7 @@ Damu had lend Rs.100 Ramu for his son's birthday and Ramu decided to pay Damu vi
 ### UPI Apps
 UPI Apps are the consumer facing side of the UPI network. Users interact with the network through these Apps. Only regulated Banks are allowed to interface with the UPI network. This means only banking apps and third party apps with backing of banks can connect to the UPI network. Each app may be backed by multiple banks and have unique handles per backing. CRED is backed by Axis bank and Google Pay is backed by multiple banks. BHIM is the official app released with UPI. You can find a list of approved apps and their connected banks here, https://www.npci.org.in/what-we-do/upi/3rd-party-apps. They are called **Third Party Application Providers, TPAPs**.
 
-#### Payment Service Provider - PSP
+### Payment Service Provider - PSP
 The banks which provide these services are called Payment Service Providers. PSP onboards the users, authenticates the user during registration, ensures the TPAPs are compliant and secure, and give grievance redressal mechanism for resolving complaints. PSP which onboarded Ramu is called the **Payer PSP**, and PSP which onboarded Damu is called the **Payee PSP**.
 
 Damu decides to go with Google Pay and downloads the app. He sets up the App and starts the Registration process.
@@ -84,6 +97,12 @@ That is how a UPI transaction happens from start to finish. The amount of techni
 
 ## Failure Points
 Since UPI touches multiple places, it has multiple modes of failure. It requires multiple entities to be online at the time of the payment, and since payment settles in realtime.
+
+### Bank Server Busy
+This is one of the most common errors that you might face with UPI. UPI has to interact with five different server clusters, even with one of them offline can prevent the entire transaction from taking place. The split between banks and PSP was neccesary to onboard banks that were techically backward.
+
+### Money debited but not credited
+The other major error is the money being debited from the Payee account and not being credited to the Payer account. Since UPI is realtime and the funds first get debited, if no acknowledgement is recived from teh Beneficiary bank, then the UPI switch considers the payment as failed. This causes the money to be unaccounted for and returned in around 3 days. NPCI is issuing guidelines to speed up the reversal of payments.
 
 
 ## Resources
