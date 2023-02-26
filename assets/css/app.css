@@ -10,7 +10,7 @@
   }
 
   article {
-    @apply prose mt-12 max-w-none prose-p:text-gray-600 prose-strong:text-gray-700 prose-headings:text-base prose-headings:text-gray-800 prose-h1:font-semibold prose-h2:mt-12 prose-h3:mt-6 prose-h2:font-semibold prose-h3:text-base prose-h3:font-semibold prose-h4:text-base prose-h4:font-semibold prose-a:font-normal prose-a:text-gray-700 prose-a:no-underline prose-pre:rounded-none prose-pre:bg-stone-100 prose-pre:text-gray-700;
+    @apply prose mt-12 max-w-none prose-p:text-gray-700 prose-strong:text-gray-700 prose-headings:text-base prose-headings:text-gray-800 prose-h1:font-semibold prose-h2:mt-12 prose-h3:mt-6 prose-h2:font-semibold prose-h3:text-base prose-h3:font-semibold prose-h4:text-base prose-h4:font-semibold prose-a:font-normal prose-a:text-gray-700 prose-a:no-underline prose-pre:rounded-none prose-pre:bg-stone-100 prose-pre:text-gray-700;
   }
 
   a {

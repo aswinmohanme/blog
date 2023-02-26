@@ -15,6 +15,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
+          "Avenir",
           "Helvetica Neue",
           "Helvetica",
           "Arial",
