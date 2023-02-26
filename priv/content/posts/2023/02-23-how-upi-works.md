@@ -6,18 +6,18 @@
 }
 ---
 
-UPI or United Payments Interface is the ubiquitous payment method in India. It is a smartphone first, realtime, instant account to account transfer service, owned and operated by the Indian Government. It is one of the most used consumer payment products in India with transaction value crossing $1 Trillion in FY 2021-2022.
+UPI or United Payments Interface is the ubiquitous payment method in India. It is a smartphone first, real-time, instant account-to-account transfer service, owned and operated by the Indian Government. It is of the most used and loved consumer payment products in India with transaction value crossing $1 Trillion in FY 2021-2022.
 
-Even though the consumer experience is simple on the surface, the technical infrastructure making it possible was a decade long effort. In this blog post we will explain how UPI works under the hood, looking into the different entities and financial systems that makes UPI one of the fastest and most used payment system in India.
+Even though the consumer experience is simple on the surface, the technical and financial infrastructure making it possible is complex and running it the scale of a nation is a commendable feat it itself. In this blog post we will explain how UPI works under the hood, looking into the different entities and financial systems that makes UPI one of the fastest and most used payment system in India.
 
 ## The User Experience of UPI
-If you haven't used UPI and have heard about it, it's better to know how the UPI works for a consumer.
+If you haven't used UPI and have only heard about it, it's better to know how the UPI works for a consumer.
 
 * The Payer (person who wants to pay) opens up their UPI app and enters the UPI Id or scans the QR code of the Payee (person who receives the payment)
 * The Payer then enters the amount and selects the bank account that they want to send the money from.
 * The UPI app then asks for the UPI pin and in around three seconds the money is sent.
 
-This flow is similar for paying merchants as well.
+This flow is similar for paying merchants as well. Shops will have a static QR that can be scanned with the UPI app. The payments settle in realtime and you get confirmation of success or failure from there itself. There is also no charge for payments.
 
 ### Why UPI is so succesful in India
 UPI is succeful in India due to many reasons
@@ -30,7 +30,7 @@ Now we can take a look at how UPI works techically.
 
 
 ## How a UPI transaction takes place.
-Rather than go through the entire terms of the ecosystem, let's start with two people who wants to make a UPI transaction and build it from first principles. 
+Rather than go through the entire terms of the ecosystem, let's start with two people who wants to make a UPI transaction and build it from first principles.
 
 In the true spirit of Indian Government ads, let's start with Ramu and Damu. Ramu wants to send Damu Rs.100. Let's see how the transaction takes place from the first step to the last step and we'll introduce the different entities along the way. We'll introduce different UPI concepts and how it works along the transaction.
 
@@ -87,7 +87,7 @@ The request from the **UPI Switch** contains the account details of the person m
 Beneficiary Bank refers to the Bank to which the money will be credited. The UPI request contains the amount and the bank details that was fetches from the Payee PSP. Once the money reaches Beneficiary bank, the corresponding account is credited and an acknowledgement is returned.
 
 ### Immediate Payment Service, IMPS
-IMPS is an interbank realtime payment system managed by NPCI in India. It is built on top of the National Financial Switch. IMPS is available 24x7 including Bank holidays. To send money through IMPS, you need to know the account number and the IFSC code. The UPI request gets these values from the PSP and sends the money through IMPS. 
+IMPS is an interbank realtime payment system managed by NPCI in India. It is built on top of the National Financial Switch. IMPS is available 24x7 including Bank holidays. To send money through IMPS, you need to know the account number and the IFSC code. The UPI request gets these values from the PSP and sends the money through IMPS.
 
 Once the money has reached Dam's Bank, his account is credited Rs.100 and his balance becomes Rs.1100 the bank sends an acknowledgement back to the UPI switch. The success message is then forwarded to the Payer PSP which forwards it to Ramu's UPI App, which shows the transaction as succesful. Ramu gets an SMS from the Bank about the debited money and Damu gets an SMS from the bank about the credited money.
 
@@ -105,8 +105,11 @@ This is one of the most common errors that you might face with UPI. UPI has to i
 The other major error is the money being debited from the Payee account and not being credited to the Payer account. Since UPI is realtime and the funds first get debited, if no acknowledgement is recived from teh Beneficiary bank, then the UPI switch considers the payment as failed. This causes the money to be unaccounted for and returned in around 3 days. NPCI is issuing guidelines to speed up the reversal of payments.
 
 
-## Resources
-* UPI Product Booklet - https://www.npci.org.in/PDF/npci/upi/Product-Booklet.pdf
-* Roles and Responsibilities of NPCI, PSP and TPAP in UPI -  https://pay.google.com/intl/en_in/about/external/npci/
-* National Payments Corporation India, NPCI - https://en.wikipedia.org/wiki/National_Payments_Corporation_of_India
-* Immediate Payment Service, IMPS - https://en.wikipedia.org/wiki/Immediate_Payment_Service
+## Resources and furthur reading
+UPI is one of the best governmental projects to ever come out of India. With it's proliferation in India and it's recent expansion to International markets, it's one of the best known payment systems.
+
+* [Auth N Capture, Aditya Kulkarni](https://www.amazon.in/Auth-Capture-Introduction-Payments-Ecosystem/dp/1639975136/ref=pd_bxgy_img_sccl_1/261-8405636-0814859?pd_rd_w=gf5af&content-id=amzn1.sym.d68c4347-8b80-4998-9474-4671a1e32e96&pf_rd_p=d68c4347-8b80-4998-9474-4671a1e32e96&pf_rd_r=R1PCF97QQC9KSCPSDJZR&pd_rd_wg=clXfj&pd_rd_r=95083dfc-188b-48b6-a471-092f3995b97b&pd_rd_i=1639975136&psc=1)
+* [UPI Product Booklet](https://www.npci.org.in/PDF/npci/upi/Product-Booklet.pdf)
+* [Roles and Responsibilities of NPCI, PSP and TPAP in UPI](https://pay.google.com/intl/en_in/about/external/npci/)
+* [National Payments Corporation India, NPCI](https://en.wikipedia.org/wiki/National_Payments_Corporation_of_India)
+* [Immediate Payment Service, IMPS](https://en.wikipedia.org/wiki/Immediate_Payment_Service)

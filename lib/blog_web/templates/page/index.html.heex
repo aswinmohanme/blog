@@ -53,12 +53,12 @@
   <div class="mt-4 flex items-center flex-wrap">
     <%= live_patch("all",
       to: Routes.page_path(@socket, :index),
-      class: "block px-2 py-1 border shrink-0 text-primary-500"
+      class: "block px-2 py-1 border shrink-0 text-primary-500 text-sm"
     ) %>
     <%= for tag <- @tags do %>
       <%= live_patch(tag,
         to: Routes.page_path(@socket, :index, tag: tag),
-        class: "block px-2 py-1 border shrink-0 text-primary-500"
+        class: "block px-2 py-1 border shrink-0 text-primary-500 text-sm"
       ) %>
     <% end %>
   </div>
