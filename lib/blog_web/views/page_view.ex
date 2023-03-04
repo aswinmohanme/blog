@@ -18,6 +18,6 @@ defmodule BlogWeb.PageView do
         12 -> "Dec"
       end
 
-    "#{date.year}-#{month_name}-#{date.day}"
+    "#{date.year}-#{month_name}-#{if date.day < 10, do: '0'}#{date.day}"
   end
 end
