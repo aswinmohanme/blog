@@ -15,14 +15,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
-          "Avenir",
-          "Helvetica Neue",
-          "Helvetica",
-          "Arial",
-          "system-ui",
-          "sans-serif",
-        ],
-        mono: ["monospace"],
+          'Avenir', 'Avenir Next LT Pro', 'Montserrat', 'Corbel', 'URW Gothic', 'source-sans-pro', 'sans-serif'],
+        mono: ["ui-monospace", 'Cascadia Code', 'Source Code Pro', 'Menlo', 'Consolas', 'DejaVu Sans Mono', 'monospace'],
       },
       colors: {
         primary: colors.gray,

@@ -1,8 +1,7 @@
 %{
   title: "How does UPI work ? A Technical Perspective.",
   tags: ~w(payments how india),
-  description: "Learn about UPI works under the hood. What happens when you send money to your friends, how payments are handled at the merchant level as well.",
-  draft: true
+  description: "A technical look at how Unified Payments Interface (UPI) works under the hood.",
 }
 ---
 
@@ -94,6 +93,9 @@ Once the money has reached Dam's Bank, his account is credited Rs.100 and his ba
 ## Ramu and Damu is happy
 That is how a UPI transaction happens from start to finish. The amount of technical infrastructure holding everything up in place is phenomenal, and I have massive respect for the people who came up and runs these systems reliably for an entire Nation.
 
+Here is the entire flow of funds from Ramu's Account to Damu's Account via UPI, based on UPI flowchart in Auth N Capture book.
+![UPI Flow](../images/upi_diagram.png)
+
 
 ## Failure Points
 Since UPI touches multiple places, it has multiple modes of failure. It requires multiple entities to be online at the time of the payment, and since payment settles in realtime.
@@ -106,7 +108,7 @@ The other major error is the money being debited from the Payee account and not 
 
 
 ## Resources and furthur reading
-UPI is one of the best governmental projects to ever come out of India. With it's proliferation in India and it's recent expansion to International markets, it's one of the best known payment systems.
+UPI is one of the best governmental projects to ever come out of India. With it's proliferation in India and it's recent expansion to International markets, it's one of the best known and used payment systems. This blog post scratches the surface of the financial and technical infrastructure that runs UPI, I have given the links that I have referenced while writing this post. If you find any issues or errors, let me know at [hey@aswinmohan.me](mailto:hey@aswinmohan.me).
 
 * [Auth N Capture, Aditya Kulkarni](https://www.amazon.in/Auth-Capture-Introduction-Payments-Ecosystem/dp/1639975136/ref=pd_bxgy_img_sccl_1/261-8405636-0814859?pd_rd_w=gf5af&content-id=amzn1.sym.d68c4347-8b80-4998-9474-4671a1e32e96&pf_rd_p=d68c4347-8b80-4998-9474-4671a1e32e96&pf_rd_r=R1PCF97QQC9KSCPSDJZR&pd_rd_wg=clXfj&pd_rd_r=95083dfc-188b-48b6-a471-092f3995b97b&pd_rd_i=1639975136&psc=1)
 * [UPI Product Booklet](https://www.npci.org.in/PDF/npci/upi/Product-Booklet.pdf)

@@ -32,11 +32,11 @@
   }
 
   code {
-    @apply font-normal text-base;
+    @apply font-normal text-sm;
   }
 
   pre {
-    @apply mb-8 mt-4 border-gray-400 p-4 font-mono text-base;
+    @apply mb-8 mt-4 border-gray-400 p-4 font-mono text-sm;
   }
 
   img {
