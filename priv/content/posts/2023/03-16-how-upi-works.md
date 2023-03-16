@@ -6,61 +6,61 @@
 }
 ---
 
-UPI or United Payments Interface is the ubiquitous payment method in India. It is a smartphone first, real-time, instant account-to-account transfer service, owned and operated by the Indian Government. It is of the most used and loved consumer payment products in India with transaction value crossing $1 Trillion in FY 2021-2022.
+UPI or United Payments Interface is the ubiquitous payment method in India. It is a smartphone-first, real-time, instant account-to-account transfer service, owned and operated by the Indian Government. It is of the most used and loved consumer payment products in India with transaction value crossing $1 Trillion in FY 2021-2022.
 
-Even though the consumer experience is simple on the surface, the technical and financial infrastructure making it possible is complex and running it the scale of a nation is a commendable feat it itself. In this blog post we will explain how UPI works under the hood, looking into the different entities and financial systems that makes UPI one of the fastest and most used payment system in India.
+Even though the consumer experience is simple on the surface, the technical and financial infrastructure making it possible is complex and running it the scale of a nation is a commendable feat in itself. In this blog post, we will explain how UPI works under the hood, looking into the different entities and financial systems that make UPI one of the fastest and most used payment systems in India.
 
 ## The User Experience of UPI
 If you haven't used UPI and have only heard about it, it's better to know how the UPI works for a consumer.
 
 * The Payer (person who wants to pay) opens up their UPI app and enters the UPI Id or scans the QR code of the Payee (person who receives the payment)
-* The Payer then enters the amount and selects the bank account that they want to send the money from.
+* The Payer then enters the amount and selects the bank account from which they want to send the money.
 * The UPI app then asks for the UPI pin and in around three seconds the money is sent.
 
-This flow is similar for paying merchants as well. Shops will have a static QR that can be scanned with the UPI app. The payments settle in realtime and you get confirmation of success or failure from there itself. There is also no charge for payments.
+This flow is similar for paying merchants as well. Shops will have a static QR that can be scanned with the UPI app. The payments settle in real-time and you get confirmation of success or failure from there. There is also no charge for payments for both the consumer and merchants, unlike credit or debit cards which charge 1-2% as interchange fees.
 
-### Why UPI is so succesful in India
-UPI is succeful in India due to many reasons
+### Why UPI is so successful in India
+UPI is successful in India due to many reasons
 
-* Easy to setup, you need a bank account and the mobile number associated with the bank accounts
+* Easy to set up, you need a bank account and the mobile number associated with the bank accounts
 * Everyone uses UPI, UPI was mandated by RBI to be supported by everyone.
-* Zero cost. Sending and reciving payments with UPI is zero cost. It even has zero MDR.
+* Zero cost. Sending and receiving payments with UPI is zero cost for all parties involved.
 
-Now we can take a look at how UPI works techically.
+Now we can take a look at how UPI works technically.
 
 
 ## How a UPI transaction takes place.
-Rather than go through the entire terms of the ecosystem, let's start with two people who wants to make a UPI transaction and build it from first principles.
+Rather than go through the entire terms of the ecosystem, let's start with two people who want to make a UPI transaction and build it from the first principles.
 
 In the true spirit of Indian Government ads, let's start with Ramu and Damu. Ramu wants to send Damu Rs.100. Let's see how the transaction takes place from the first step to the last step and we'll introduce the different entities along the way. We'll introduce different UPI concepts and how it works along the transaction.
 
 
 ## The world of Ramu and Damu
-Before we start with the transaction, let's establish the world where Ramu and Damu lives in. Ramu and Damu are living in India. Ramu has an account with SBI and Damu has an account with Yes Bank. Ramu and Damu both has an account balance of Rs.1000.
+Before we start with the transaction, let's establish the world where Ramu and Damu live in. Ramu and Damu are living in India. Ramu has an account with SBI and Damu has an account with Yes Bank. Ramu and Damu both have an account balance of Rs.1000.
 
 
 ## Ramu sets up UPI
-Damu had lend Rs.100 Ramu for his son's birthday and Ramu decided to pay Damu via UPI. Ramu doesn't have UPI setup yet. So he goes on the Play Store to download a UPI app to send the payment.
+Damu had lent Rs.100 to Ramu for his son's birthday and Ramu decided to pay Damu via UPI. Ramu doesn't have UPI setup yet. So he goes on the Play Store to download a UPI app to send the payment.
 
 ### UPI Apps
-UPI Apps are the consumer facing side of the UPI network. Users interact with the network through these Apps. Only regulated Banks are allowed to interface with the UPI network. This means only banking apps and third party apps with backing of banks can connect to the UPI network. Each app may be backed by multiple banks and have unique handles per backing. CRED is backed by Axis bank and Google Pay is backed by multiple banks. BHIM is the official app released with UPI. You can find a list of approved apps and their connected banks here, https://www.npci.org.in/what-we-do/upi/3rd-party-apps. They are called **Third Party Application Providers, TPAPs**.
+UPI Apps are the consumer-facing side of the UPI network. Users interact with the network through these Apps. Only regulated Banks are allowed to interface with the UPI network. This means only banking apps and third-party apps with the backing of banks can connect to the UPI network. Each app may be backed by multiple banks and have unique handles per backing. CRED is backed by Axis bank and Google Pay is backed by multiple banks. BHIM is the official app released with UPI. You can find a list of approved apps and their connected banks here, https://www.npci.org.in/what-we-do/upi/3rd-party-apps. They are called **Third Party Application Providers, TPAPs**.
 
 ### Payment Service Provider - PSP
-The banks which provide these services are called Payment Service Providers. PSP onboards the users, authenticates the user during registration, ensures the TPAPs are compliant and secure, and give grievance redressal mechanism for resolving complaints. PSP which onboarded Ramu is called the **Payer PSP**, and PSP which onboarded Damu is called the **Payee PSP**.
+The banks which provide these services are called Payment Service Providers. PSP onboards the users authenticates the user during registration, ensures the TPAPs are compliant and secure and give a grievance redressal mechanism for resolving complaints. PSP which onboarded Ramu is called the **Payer PSP**, and PSP which onboarded Damu is called the **Payee PSP**.
 
 Damu decides to go with Google Pay and downloads the app. He sets up the App and starts the Registration process.
 
 ### Registration process
-To start using UPI, the user must have a bank account and a debit card linked to that bank account. The mobile number used for registration should also be linked to the Bank account. During registration the app sends an SMS to the servers with a one-time code generated by the App. This identifies the linked bank account and the user can then set it up from there. UPI transactions require two-factor authentication, hence a UPI Pin needs to be setup as well. Even though the registration process is handled by the PSP, setting the UPI pin and it's authentication is handled by the bank that has the user's account.
+To start using UPI, the user must have a bank account and a debit card linked to that bank account. The mobile number used for registration should also be linked to the Bank account. During registration, the app sends an SMS to the servers with a one-time code generated by the App. This identifies the linked bank account and the user can then set it up from there. UPI transactions require two-factor authentication, hence a UPI Pin needs to be set up as well. Even though the registration process is handled by the PSP, setting the UPI pin and its authentication is handled by the bank that has the user's account.
 
-Now Ramu has setup his UPI account and is now ready to send his payment to Damu.
+Now Ramu has set up his UPI account and is now ready to send his payment to Damu.
 
 
 ## Finding Damu
-Ramu now needs to find Damu on the UPI network so the money reaches him safely. Unlike the by-gone days, we do not need the account number and the IFSC code to send the payment, we need the unique VPA that is generated during UPI signup to send and recieve money.
+Ramu now needs to find Damu on the UPI network so the money reaches him safely. Unlike the bygone days, we do not need the account number and the IFSC code to send the payment, we need the unique VPA that is generated during UPI signup to send and receive money.
 
 ### VPA - Virtual Payment Address
-Every person on the UPI network will have a unique address identifying them. The VPA is a combination of a user identifier and an entity identifier that identifies the issuing bank separated by a `@` symbol, like `ramu@sbi` and `damu@yes`. The VPA uniquely identifies the UPI account. A single bank account can have multiple VPA's associated with them. A VPA can have multiple banks accounts associated with them, but one is required to be primary.
+Every person on the UPI network will have a unique address identifying them. The VPA is a combination of a user identifier and an entity identifier that identifies the issuing bank separated by a `@` symbol, like `ramu@sbi` and `damu@yes`. The VPA uniquely identifies the UPI account. A single bank account can have multiple VPAs associated with them. A VPA can have multiple bank accounts associated with them, but one is required to be primary.
 
 Damu sends his VPA to Ramu and he opens up his UPI app to send Rs.100 to Damu's account.
 
@@ -68,48 +68,48 @@ Damu sends his VPA to Ramu and he opens up his UPI app to send Rs.100 to Damu's 
 ## Ramu sends Rs.100 to Damu
 Ramu enters the VPA Id and the amount on his UPI app, enters his UPI pin and starts the payment process. The TPAP sends the request to the Payer Bank which forwards it to the central UPI switch hosted at **NPCI**.
 
-### National Payments Corportion of India, NPCI
-The National Payments Corportion of India is a RBI established organization that handles multiple payment and settlement systems in India. In additional to operating the technical infrastructure, the organization is responsible for setting the rules and guidelines for all parties integrating with the system. They are also responsible for audits and managing the third party integrations. They also handle transaction routing, settlement and dispute management. NPCI also operates the UPI Switch, a bunch of servers to handle UPI transactions.
+### National Payments Corporation of India, NPCI
+The National Payments Corporation of India is an organization established by RBI that handles multiple payment and settlement systems in India. In addition to operating the technical infrastructure, the organization is responsible for setting the rules and guidelines for all parties integrating with the system. They are also responsible for audits and managing third-party integrations. They also handle transaction routing, settlement and dispute management. NPCI also operates the UPI Switch, a bunch of servers to handle UPI transactions.
 
-The UPI Switch then finds the Payee PSP from the VPA id and routes the transaction to the corresponding PSP of Damu. The Payee PSP validates the request and returns the account details of Damu back to NPCI.
+The UPI Switch then finds the Payee PSP from the VPA id and routes the transaction to the corresponding PSP of Damu. The Payee PSP validates the request and returns the account details of Damu to NPCI.
 
 
 ## Moving the Money
-Now the UPI Switch knows Ramu's and Damu's account details which it got from the corresponding PSPs and the amount to be transferred. Since UPI is a realtime system the transfer of money takes place with the transaction itself, unlike card transactions where the money moves at the end of the day. Now it's upto the UPI switch to move the money from Ramu's **Remitter Bank Account** to Damu's **Beneficiary Bank Account**. The UPI Switch forwards the request to the **Remitter Bank** ie Ramu's Bank.
+Now the UPI Switch knows Ramu's and Damu's account details which it got from the corresponding PSPs and the amount to be transferred. Since UPI is a real-time system the transfer of money takes place with the transaction itself, unlike card transactions where the money moves at the end of the day. Now it's up to the UPI switch to move the money from Ramu's **Remitter Bank Account** to Damu's **Beneficiary Bank Account**. The UPI Switch forwards the request to the **Remitter Bank** ie Ramu's Bank.
 
 
 ### Remitter Bank, Ramu's Bank
-The Remitter Bank refers to the Bank from which the payment originates. The Remitter bank in in charge of authenticating the UPI pin as well.
+The Remitter Bank refers to the Bank from which the payment originates. The Remitter bank is in charge of authenticating the UPI pin as well.
 
-The request from the **UPI Switch** contains the account details of the person making the payment. The **Remitter Bank** authenticates the **UPI Pin** and if it matches, debits the amount and sends the request back to UPI Switch. Ramu's bank account has currently a balance of Rs.900. The debited money is credited to the **Beneficiary Bank** in realtime through **IMPS**.
+The request from the **UPI Switch** contains the account details of the person making the payment. The **Remitter Bank** authenticates the **UPI Pin** and if it matches, debits the amount and sends the request back to UPI Switch. Ramu's bank account has currently a balance of Rs.900. The debited money is credited to the **Beneficiary Bank** in real-time through **IMPS**.
 
 ### Beneficiary Bank, Damu's Bank
-Beneficiary Bank refers to the Bank to which the money will be credited. The UPI request contains the amount and the bank details that was fetches from the Payee PSP. Once the money reaches Beneficiary bank, the corresponding account is credited and an acknowledgement is returned.
+Beneficiary Bank refers to the Bank to which the money will be credited. The UPI request contains the amount and the bank details that were fetched from the Payee PSP. Once the money reaches the Beneficiary bank, the corresponding account is credited and an acknowledgement is returned.
 
 ### Immediate Payment Service, IMPS
-IMPS is an interbank realtime payment system managed by NPCI in India. It is built on top of the National Financial Switch. IMPS is available 24x7 including Bank holidays. To send money through IMPS, you need to know the account number and the IFSC code. The UPI request gets these values from the PSP and sends the money through IMPS.
+IMPS is an interbank real-time payment system managed by NPCI in India. It is built on top of the National Financial Switch. IMPS is available 24x7 including Bank holidays. To send money through IMPS, you need to know the account number and the IFSC code. The UPI request gets these values from the PSP and sends the money through IMPS.
 
-Once the money has reached Dam's Bank, his account is credited Rs.100 and his balance becomes Rs.1100 the bank sends an acknowledgement back to the UPI switch. The success message is then forwarded to the Payer PSP which forwards it to Ramu's UPI App, which shows the transaction as succesful. Ramu gets an SMS from the Bank about the debited money and Damu gets an SMS from the bank about the credited money.
+Once the money has reached Dam's Bank, his account is credited Rs.100 and his balance becomes Rs.1100 the bank sends an acknowledgement back to the UPI switch. The success message is then forwarded to the Payer PSP which forwards it to Ramu's UPI App, which shows the transaction as successful. Ramu gets an SMS from the Bank about the debited money and Damu gets an SMS from the bank about the credited money.
 
 ## Ramu and Damu is happy
-That is how a UPI transaction happens from start to finish. The amount of technical infrastructure holding everything up in place is phenomenal, and I have massive respect for the people who came up and runs these systems reliably for an entire Nation.
+That is how a UPI transaction happens from start to finish. The amount of technical infrastructure holding everything up in place is phenomenal, and I have massive respect for the people who came up with and run these systems reliably for an entire Nation.
 
-Here is the entire flow of funds from Ramu's Account to Damu's Account via UPI, based on UPI flowchart in Auth N Capture book.
+Here is the entire flow of funds from Ramu's Account to Damu's Account via UPI, based on the UPI flowchart in Auth N Capture book.
 ![UPI Flow](../images/upi_diagram.png)
 
 
 ## Failure Points
-Since UPI touches multiple places, it has multiple modes of failure. It requires multiple entities to be online at the time of the payment, and since payment settles in realtime.
+Since UPI touches multiple places, it has multiple modes of failure. It requires multiple entities to be online at the time of the payment, and since payment settles in real-time.
 
 ### Bank Server Busy
-This is one of the most common errors that you might face with UPI. UPI has to interact with five different server clusters, even with one of them offline can prevent the entire transaction from taking place. The split between banks and PSP was neccesary to onboard banks that were techically backward.
+This is one of the most common errors that you might face with UPI. UPI has to interact with five different server clusters, and even one of them offline can prevent the entire transaction from taking place. The split between banks and PSP was necessary to onboard banks that were technically backward.
 
 ### Money debited but not credited
-The other major error is the money being debited from the Payee account and not being credited to the Payer account. Since UPI is realtime and the funds first get debited, if no acknowledgement is recived from teh Beneficiary bank, then the UPI switch considers the payment as failed. This causes the money to be unaccounted for and returned in around 3 days. NPCI is issuing guidelines to speed up the reversal of payments.
+The other major error is the money being debited from the Payee account and not being credited to the Payer account. Since UPI is real-time and the funds first get debited, if no acknowledgement is received from the Beneficiary bank, then the UPI switch considers the payment as failed. This causes the money to be unaccounted for and returned in around 3 days. NPCI is issuing guidelines to speed up the reversal of payments.
 
 
-## Resources and furthur reading
-UPI is one of the best governmental projects to ever come out of India. With it's proliferation in India and it's recent expansion to International markets, it's one of the best known and used payment systems. This blog post scratches the surface of the financial and technical infrastructure that runs UPI, I have given the links that I have referenced while writing this post. If you find any issues or errors, let me know at [hey@aswinmohan.me](mailto:hey@aswinmohan.me).
+## Resources and further reading
+UPI is one of the best governmental projects to ever come out of India. With its proliferation in India and its recent expansion to International markets, it's one of the best-known and used payment systems. This blog post scratches the surface of the financial and technical infrastructure that runs UPI, I have given the links that I have referenced while writing this post. If you find any issues or errors, let me know at [hey@aswinmohan.me](mailto:hey@aswinmohan.me).
 
 * [Auth N Capture, Aditya Kulkarni](https://www.amazon.in/Auth-Capture-Introduction-Payments-Ecosystem/dp/1639975136/ref=pd_bxgy_img_sccl_1/261-8405636-0814859?pd_rd_w=gf5af&content-id=amzn1.sym.d68c4347-8b80-4998-9474-4671a1e32e96&pf_rd_p=d68c4347-8b80-4998-9474-4671a1e32e96&pf_rd_r=R1PCF97QQC9KSCPSDJZR&pd_rd_wg=clXfj&pd_rd_r=95083dfc-188b-48b6-a471-092f3995b97b&pd_rd_i=1639975136&psc=1)
 * [UPI Product Booklet](https://www.npci.org.in/PDF/npci/upi/Product-Booklet.pdf)
