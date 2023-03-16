@@ -23,7 +23,7 @@ This flow is similar for paying merchants as well. Shops will have a static QR t
 UPI is successful in India due to many reasons
 
 * Easy to set up, you need a bank account and the mobile number associated with the bank accounts
-* Everyone uses UPI, UPI was mandated by RBI to be supported by everyone.
+* Everyone has access to UPI, UPI was mandated by RBI to be supported by every bank.
 * Zero cost. Sending and receiving payments with UPI is zero cost for all parties involved.
 
 Now we can take a look at how UPI works technically.
