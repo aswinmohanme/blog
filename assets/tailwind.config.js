@@ -16,7 +16,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Jost', ...defaultTheme.fontFamily.sans],
-        mono: ["ui-monospace", 'Cascadia Code', 'Source Code Pro', 'Menlo', 'Consolas', 'DejaVu Sans Mono', 'monospace'],
+        mono: ["Anka'\'Coder", 'Cascadia Code', 'Source Code Pro', 'Menlo', 'Consolas', 'DejaVu Sans Mono', 'monospace'],
       },
       colors: {
         primary: colors.gray,
