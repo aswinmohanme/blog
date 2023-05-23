@@ -28,7 +28,7 @@
   }
 
   h1 {
-    @apply text-xl font-medium md:text-2xl;
+    @apply text-xl font-semibold md:text-2xl;
   }
 
   h2 {

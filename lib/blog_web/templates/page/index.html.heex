@@ -53,12 +53,14 @@
   <div class="mt-4 flex items-center flex-wrap">
     <%= live_patch("all",
       to: Routes.page_path(@socket, :index),
-      class: "block px-2 py-1 hover:bg-yellow-300 hover:text-gray-900 rounded shrink-0 text-primary-500 text-sm md:text-base"
+      class:
+        "block px-2 py-1 hover:bg-yellow-300 hover:text-gray-900 rounded shrink-0 text-primary-500 text-sm md:text-base"
     ) %>
     <%= for tag <- @tags do %>
       <%= live_patch(tag,
         to: Routes.page_path(@socket, :index, tag: tag),
-        class: "block px-2 py-1 hover:bg-yellow-300 hover:text-gray-900 rounded shrink-0 text-primary-500 text-sm md:text-base"
+        class:
+          "block px-2 py-1 hover:bg-yellow-300 hover:text-gray-900 rounded shrink-0 text-primary-500 text-sm md:text-base"
       ) %>
     <% end %>
   </div>
@@ -66,9 +68,9 @@
     <%= for post <- @posts do %>
       <div class="">
         <h3 class="font-medium">
-        <%= live_redirect("#{String.duplicate("🌟", post.rating)} #{post.title}",
-          to: Routes.post_show_path(@socket, :show, post.id)
-        ) %>
+          <%= live_redirect("#{String.duplicate("🌟", post.rating)} #{post.title}",
+            to: Routes.post_show_path(@socket, :show, post.id)
+          ) %>
         </h3>
         <p class="mt-2 text-primary-600 text-base">
           <span class="bg-gray-100 rounded pl-2 pr-0 mr-2 py-0.5 text-sm md:text-base">

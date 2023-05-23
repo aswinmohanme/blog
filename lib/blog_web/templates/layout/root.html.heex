@@ -30,15 +30,42 @@
       </p>
       <div class="mt-4 flex flex-col items-start space-y-2 md:flex-row md:items-center md:space-y-0 md:justify-between">
         <div class="flex flex-row items-center space-x-2">
-        <%= live_redirect("home", to: Routes.page_path(@conn, :index), class: "px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black") %>
-        <%= live_redirect("about", to: Routes.page_path(@conn, :about), class: "px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black") %>
-        <%= live_redirect("now", to: Routes.page_path(@conn, :now), class: "px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black") %>
-        <%= live_redirect("talks", to: Routes.page_path(@conn, :talks), class: "px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black") %>
+          <%= live_redirect("home",
+            to: Routes.page_path(@conn, :index),
+            class: "px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black"
+          ) %>
+          <%= live_redirect("about",
+            to: Routes.page_path(@conn, :about),
+            class: "px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black"
+          ) %>
+          <%= live_redirect("now",
+            to: Routes.page_path(@conn, :now),
+            class: "px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black"
+          ) %>
+          <%= live_redirect("talks",
+            to: Routes.page_path(@conn, :talks),
+            class: "px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black"
+          ) %>
         </div>
         <div class="flex flex-row items-center space-x-2">
-        <a class="px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black" href="mailto:hey@aswinmohan.me">email</a>
-        <a class="px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black" href="https://github.com/aswinmohanme">github</a>
-        <a class="px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black" href="https://twitter.com/aswinmohanme">twitter</a>
+          <a
+            class="px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black"
+            href="mailto:hey@aswinmohan.me"
+          >
+            email
+          </a>
+          <a
+            class="px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black"
+            href="https://github.com/aswinmohanme"
+          >
+            github
+          </a>
+          <a
+            class="px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black"
+            href="https://twitter.com/aswinmohanme"
+          >
+            twitter
+          </a>
         </div>
       </div>
       <div class="text-gray-900 rounded-lg mt-8 bg-yellow-100 px-4 py-2">
