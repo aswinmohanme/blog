@@ -1,4 +1,9 @@
 <article class="md:pt-8">
-  <h1><%= @post.title %></h1>
+  <div class="flex flex-col items-start space-y-2">
+    <div class="bg-gray-100 rounded px-2 py-0.5 text-sm md:text-base">
+      <%= format_published_date(@post.date) %>
+    </div>
+    <h1><%= @post.title %></h1>
+  </div>
   <%= raw(@post.body) %>
 </article>
