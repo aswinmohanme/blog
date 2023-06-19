@@ -1,7 +1,8 @@
 %{
   title: "MacOS like Fonts on Manjaro/Arch Linux",
   tags: ~w(linux typography),
-  description: "Learn how to setup Manjaro/Arch to get MacOS like fonts in the interface and Chrome."
+  description: "Learn how to setup Manjaro/Arch to get MacOS like fonts in the interface and Chrome.",
+  rating: 3,
 }
 
 ---

@@ -23,6 +23,7 @@ defmodule Blog.Posts do
   def list_top_posts do
     list_posts()
     |> Enum.reject(fn post -> post.rating < 1 end)
+    |> Enum.sort(fn a, b -> a.rating > b.rating end)
   end
 
   def list_tags do
