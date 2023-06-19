@@ -20,6 +20,11 @@ defmodule Blog.Posts do
     end
   end
 
+  def list_top_posts do
+    list_posts()
+    |> Enum.reject(fn post -> post.rating < 1 end)
+  end
+
   def list_tags do
     list_posts() |> Enum.flat_map(& &1.tags) |> Enum.uniq() |> Enum.sort()
   end

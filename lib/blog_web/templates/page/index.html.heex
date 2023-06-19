@@ -49,6 +49,27 @@
 </section>
 
 <section class="mt-20">
+  <h2>Top Posts</h2>
+  <div class="mt-4 space-y-12">
+    <%= for post <- @top_posts do %>
+      <div class="">
+        <h3 class="font-medium">
+          <%= live_redirect("#{String.duplicate("🌟", post.rating)} #{post.title}",
+            to: Routes.post_show_path(@socket, :show, post.id)
+          ) %>
+        </h3>
+        <p class="mt-2 text-primary-600 text-base">
+          <span class="bg-gray-100 rounded pl-2 pr-0 mr-2 py-0.5 text-sm md:text-base">
+            <%= format_published_date(post.date) %>
+          </span>
+          <%= post.description %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</section>
+
+<section class="mt-20">
   <h2>All Posts</h2>
   <div class="mt-4 flex items-center flex-wrap">
     <%= live_patch("all",

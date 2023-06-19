@@ -6,6 +6,7 @@ defmodule BlogWeb.PageLive do
   @impl true
   def mount(%{}, _, %{assigns: %{live_action: :index}} = socket) do
     posts = Posts.list_posts()
+    top_posts = Posts.list_top_posts()
     tags = Posts.list_tags()
 
     meta_attrs = [
@@ -16,7 +17,8 @@ defmodule BlogWeb.PageLive do
       }
     ]
 
-    {:ok, socket |> assign(posts: posts, tags: tags, meta_attrs: meta_attrs)}
+    {:ok,
+     socket |> assign(posts: posts, tags: tags, meta_attrs: meta_attrs, top_posts: top_posts)}
   end
 
   def mount(_, _, socket) do

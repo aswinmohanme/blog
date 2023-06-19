@@ -2,7 +2,6 @@
   title: "How does UPI work ? A Technical Perspective.",
   tags: ~w(payments how india),
   description: "A technical look at how Unified Payments Interface (UPI) works under the hood.",
-  rating: 2
 }
 ---
 
