@@ -12,7 +12,7 @@ When I was starting to learn Phoenix the most trouble I had was how to organize 
 First let's see why we need Contexts.
 
 ## Phoenix is not your Application
-The reason why Contexts exists and is recommended instead of directly accessing the Ecto Schemas in the Controllers and LiveView is because Phoenix is Boundary that exists to deliver the business logic in your Core to your customers. Contexts exist to decouple your internal business logic from the external means of delivery. Let's say that your business logic is not decoupled and exists 
+The reason why Contexts exists and is recommended instead of directly accessing the Ecto Schemas in the Controllers and LiveView is because Phoenix is Boundary that exists to deliver the business logic in your Core to your customers. Contexts exist to decouple your internal business logic from the external means of delivery. Let's say that your business logic is not decoupled and exists inside your Controllers, where you directly call Ecto and 
 
 
 ### References
