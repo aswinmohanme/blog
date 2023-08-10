@@ -5,3 +5,5 @@
   draft: true
 }
 ---
+
+Elixir, Phoenix and LiveView is picking up steam. With it's recent additions of Machine learning capabilities and a cohesive ecosystem, it's gaining ground fast. But unlike the hype cycles of other languages, we do not see an influx of beginners into the language. It's mostly mid to senior level developers who are making the switch.
