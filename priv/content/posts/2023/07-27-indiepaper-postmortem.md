@@ -5,3 +5,5 @@
   draft: true
 }
 ---
+
+IndiePaper was my previous startup that I founded and ran as a solo-founder.
