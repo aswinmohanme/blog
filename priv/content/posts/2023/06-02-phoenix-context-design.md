@@ -33,8 +33,14 @@ Now let's get into the meaty part. Where to keep associations. Let's say that we
 
 What about the `get_profile_of_user(user)` function. Now that is tricky. Does it belong in the Users or Profiles functioh. The function should belong to the context which manipulates the schema. Since this function returns the `profile` it should go in the `Profiles` context. But then it violates the other rule that you cannot have two Secondary Contexts calling around schemas. So rewrite the function as `get_profile_of_user(user_id)`. Only pass ids or the primary struct of in the Secondary Context.
 
+### Teritiary Contexts
+Now let's bring up teritiary contexts. Sometimes you to code functions that need to touch two contexts. That's when we use Teritiary contexts. Use `UserPitches` to house functions that affect both the user and pitches together. That is where you can house the `list_pitches(user)` where user the user struct. You are only allowed to contact functions from secondary contexts from here.
+
 ### Higher Order Business Functions
-What about higher order business functions. Now these are functions that achieve a lot and touch a lot of different contexts. To organise them I create Jobs to be done contexts. Let's say that I have an order that needs to be fulfilled. I create a `CreateOrderJob` context. The context will only have one function, `run/1` that needs all the information that is required. If the data comes from a form that needs to be backed up by the
+What about higher order business functions. Now these are functions that achieve a lot and touch a lot of different contexts. To organise them I create Jobs to be done contexts. Let's say that I have an order that needs to be fulfilled. I create a `CreateOrderJob` context. The context will only have one function, `run/1` that needs all the information that is required. If the data comes from a form that needs to be backed up by the struct, you can use the `embed_struct` directive as well.
+
+- Use `run` function to run the fucntion
+- Use `changeset` to write the changeset as well.
 
 ### References
  - [A Proposal for Some New Rules for Phoenix Contexts](https://devonestes.com/a-proposal-for-context-rules)
