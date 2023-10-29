@@ -7,8 +7,8 @@
 
     <%= if assigns[:meta_attrs], do: meta_tags(assigns[:meta_attrs]) %>
 
-    <.live_title suffix=" · Phoenix Framework">
-      <%= assigns[:page_title] || "Aswin Mohan", suffix: "  · aswinmohan.me" %>
+    <.live_title suffix=" · aswinmohan.me">
+      <%= assigns[:page_title] || "Aswin Mohan" %>
     </.live_title>
 
     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
@@ -17,6 +17,7 @@
     </script>
 
     <script defer data-domain="aswinmohan.me" src="https://plausible.io/js/script.js">
+    </script>
   </head>
   <body>
     <header>
@@ -27,22 +28,27 @@
       </p>
       <div class="mt-4 flex flex-col items-start space-y-2 md:flex-row md:items-center md:space-y-0 md:justify-between">
         <div class="flex flex-row items-center space-x-2 -ml-2">
-          <%= live_redirect("home",
-            to: ~p"/",
-            class: "px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black"
-          ) %>
-          <%= live_redirect("about",
-            to: ~p"/about",
-            class: "px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black"
-          ) %>
-          <%= live_redirect("now",
-            to: ~p"/now",
-            class: "px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black"
-          ) %>
-          <%= live_redirect("talks",
-            to: ~p"/talks",
-            class: "px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black"
-          ) %>
+          <.link patch={~p"/"} class="px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black">
+            home
+          </.link>
+          <.link
+            patch={~p"/about"}
+            class="px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black"
+          >
+            about
+          </.link>
+          <.link
+            patch={~p"/now"}
+            class="px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black"
+          >
+            now
+          </.link>
+          <.link
+            patch={~p"/talks"}
+            class="px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black"
+          >
+            talks
+          </.link>
         </div>
         <div class="flex flex-row items-center space-x-2 -ml-2">
           <a

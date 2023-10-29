@@ -52,11 +52,11 @@
     <div class="mt-4 space-y-12">
       <%= for post <- @top_posts do %>
         <div class="">
-          <h3 class="font-medium">
-            <%= live_redirect("#{String.duplicate("🌟", post.rating)} #{post.title}",
-              to: ~p"/#{post.id}"
-            ) %>
-          </h3>
+          <.link navigate={~p"/#{post.id}"}>
+            <h3 class="font-medium">
+              <%= String.duplicate("🌟", post.rating) %> <%= post.title %>
+            </h3>
+          </.link>
           <p class="mt-2 text-primary-600 text-base">
             <%= post.description %>
           </p>
@@ -74,21 +74,21 @@
           "block px-2 py-1 hover:bg-yellow-300 hover:text-gray-900 rounded shrink-0 text-primary-500 text-sm md:text-base"
       ) %>
       <%= for tag <- @tags do %>
-        <%= live_patch(tag,
-          to: ~p"/?tag=#{tag}",
-          class:
-            "block px-2 py-1 hover:bg-yellow-300 hover:text-gray-900 rounded shrink-0 text-primary-500 text-sm md:text-base"
-        ) %>
+        <.link patch={~p"/?tag=#{tag}"}>
+          <p class="block px-2 py-1 hover:bg-yellow-300 hover:text-gray-900 rounded shrink-0 text-primary-500 text-sm md:text-base">
+            <%= tag %>
+          </p>
+        </.link>
       <% end %>
     </div>
     <div class="mt-10 space-y-12">
       <%= for post <- @posts do %>
         <div class="">
-          <h3 class="font-medium">
-            <%= live_redirect("#{String.duplicate("🌟", post.rating)} #{post.title}",
-              to: ~p"/#{post.id}"
-            ) %>
-          </h3>
+          <.link navigate={~p"/#{post.id}"}>
+            <h3 class="font-medium">
+              <%= String.duplicate("🌟", post.rating) %> <%= post.title %>
+            </h3>
+          </.link>
           <p class="mt-2 text-primary-600 text-base">
             <span class="bg-gray-100 rounded pl-2 pr-0 mr-2 py-0.5 text-sm md:text-base">
               <%= format_published_date(post.date) %>
