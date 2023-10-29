@@ -8,16 +8,16 @@ defmodule Blog.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Start the Ecto repository
-      Blog.Repo,
-      # Start the Telemetry supervisor
       BlogWeb.Telemetry,
-      # Start the PubSub system
+      Blog.Repo,
+      {DNSCluster, query: Application.get_env(:blog, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Blog.PubSub},
-      # Start the Endpoint (http/https)
-      BlogWeb.Endpoint
+      # Start the Finch HTTP client for sending emails
+      {Finch, name: Blog.Finch},
       # Start a worker by calling: Blog.Worker.start_link(arg)
-      # {Blog.Worker, arg}
+      # {Blog.Worker, arg},
+      # Start to serve requests, typically the last entry
+      BlogWeb.Endpoint
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

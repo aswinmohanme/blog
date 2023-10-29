@@ -1,0 +1,375 @@
+<div :if={@live_action == :index}>
+  <section class="mt-12 md:mt-16">
+    <h2>Best Work</h2>
+    <div class="mt-6 grid grid-cols-1 gap-y-4 gap-x-4 md:grid-cols-2 md:gap-6">
+      <div class="px-4 py-2 rounded-lg bg-gray-100 border">
+        <a href="https://nellohq.com" class="">Nello</a>
+        <p class="text-primary-700 mt-1 text-sm md:text-base">
+          Enable businesses to get paid 1/10th the cost, time and effort.
+        </p>
+      </div>
+      <div class="px-4 py-2 rounded-lg bg-gray-100 border">
+        <a href="https://nellopay.com" class="">Nello Pay</a>
+        <p class="text-primary-700 mt-1 text-sm md:text-base">
+          A UPI like payments app built on top of bank transfers.
+        </p>
+      </div>
+      <div class="px-4 py-2 rounded-lg bg-gray-100 border">
+        <a href="https://www.producthunt.com/products/indiepaper" class="">IndiePaper</a>
+        <p class="text-primary-700 mt-1 text-sm md:text-base">
+          A self-publishing platform for Indie Authors.
+        </p>
+      </div>
+      <div class="px-4 py-2 rounded-lg bg-gray-100 border">
+        <a href="https://github.com/coronasafe/coronaRM">CoronaRM</a>
+        <p class="text-primary-700 mt-1 text-sm md:text-base">
+          A CRM for contact tracing implemented in Pathanamthitta, Kerala.
+        </p>
+      </div>
+      <div class="px-4 py-2 rounded-lg bg-gray-100 border">
+        <a
+          href="https://play.google.com/store/apps/details?id=me.aswinmohan.nophone&hl=en_IN&gl=US"
+          class=""
+        >
+          LessPhone
+        </a>
+        <p class="text-primary-700 mt-1 text-sm md:text-base">
+          A minimal Android Launcher to reduce phone use with over 250,000
+          downloads.
+        </p>
+      </div>
+      <div class="px-4 py-2 rounded-lg bg-gray-100 border">
+        <a class="" href="https://github.com/aswinmohanme/ultronOS">Ultron OS</a>
+        <p class="text-primary-700 mt-1 text-sm md:text-base">
+          A bootable Operating System as my high-school project.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2>Top Posts</h2>
+    <div class="mt-4 space-y-12">
+      <%= for post <- @top_posts do %>
+        <div class="">
+          <h3 class="font-medium">
+            <%= live_redirect("#{String.duplicate("🌟", post.rating)} #{post.title}",
+              to: ~p"/#{post.id}"
+            ) %>
+          </h3>
+          <p class="mt-2 text-primary-600 text-base">
+            <%= post.description %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <h2>All Posts</h2>
+    <div class="mt-4 flex items-center flex-wrap">
+      <%= live_patch("all",
+        to: ~p"/",
+        class:
+          "block px-2 py-1 hover:bg-yellow-300 hover:text-gray-900 rounded shrink-0 text-primary-500 text-sm md:text-base"
+      ) %>
+      <%= for tag <- @tags do %>
+        <%= live_patch(tag,
+          to: ~p"/?tag=#{tag}",
+          class:
+            "block px-2 py-1 hover:bg-yellow-300 hover:text-gray-900 rounded shrink-0 text-primary-500 text-sm md:text-base"
+        ) %>
+      <% end %>
+    </div>
+    <div class="mt-10 space-y-12">
+      <%= for post <- @posts do %>
+        <div class="">
+          <h3 class="font-medium">
+            <%= live_redirect("#{String.duplicate("🌟", post.rating)} #{post.title}",
+              to: ~p"/#{post.id}"
+            ) %>
+          </h3>
+          <p class="mt-2 text-primary-600 text-base">
+            <span class="bg-gray-100 rounded pl-2 pr-0 mr-2 py-0.5 text-sm md:text-base">
+              <%= format_published_date(post.date) %>
+            </span>
+            <%= post.description %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  </section>
+</div>
+
+<article :if={@live_action == :about}>
+  <section>
+    <h1>About</h1>
+    <p>
+      Hey, I'm Aswin Mohan. I'm a Software Developer who works across
+      frontend, backend, mobile and design. I am currently based out of
+      Kerala, India. I love to design, code and make bold, beautiful, useful
+      things. I love film photography, old typewriters and completely
+      mechanical things.
+    </p>
+    <p>
+      I primarly work with Elixir, Phoenix LiveView, React, NextJS, React
+      Native and TailwindCSS. I do occasional Rails, Flutter and sometimes
+      UI/UX design to make something look less ugly.
+    </p>
+  </section>
+  <section>
+    <h2>What is this blog?</h2>
+    <p>
+      This blog is my corner on the Internet. I love to write, to share my
+      thoughts with the world, to have great conversations with people and
+      enjoy life. I'm forever grateful for the Internet for providing a near free platform for that. This blog doesn't have any other goals
+      than being a public record of my thoughts, so expect it to be a
+      small garden with flowers, moss and weeds all growing together. You can find my resume
+      <a href="./resume.pdf">here</a>
+      and if
+      you like what I write, share your thoughts with me at <a href="mailto:hey@aswinmohan.me">hey@aswinmohan.me</a>.
+    </p>
+  </section>
+  <section>
+    <h2>Timeline</h2>
+    <div>
+      <p>
+        <span class="mr-1 rounded-full bg-gray-200 px-2">2023 Aug</span>
+        Tore my ACL and had reconstruction surgery. The most pain I have ever felt.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-yellow-200 px-2">2023 July</span>
+        Going all in on a stealth B2B focused startup. Founder life, round two.
+      </p>
+      <br />
+      <p>
+        <span class="mr-1 rounded-full bg-gray-200 px-2">2022 Oct</span>
+        Shut down Nello due to very low customer interest and started working as an Elixir Phoenix consultant.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-yellow-200 px-2">2022 Aug</span>
+        Started working on Nello, a new payments app. Think Paypal, but
+        cheaper and faster.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-yellow-200 px-2">2022 Jun</span>
+        Presented
+        <a href="https://www.elixirconf.eu/talks/getting-to-phoenix-liveview-a-journey-through-nextjs-hasura-faunadb-supabase-rails-and-vanilla-phoenix/">
+          The Joy of Building your Startup in Phoenix LiveView
+        </a>
+        at ElixirConf EU, 2022. First time presenting a talk at an
+        International Conference.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-gray-200 px-2">2022 Mar</span>
+        Started working on a secret Fintech thing for India.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-yellow-200 px-2">2022 Jan</span>
+        Release Indiepaper on Product Hunt.
+      </p>
+      <br />
+      <p>
+        <span class="mr-1 rounded-full bg-gray-200 px-2">2021 Oct</span>
+        Quit job at Buy Me a Coffee for IndiePaper.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-gray-200 px-2">2021 Oct</span>
+        Released IndiePaper on Hacker News.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-gray-200 px-2">2021 Mar</span>
+        Started working on <a href="https://indiepaper.me">indiepaper.me</a>.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-yellow-200 px-2">2021 Apr</span>
+        Incorporated IndiePaper as Delaware C Corp.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-yellow-200 px-2">2020 Nov</span>
+        Got first job as a Mobile Developer with <a href="https://buymeacoffee.com">buymeacoffee.com</a>.
+      </p>
+      <br />
+      <p>
+        <span class="mr-1 rounded-full bg-yellow-200 px-2">2020 July</span>
+        Graduated from College of Engineering Chengannur with an Engineering
+        degree in Computer Science.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-yellow-200 px-2">2020 Mar</span>
+        Created a <a href="https://github.com/coronasafe/coronaRM">CRM</a>
+        to manage
+        patients during the start of the Pandemic, covered in
+        <a href="https://drive.google.com/file/d/1RlMMo3rzkZGdnGgK54bOl6vE4KvcKBOb/view?usp=sharing">
+          regional news
+        </a>
+        and <a href="https://drive.google.com/file/d/11xdX5nDezXWcihuSugnnw_FTtPVYtpiz/view?usp=share_link">newspapers</a>.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-yellow-200 px-2">2019 Nov</span>
+        LessPhone crosses 250,000 downloads.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-yellow-200 px-2">2018 Aug</span>
+        Created <a href="https://github.com/aswinmohanme/kerala-flood-map">Kerala Flood Map</a>
+        to locate people stranded in 2018 Floods.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-yellow-200 px-2">2018 Aug</span>
+        <a href="https://www.youtube.com/watch?v=msULur7oQho">Unbox Therapy covered LessPhone</a>
+        on channel, makes first $1000.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-gray-200 px-2">2018 Jun</span>
+        Made my first dollar from the Internet.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-yellow-200 px-2">2018</span>
+        Published
+        <a href="https://play.google.com/store/apps/details?id=me.aswinmohan.nophone&hl=en&gl=US">
+          LessPhone(NoPhone)
+        </a>
+        in Play Store.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-gray-200 px-2">2018</span>
+        Published first App in Play Store.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-gray-200 px-2">2017</span> Started
+        learning Mobile Development with React Native.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-gray-200 px-2">2016</span> Joined
+        College of Engineering Chengannur with CS major.
+      </p>
+      <br />
+      <p>
+        <span class="mr-1 rounded-full bg-yellow-200 px-2">2016</span>
+        Graduated top of State in Computer Science (100/100).
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-yellow-200 px-2">2015</span>
+        Made
+        a hardware bootable
+        <a href="https://news.ycombinator.com/item?id=19070114">Operating System</a>
+        for my high-school project.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-gray-200 px-2">2015</span> Made a
+        simple <a href="https://fb.watch/4p9LUIGIif/">Programming Language</a> with
+        Ruby.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-gray-200 px-2">2014</span>
+        Started
+        learning to code with C++ from the
+        <a href="https://www.youtube.com/watch?v=tvC1WCdV1XU&list=PLAE85DE8440AA6B83">
+          New Boston Youtube
+        </a>
+        channel.
+      </p>
+      <br />
+      <p>
+        <span class="mr-1 rounded-full bg-gray-200 px-2">2014</span> Started
+        my first website bloggytricks.in.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-gray-200 px-2">2013</span> Got my
+        first laptop after waiting four years.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-gray-200 px-2">2009</span>
+        Searched on the internet for the first time.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-yellow-200 px-2">2007</span> Used
+        a Computer for the first time.
+      </p>
+      <p>
+        <span class="mr-1 rounded-full bg-gray-200 px-2">1999</span> Born in
+        Kerala/India.
+      </p>
+    </div>
+  </section>
+</article>
+
+<article :if={@live_action == :now}>
+  <h1>Now</h1>
+  <p>
+    This is my now page, inspired by <a href="https://sive.rs/now">Derek Siver's Now page</a>. It lists out
+    what I'm currently working on and why.
+  </p>
+  <h2>Work</h2>
+  <p>
+    Currently working on <a href="https://nellohq.com">Nello</a>. It's a B2B checkout platform that enables SMBs to recieve and send cross-border payments at 1/10th the cost, time and effort.
+  </p>
+  <h2>Archive</h2>
+  <ul>
+    <li>
+      <p>
+        Currently working as an Elixir Phoenix Consultant with pre MVP and Early Stage Startups. Primarily focused on Web and Mobile apps with the backend in Phoenix, web frontend in LiveView and mobile in React Native and styling with TailwindCSS.
+      </p>
+    </li>
+    <li>
+      <p>
+        Currently working on a stealth B2B focused startup as a solo-founder. The B2B cross-border payments space even though is $100T Industry, is still in it's earliest stages of user-experience, far overtaken by consumer payments.
+        We are at a point where we can improve the end-to-end B2B payments experience.
+      </p>
+      <p>
+        Working on Nello. It's a payment app that consolidates different
+        payment methods so you can send money locally and globally and we'll
+        route your money through the cheapest, fastest payment method. In
+        it's most earliest stages and needs a lot of work.
+      </p>
+    </li>
+    <li>
+      <p>
+        Currently I'm working on something secret. It's related to payments
+        and India. I have a clear idea about what the end product is going
+        to be, but it's so early I don't know how we're going to get there.
+      </p>
+    </li>
+  </ul>
+</article>
+
+<article :if={@live_action == :talks}>
+  <h1>Talks</h1>
+  <p>Lists the talks I have presented at various conferences and events.</p>
+  <h2>Tech Talks</h2>
+  <div class="mt-6 space-y-10">
+    <div>
+      <h3>
+        <a href="https://www.elixirconf.eu/talks/getting-to-phoenix-liveview-a-journey-through-nextjs-hasura-faunadb-supabase-rails-and-vanilla-phoenix/">
+          🌟 The Joy of Building your Startup with Phoenix LiveView -
+          ElixirConf EU 2022
+        </a>
+      </h3>
+      <p class="mt-2">
+        A talk about my journey building <a href="https://indiepaper.me">IndiePaper</a>
+        using different tech
+        stacks and finally settling on Phoenix LiveView. I talk about the
+        advantages of Elixir, Phoenix and LiveView and the advantages and
+        disadvantages of choosing LiveView for your startup.
+        <a href="https://github.com/aswinmohanme/talks/blob/master/ELIXICONF_EU_2022/TheJoyOfBuildingYourStartupInElx.pdf">
+          Slides
+        </a>
+      </p>
+    </div>
+    <div>
+      <h3>
+        <a href="https://www.youtube.com/watch?v=L4JTPaY_aWw">
+          Building the Map Frontend for Kerala Rescue - FOSSMeet '19
+        </a>
+      </h3>
+      <p class="mt-2">
+        During the floods of Kerala in 2018, I built a map based frontend
+        for Kerala Rescue. It was deployed along side the official disaster
+        management platform. This talk covers the story behind it.
+        <a href="https://github.com/aswinmohanme/talks/blob/master/FOSSMEET_2019/presentation.pdf">
+          Slides
+        </a>
+      </p>
+    </div>
+  </div>
+</article>

@@ -7,64 +7,45 @@ defmodule BlogWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_blog_key",
-    signing_salt: "oCyC9WPj"
+    signing_salt: "BLLxVxnY",
+    same_site: "Lax"
   ]
 
-  # Redirect to canonical URL
-  plug(:canonical_host)
-
-  socket("/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]])
+  socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
 
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phx.digest
   # when deploying your static files in production.
-  plug(Plug.Static,
+  plug Plug.Static,
     at: "/",
     from: :blog,
     gzip: false,
-    only: ~w(assets fonts images favicon.ico robots.txt resume.pdf)
-  )
+    only: BlogWeb.static_paths()
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
-    socket("/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket)
-    plug(Phoenix.LiveReloader)
-    plug(Phoenix.CodeReloader)
-    plug(Phoenix.Ecto.CheckRepoStatus, otp_app: :blog)
+    socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
+    plug Phoenix.LiveReloader
+    plug Phoenix.CodeReloader
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :blog
   end
 
-  plug(Phoenix.LiveDashboard.RequestLogger,
+  plug Phoenix.LiveDashboard.RequestLogger,
     param_key: "request_logger",
     cookie_key: "request_logger"
-  )
 
-  plug(Plug.RequestId)
-  plug(Plug.Telemetry, event_prefix: [:phoenix, :endpoint])
+  plug Plug.RequestId
+  plug Plug.Telemetry, event_prefix: [:phoenix, :endpoint]
 
-  plug(Plug.Parsers,
+  plug Plug.Parsers,
     parsers: [:urlencoded, :multipart, :json],
     pass: ["*/*"],
     json_decoder: Phoenix.json_library()
-  )
 
-  plug(Plug.MethodOverride)
-  plug(Plug.Head)
-  plug(Plug.Session, @session_options)
-  plug(BlogWeb.Redirector)
-  plug(BlogWeb.Router)
-
-  defp canonical_host(conn, _opts) do
-    :blog
-    |> Application.get_env(:canonical_host)
-    |> case do
-      host when is_binary(host) ->
-        opts = PlugCanonicalHost.init(canonical_host: host)
-        PlugCanonicalHost.call(conn, opts)
-
-      _ ->
-        conn
-    end
-  end
+  plug Plug.MethodOverride
+  plug Plug.Head
+  plug Plug.Session, @session_options
+  plug BlogWeb.Router
 end
