@@ -4,12 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content={get_csrf_token()} />
+
+    <%= if assigns[:meta_attrs], do: meta_tags(assigns[:meta_attrs]) %>
+
     <.live_title suffix=" · Phoenix Framework">
-      <%= assigns[:page_title] || "Blog" %>
+      <%= assigns[:page_title] || "Aswin Mohan", suffix: "  · aswinmohan.me" %>
     </.live_title>
+
     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
     </script>
+
+    <script defer data-domain="aswinmohan.me" src="https://plausible.io/js/script.js">
   </head>
   <body>
     <header>
