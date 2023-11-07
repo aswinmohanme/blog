@@ -14,7 +14,7 @@ config :blog,
 # Configures the endpoint
 config :blog, BlogWeb.Endpoint,
   url: [host: "localhost"],
-  adapter: Phoenix.Endpoint.Cowboy2Adapter,
+  adapter: Bandit.PhoenixAdapter,
   render_errors: [
     formats: [html: BlogWeb.ErrorHTML, json: BlogWeb.ErrorJSON],
     layout: false

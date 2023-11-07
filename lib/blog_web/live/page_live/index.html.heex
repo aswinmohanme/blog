@@ -68,11 +68,11 @@
   <section class="mt-20">
     <h2>All Posts</h2>
     <div class="mt-4 flex items-center flex-wrap">
-      <%= live_patch("all",
-        to: ~p"/",
-        class:
-          "block px-2 py-1 hover:bg-yellow-300 hover:text-gray-900 rounded shrink-0 text-primary-500 text-sm md:text-base"
-      ) %>
+      <.link patch={~p"/"}>
+        <p class="block px-2 py-1 hover:bg-yellow-300 hover:text-gray-900 rounded shrink-0 text-primary-500 text-sm md:text-base">
+          all
+        </p>
+      </.link>
       <%= for tag <- @tags do %>
         <.link patch={~p"/?tag=#{tag}"}>
           <p class="block px-2 py-1 hover:bg-yellow-300 hover:text-gray-900 rounded shrink-0 text-primary-500 text-sm md:text-base">

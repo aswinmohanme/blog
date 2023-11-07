@@ -54,6 +54,7 @@ defmodule Blog.MixProject do
       {:nimble_publisher, "~> 0.1.1"},
       {:plug_redirect, "~> 1.0"},
       {:plug_canonical_host, "~> 2.0"},
+      {:bandit, "~> 1.0"},
       {:mix_test_interactive, "~> 1.0", only: :dev, runtime: false}
     ]
   end

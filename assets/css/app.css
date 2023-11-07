@@ -10,11 +10,11 @@
 
   article {
     @apply prose mt-12 max-w-none prose-p:text-gray-700 prose-strong:text-gray-800 prose-headings:text-base prose-headings:text-gray-800
-                                                                                                                           prose-h1:font-semibold prose-h2:mt-12 prose-h3:mt-6 prose-h2:font-semibold
+                                                                                                                           prose-h1:font-semibold prose-h1:mt-12 prose-h2:mt-8 prose-h3:mt-6 prose-h2:font-semibold
                                                                                                                                                                                         prose-h3:text-base prose-h3:md:text-lg prose-h3:font-medium prose-h4:text-base prose-h4:font-medium prose-a:font-normal prose-a:text-gray-800
                                                                                                                                                                                                                                                                                                                         prose-a:no-underline prose-pre:rounded-none prose-pre:bg-stone-100 prose-pre:text-gray-800
                                                                                                                                                                                                                                                                                                                                                                                                      prose-p:md:text-lg
-                                                                                                                                                                                                                                                                                                                                                                                                                prose-li:md:text-lg
+                                                                                                                                                                                                                                                                                                                                                                                                                prose-li:md:text-lg;
   }
 
   a {
@@ -78,5 +78,4 @@
     src: url(../fonts/anka-coder.ttf) format("truetype");
     font-display: fallback;
   }
-
 }
