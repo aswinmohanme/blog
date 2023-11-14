@@ -35,7 +35,7 @@ Although these are only tendencies, the knowledge about them is not to treat you
 ## Romanitisier
 
 # Understand Relationship
-A relatioship is something that is independent from you and your partner. You have to nurture it as a separate entity. This means that you have to put in major effort to maintina it.
+A relatioship is something that is independent from you and your partner. You have to nurture it as a separate entity. This means that you have to put in major effort to maintina it. I believe that the relationship is the first born of a communinon and you have to put in the same amount of effort as raising a cihld into the relationship.
 
 ## Build a relationship, not find one
 
@@ -67,3 +67,5 @@ There is no price at the end of your career. Choose someone who you can grow wit
 ## Reconcilation
 
 # Love yourself and Trust the Universe
+
+# Resources
