@@ -86,6 +86,7 @@
         <div class="">
           <.link navigate={~p"/#{post.id}"}>
             <h3 class="font-medium">
+              <span :if={Posts.draft?(post)}>✍️</span>
               <%= String.duplicate("🌟", post.rating) %> <%= post.title %>
             </h3>
           </.link>

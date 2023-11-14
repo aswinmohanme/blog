@@ -41,4 +41,6 @@ defmodule Blog.Posts do
       posts -> posts
     end
   end
+
+  def draft?(post), do: post.draft
 end

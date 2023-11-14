@@ -11,10 +11,10 @@ Last year I broke up with my first long-term girlfriend. Even though the breakup
 
 I have debated with myself whether I should post this or not. It all came to the question that if a resource like this existed when I was going through heartbreak, it would have helped me and I said to myself it would. So here it is.
 
-This post touches everything from getting dates, to choosing your partner, to maintaining healthy relationships, to how to handle breakups and how to let go, reconcile and move on. This post is also written from the perspective of a guy who wants to be in a realtionship with a girl, although it can be adapted to your circumstance. Also this is my perspective and the things and the advice that resonated with me. This is no way the best way forward and I hope you can see it too. This post is centered around getting into and maintaining long term healthy monogamous relationships.
+This post touches everything from getting dates, to choosing your partner, to maintaining healthy relationships, to how to handle breakups and how to let go, reconcile and move on. This post is written as advice a 24 year old guy, although it can be adapted to your circumstance. Also this is my perspective and the things and the advice that resonated with me. This is no way the best way forward and I hope you can see it too. This post is centered around getting into and maintaining long term healthy monogamous relationships.
 
 # We need other Humans
-Fulfilling relationships are not the result of a happy life, but the cause of it.
+Fulfilling relationships are not the result of a happy life, but the cause of it. Human beings are not designed to survive in isolation.
 
 You need people to support you and motivate you.
 
@@ -59,3 +59,11 @@ There is no price at the end of your career. Choose someone who you can grow wit
 
 ## Maintaining great long term compatiblity
 ## Marriage and Kids
+
+# Breaking Up
+
+## Figure out if breakup is the right 
+## Handling a breakup properly
+## Reconcilation
+
+# Love yourself and Trust the Universe
