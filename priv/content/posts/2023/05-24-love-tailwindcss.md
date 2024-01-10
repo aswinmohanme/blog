@@ -6,12 +6,12 @@
 }
 ---
 
-TailwindCSS is a [utility first]() CSS framework primarily designed for the modern web. Rather than giving a bunch of predefined classes such as `button button-primary`, it gives a collection of well thought out atomic classes such as `px-2 text-gray-200` that can be composed together to form our own custom styles. 
+TailwindCSS is a [utility first]() CSS framework primarily designed for the modern web. Rather than giving a bunch of predefined classes such as `button button-primary`, it gives a collection of well thought out atomic classes such as `px-2 text-gray-200` that can be composed together to form our own custom component styles. 
 
 I have been using TailwindCSS since 2020 and in this post I'll explain why I love it so much and why I use it for all my projects by default.
 
 ### Consistently Simple Styling Abstraction
-Tailwind is a light abstraction over CSS. CSS akin to Javascript grew up with the World Wide Web and so it has all the quirks you expect from the web. There are specificity issues, vendor specific flags, styling quirks that you will only understand once you have spend your time mastering it. What Tailwind does it, it takes CSS and creates an abstraction on top by what you want done, rather than how to do it.
+Tailwind is a light abstraction over CSS. CSS akin to Javascript grew up with the World Wide Web and so it has all the quirks you expect from the web. There are specificity issues, vendor specific flags, styling quirks that you will only understand once you have spend your time mastering it. What Tailwind does it, it takes CSS and creates an abstraction on top by what you want done, rather than how to do it. So rather than figuring out who to implement padding, we use `px-4` which sets the padding.
 
 It is also consistent across projects. I have no problem working on projects that I have worked on in the beginning with Tailwind as the classes and their functionality have remained the same. After a while the mental vocabulary of classes is enough to build out entire projects without ever consulting any documentation.
 

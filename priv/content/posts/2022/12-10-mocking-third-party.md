@@ -11,8 +11,6 @@ Testing in Elixir is awesome. Unlike other languages and frameworks, testing is 
 
 When writing LiveView apps, I mostly write integration tests that span an entire user action. Since the tests are executed by a GenServer instead of an actual browser the tests and fast and stable. Issues start to come up when the code path contains third-party dependencies that call external APIs. If you do not mock those dependencies, the APIs get hit everytime you run your tests, making those tests slow and brittle. In this post I'll explain how I mock those third party APIs with an expected static reply, so our tests run fast again.
 
-This is more like a thinking aloud in public post. Mocking third party dependencies is actually hard, we have the tradeoff between flexibility and ease of implementation. If you have a better method, please take part in the implementation.
-
 
 ## Abstracting to Services
 The first step is to abstract away calls to the API in it's own service module. Let's say that I want to integrate with [Plaid](https://plaid.com) for my new payments app Nello so customers can connect their bank accounts. The connection requires two API calls, so I create a new service in my `lib/nello/services/plaid.ex`
