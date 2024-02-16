@@ -3,6 +3,12 @@
     <h2>Best Work</h2>
     <div class="mt-6 grid grid-cols-1 gap-y-4 gap-x-4 md:grid-cols-2 md:gap-6">
       <div class="px-4 py-2 rounded-lg bg-gray-100 border">
+        <a href="https://modernresume.io" class="">ModernResume</a>
+        <p class="text-primary-700 mt-1 text-sm md:text-base">
+          A resume builder for Software Engineers, written in Phoenix LiveView.
+        </p>
+      </div>
+      <div class="px-4 py-2 rounded-lg bg-gray-100 border">
         <a href="https://www.producthunt.com/products/indiepaper" class="">IndiePaper</a>
         <p class="text-primary-700 mt-1 text-sm md:text-base">
           A self-publishing platform for Indie Authors.
@@ -57,13 +63,19 @@
     <h2>All Posts</h2>
     <div class="mt-4 flex items-center flex-wrap">
       <.link patch={~p"/"}>
-        <p class="block px-2 py-1 hover:bg-yellow-300 hover:text-gray-900 rounded shrink-0 text-primary-500 text-sm md:text-base">
+        <p class={[
+          "block px-2 py-1 hover:bg-yellow-300 hover:text-gray-900 rounded shrink-0 text-primary-500 text-sm md:text-base",
+          is_nil(@selected_tag) && "bg-yellow-300 !text-gray-900"
+        ]}>
           all
         </p>
       </.link>
       <%= for tag <- @tags do %>
         <.link patch={~p"/?tag=#{tag}"}>
-          <p class="block px-2 py-1 hover:bg-yellow-300 hover:text-gray-900 rounded shrink-0 text-primary-500 text-sm md:text-base">
+          <p class={[
+            "block px-2 py-1 hover:bg-yellow-300 hover:text-gray-900 rounded shrink-0 text-primary-500 text-sm md:text-base",
+            @selected_tag == tag && "bg-yellow-300 !text-gray-900"
+          ]}>
             <%= tag %>
           </p>
         </.link>

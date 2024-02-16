@@ -19,7 +19,13 @@ defmodule BlogWeb.PageLive.Index do
 
     {:ok,
      socket
-     |> assign(posts: posts, tags: tags, meta_attrs: meta_attrs, top_posts: top_posts)}
+     |> assign(
+       posts: posts,
+       tags: tags,
+       meta_attrs: meta_attrs,
+       top_posts: top_posts,
+       selected_tag: nil
+     )}
   end
 
   def mount(_, _, socket) do
@@ -29,13 +35,13 @@ defmodule BlogWeb.PageLive.Index do
   @impl true
   def handle_params(%{"tag" => tag}, _, %{assigns: %{live_action: :index}} = socket) do
     posts = Posts.list_posts_by_tag!(tag)
-    {:noreply, socket |> assign(posts: posts)}
+    {:noreply, socket |> assign(posts: posts, selected_tag: tag)}
   end
 
   @impl true
   def handle_params(%{}, _, %{assigns: %{live_action: :index}} = socket) do
     posts = Posts.list_posts()
-    {:noreply, socket |> assign(posts: posts)}
+    {:noreply, socket |> assign(posts: posts, selected_tag: nil)}
   end
 
   @impl true
