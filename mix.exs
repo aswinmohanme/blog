@@ -55,6 +55,7 @@ defmodule Blog.MixProject do
       {:plug_redirect, "~> 1.0"},
       {:plug_canonical_host, "~> 2.0"},
       {:bandit, "~> 1.0"},
+      {:tailwind_formatter, "~> 0.4.0", runtime: false},
       {:mix_test_interactive, "~> 1.0", only: :dev, runtime: false}
     ]
   end

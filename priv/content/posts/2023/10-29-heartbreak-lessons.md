@@ -7,6 +7,8 @@ rating: 2
 }
 ---
 
+![Please stay written on a stone](/images/please-stay.jpeg)
+
 Last year I broke up with my first long-term girlfriend. Even though the breakup was my own doing, it threw me heartbreak, frantically searching for answers and therapy for one and half years. I spent an inordinate amount of time watching Youtube videos, reading books, blog and reddit posts to better understand relationships, what works in the ones that last and how to cope with heartbreak. This blog post is the culmination of all the lessons that I learnt on how to get, maintain and be happy in long-term relationships.
 
 I have debated with myself whether I should post this or not since the information and lessons are personal enough to never see the light outside my notes. But I am deciding to publish this, because if I had come across a resource like this earlier in my journey it would have saved me a lot of pain and stress.

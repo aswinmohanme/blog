@@ -1,26 +1,26 @@
 <div :if={@live_action == :index}>
   <section class="mt-12 md:mt-16">
     <h2>Best Work</h2>
-    <div class="mt-6 grid grid-cols-1 gap-y-4 gap-x-4 md:grid-cols-2 md:gap-6">
-      <div class="px-4 py-2 rounded-lg bg-primary-100 border border-primary-200 shadow-xs">
+    <div class="mt-6 grid grid-cols-1 gap-x-4 gap-y-4 md:grid-cols-2 md:gap-6">
+      <div class="bg-primary-100 border-primary-200 shadow-xs rounded-lg border px-4 py-2">
         <a href="https://modernresume.io" class="">ModernResume</a>
         <p class="text-primary-700 mt-1 text-sm md:text-base">
           A resume builder for Software Engineers, written in Phoenix LiveView.
         </p>
       </div>
-      <div class="px-4 py-2 rounded-lg bg-primary-100 border border-primary-200 shadow-xs">
+      <div class="bg-primary-100 border-primary-200 shadow-xs rounded-lg border px-4 py-2">
         <a href="https://www.producthunt.com/products/indiepaper" class="">IndiePaper</a>
         <p class="text-primary-700 mt-1 text-sm md:text-base">
           A self-publishing platform for Indie Authors.
         </p>
       </div>
-      <div class="px-4 py-2 rounded-lg bg-primary-100 border border-primary-200 shadow-xs">
+      <div class="bg-primary-100 border-primary-200 shadow-xs rounded-lg border px-4 py-2">
         <a href="https://github.com/coronasafe/coronaRM">CoronaRM</a>
         <p class="text-primary-700 mt-1 text-sm md:text-base">
           A CRM for contact tracing implemented in Pathanamthitta, Kerala.
         </p>
       </div>
-      <div class="px-4 py-2 rounded-lg bg-primary-100 border border-primary-200 shadow-xs">
+      <div class="bg-primary-100 border-primary-200 shadow-xs rounded-lg border px-4 py-2">
         <a
           href="https://play.google.com/store/apps/details?id=me.aswinmohan.nophone&hl=en_IN&gl=US"
           class=""
@@ -32,7 +32,7 @@
           downloads.
         </p>
       </div>
-      <div class="px-4 py-2 rounded-lg bg-primary-100 border border-primary-200 shadow-xs">
+      <div class="bg-primary-100 border-primary-200 shadow-xs rounded-lg border px-4 py-2">
         <a class="" href="https://github.com/aswinmohanme/ultronOS">Ultron OS</a>
         <p class="text-primary-700 mt-1 text-sm md:text-base">
           A bootable Operating System as my high-school project.
@@ -51,7 +51,7 @@
               <%= String.duplicate("🌟", post.rating) %> <%= post.title %>
             </h3>
           </.link>
-          <p class="mt-2 text-primary-600 text-base">
+          <p class="text-primary-600 mt-2 text-base">
             <%= post.description %>
           </p>
         </div>
@@ -61,11 +61,11 @@
 
   <section class="mt-20">
     <h2>All Posts</h2>
-    <div class="mt-4 flex items-center flex-wrap">
+    <div class="mt-4 flex flex-wrap items-center">
       <.link patch={~p"/"}>
         <p class={[
-          "block px-2 py-1 hover:bg-yellow-300 hover:text-primary-900 rounded shrink-0 text-primary-500 text-sm md:text-base",
-          is_nil(@selected_tag) && "bg-yellow-300 !text-primary-900"
+          "text-primary-500 block shrink-0 rounded px-2 py-1 text-sm hover:text-primary-900 hover:bg-yellow-300 md:text-base",
+          is_nil(@selected_tag) && "!text-primary-900 bg-yellow-300"
         ]}>
           all
         </p>
@@ -73,8 +73,8 @@
       <%= for tag <- @tags do %>
         <.link patch={~p"/?tag=#{tag}"}>
           <p class={[
-            "block px-2 py-1 hover:bg-yellow-300 hover:text-primary-900 rounded shrink-0 text-primary-500 text-sm md:text-base",
-            @selected_tag == tag && "bg-yellow-300 !text-primary-900"
+            "text-primary-500 block shrink-0 rounded px-2 py-1 text-sm hover:text-primary-900 hover:bg-yellow-300 md:text-base",
+            @selected_tag == tag && "!text-primary-900 bg-yellow-300"
           ]}>
             <%= tag %>
           </p>
@@ -90,8 +90,8 @@
               <%= String.duplicate("🌟", post.rating) %> <%= post.title %>
             </h3>
           </.link>
-          <p class="mt-2 text-primary-600 text-base">
-            <span class="bg-primary-100 rounded pl-2 pr-0 mr-2 py-0.5 text-sm md:text-base">
+          <p class="text-primary-600 mt-2 text-base">
+            <span class="bg-primary-100 border-primary-200 mr-2 rounded border py-0.5 pr-0 pl-2 text-xs md:text-sm">
               <%= format_published_date(post.date) %>
             </span>
             <%= post.description %>
@@ -135,12 +135,12 @@
     <h2>Timeline</h2>
     <div>
       <p>
-        <span class="mr-1 rounded-full bg-primary-200 px-2">2023 Aug</span>
+        <span class="bg-primary-200 mr-1 rounded-full px-2">2023 Aug</span>
         Tore my ACL and had reconstruction surgery. The most pain I have ever felt.
       </p>
       <br />
       <p>
-        <span class="mr-1 rounded-full bg-primary-200 px-2">2022 Oct</span>
+        <span class="bg-primary-200 mr-1 rounded-full px-2">2022 Oct</span>
         Shut down Nello due to very low customer interest and started working as an Elixir Phoenix consultant.
       </p>
       <p>
@@ -158,7 +158,7 @@
         International Conference.
       </p>
       <p>
-        <span class="mr-1 rounded-full bg-primary-200 px-2">2022 Mar</span>
+        <span class="bg-primary-200 mr-1 rounded-full px-2">2022 Mar</span>
         Started working on a secret Fintech thing for India.
       </p>
       <p>
@@ -167,15 +167,15 @@
       </p>
       <br />
       <p>
-        <span class="mr-1 rounded-full bg-primary-200 px-2">2021 Oct</span>
+        <span class="bg-primary-200 mr-1 rounded-full px-2">2021 Oct</span>
         Quit job at Buy Me a Coffee for IndiePaper.
       </p>
       <p>
-        <span class="mr-1 rounded-full bg-primary-200 px-2">2021 Oct</span>
+        <span class="bg-primary-200 mr-1 rounded-full px-2">2021 Oct</span>
         Released IndiePaper on Hacker News.
       </p>
       <p>
-        <span class="mr-1 rounded-full bg-primary-200 px-2">2021 Mar</span>
+        <span class="bg-primary-200 mr-1 rounded-full px-2">2021 Mar</span>
         Started working on <a href="https://indiepaper.me">indiepaper.me</a>.
       </p>
       <p>
@@ -207,7 +207,7 @@
         LessPhone crosses 250,000 downloads.
       </p>
       <p>
-        <span class="mr-1 rounded-full bg-primary-200 px-2">2019 Sep</span>
+        <span class="bg-primary-200 mr-1 rounded-full px-2">2019 Sep</span>
         Built <a href="https://github.com/moot-books/moot-KTU">Moot Books</a>
         a notes typesetter for my university notes.
       </p>
@@ -222,7 +222,7 @@
         on channel, makes first $1000.
       </p>
       <p>
-        <span class="mr-1 rounded-full bg-primary-200 px-2">2018 Jun</span>
+        <span class="bg-primary-200 mr-1 rounded-full px-2">2018 Jun</span>
         Made my first dollar from the Internet.
       </p>
       <p>
@@ -234,15 +234,15 @@
         in Play Store.
       </p>
       <p>
-        <span class="mr-1 rounded-full bg-primary-200 px-2">2018</span>
+        <span class="bg-primary-200 mr-1 rounded-full px-2">2018</span>
         Published first App in Play Store.
       </p>
       <p>
-        <span class="mr-1 rounded-full bg-primary-200 px-2">2017</span> Started
+        <span class="bg-primary-200 mr-1 rounded-full px-2">2017</span> Started
         learning Mobile Development with React Native.
       </p>
       <p>
-        <span class="mr-1 rounded-full bg-primary-200 px-2">2016</span> Joined
+        <span class="bg-primary-200 mr-1 rounded-full px-2">2016</span> Joined
         College of Engineering Chengannur with CS major.
       </p>
       <br />
@@ -258,12 +258,12 @@
         for my high-school project.
       </p>
       <p>
-        <span class="mr-1 rounded-full bg-primary-200 px-2">2015</span> Made a
+        <span class="bg-primary-200 mr-1 rounded-full px-2">2015</span> Made a
         simple <a href="https://fb.watch/4p9LUIGIif/">Programming Language</a> with
         Ruby.
       </p>
       <p>
-        <span class="mr-1 rounded-full bg-primary-200 px-2">2014</span>
+        <span class="bg-primary-200 mr-1 rounded-full px-2">2014</span>
         Started
         learning to code with C++ from the
         <a href="https://www.youtube.com/watch?v=tvC1WCdV1XU&list=PLAE85DE8440AA6B83">
@@ -273,15 +273,15 @@
       </p>
       <br />
       <p>
-        <span class="mr-1 rounded-full bg-primary-200 px-2">2014</span> Started
+        <span class="bg-primary-200 mr-1 rounded-full px-2">2014</span> Started
         my first website bloggytricks.in.
       </p>
       <p>
-        <span class="mr-1 rounded-full bg-primary-200 px-2">2013</span> Got my
+        <span class="bg-primary-200 mr-1 rounded-full px-2">2013</span> Got my
         first laptop after waiting four years.
       </p>
       <p>
-        <span class="mr-1 rounded-full bg-primary-200 px-2">2009</span>
+        <span class="bg-primary-200 mr-1 rounded-full px-2">2009</span>
         Searched on the internet for the first time.
       </p>
       <p>
@@ -289,7 +289,7 @@
         a Computer for the first time.
       </p>
       <p>
-        <span class="mr-1 rounded-full bg-primary-200 px-2">1999</span> Born in
+        <span class="bg-primary-200 mr-1 rounded-full px-2">1999</span> Born in
         Kerala/India.
       </p>
     </div>
