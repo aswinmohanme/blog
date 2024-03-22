@@ -21,7 +21,7 @@ module.exports = {
         mono: ["AnkaCoder", ...defaultTheme.fontFamily.mono],
       },
       colors: {
-        primary: colors.gray,
+        primary: colors.stone,
       },
     },
   },

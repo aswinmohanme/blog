@@ -5,16 +5,16 @@
 /* This file is for your main application CSS */
 @layer base {
   body {
-    @apply mx-auto max-w-3xl bg-stone-50 px-6 pt-12 pb-24 text-justify text-base leading-6 text-gray-700 subpixel-antialiased md:text-lg;
+    @apply mx-auto max-w-3xl bg-stone-50 px-6 pt-12 pb-24 text-justify text-base leading-6 text-primary-700 subpixel-antialiased md:text-lg;
   }
 
   article {
-    @apply prose mt-12 max-w-none prose-p:text-gray-700 prose-strong:text-gray-800 prose-headings:text-base prose-headings:text-gray-800
+    @apply prose mt-12 max-w-none prose-p:text-primary-700 prose-strong:text-primary-800 prose-headings:text-base prose-headings:text-primary-800
                                                                                                                            prose-h1:font-semibold prose-h1:mt-12 prose-h2:mt-8 prose-h3:mt-6 prose-h2:font-semibold
-                                                                                                                                                                                        prose-h3:text-base prose-h3:md:text-lg prose-h3:font-medium prose-h4:text-base prose-h4:font-medium prose-a:font-normal prose-a:text-gray-800
-                                                                                                                                                                                                                                                                                                                        prose-a:no-underline prose-pre:rounded-none prose-pre:bg-stone-100 prose-pre:text-gray-800
-                                                                                                                                                                                                                                                                                                                                                                                                     prose-p:md:text-lg
-                                                                                                                                                                                                                                                                                                                                                                                                                prose-li:md:text-lg;
+                                                                                                                                                                                                      prose-h3:text-base prose-h3:md:text-lg prose-h3:font-medium prose-h4:text-base prose-h4:font-medium prose-a:font-normal prose-a:text-gray-800
+                                                                                                                                                                                                                                                                                                                                      prose-a:no-underline prose-pre:rounded-none prose-pre:bg-stone-100 prose-pre:text-gray-800
+                                                                                                                                                                                                                                                                                                                                                                                                                   prose-p:md:text-lg
+                                                                                                                                                                                                                                                                                                                                                                                                                              prose-li:md:text-lg;
   }
 
   a {
@@ -44,11 +44,11 @@
   }
 
   pre {
-    @apply mb-8 mt-4 border-gray-400 p-4 font-mono text-sm;
+    @apply mb-8 mt-4 border rounded-lg border-primary-200 p-4 font-mono text-sm shadow-sm;
   }
 
   img {
-    @apply rounded-lg;
+    @apply rounded-lg border border-primary-200 shadow;
   }
 
   @font-face {
