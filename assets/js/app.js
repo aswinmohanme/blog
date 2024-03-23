@@ -45,7 +45,7 @@ Hooks.PrependHashesToHeadings = {
       let span = document.createElement('span');
       span.textContent = 'oo';
       tag.classList.add("relative", "ml-7" , "md:ml-0")
-      span.classList.add("absolute","-left-7","md:-left-7", "text-yellow-700")
+      span.classList.add("absolute","-left-7","md:-left-7", "text-yellow-600")
       tag.insertBefore(span, tag.firstChild);
     });
 
