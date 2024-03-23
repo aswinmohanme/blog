@@ -9,7 +9,7 @@
   }
 
   article {
-    @apply prose mt-12 max-w-none md:prose-lg;
+    @apply prose prose-stone mt-12 max-w-none md:prose-lg;
   }
 
   a {
@@ -31,21 +31,28 @@
   @font-face {
     font-family: Jost;
     font-weight: 400;
-    src: url(../fonts/Jost-Regular.ttf) format("truetype");
+    src: url(../fonts/Jost-400-Book.ttf) format("truetype");
     font-display: fallback;
   }
 
   @font-face {
     font-family: Jost;
     font-weight: 500;
-    src: url(../fonts/Jost-Medium.ttf) format("truetype");
+    src: url(../fonts/Jost-500-Medium.ttf) format("truetype");
     font-display: fallback;
   }
 
   @font-face {
     font-family: Jost;
     font-weight: 600;
-    src: url(../fonts/Jost-SemiBold.ttf) format("truetype");
+    src: url(../fonts/Jost-600-Semi.ttf) format("truetype");
+    font-display: fallback;
+  }
+
+  @font-face {
+    font-family: Jost;
+    font-weight: 700;
+    src: url(../fonts/Jost-700-Bold.ttf) format("truetype");
     font-display: fallback;
   }
 

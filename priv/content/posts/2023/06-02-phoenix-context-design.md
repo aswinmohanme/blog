@@ -22,13 +22,18 @@ Contexts exist to decouple your internal business logic from the external means 
 Consider that your business logic exists inside your LiveView, where you directly interact with the database through Ecto and manipulate the schemas as you please. If you later decide to expand to hardware and use Nerves, you'd have to either duplicate the logic or extract it out. Contexts help you to extract out the business logic to modules that are independent of the method of delivery. Contexts and Schemas form the core of your application that can be accessed through LiveView, a JSON Api or a Nerves frontend. Contexts are a first degree of separation between your data layer and your presentation layer acting as your boundary.
 
 ### Your application can and will change
+Your application changes and evolves with time, and your codebase needs to support the changes as well. Contexts encapsulate the changes so it can be changed only once. Having a codebase that mirrors your business rules would keep the complexity in check.
 
 ## Rules for Contexts
 These are the guidelines that I keep in mind when I am working on my Elixir and Phoenix apps. True to the words these are just guidelines so keep that in mind when you are working with this. It's up to you to know when to use this and when to not use this. But in my case 90% of my usecases have been covered by these that I do not deviate far from this.
 
+Rather than deciding everytime where each piece of code goes, I follow a set of guidelines that help me take decisions and make the process of program construction easier. 
 
-### Everything starts with the Data Layer
+
+### Start with the Data Layer
 Each Schema should be it's own Model. This is the lowest layer of the application. This is the layer of the changeset. This is the layer where you directly manipualate the changeset, setup validations and setup other changesets. The only exception to these are manipulating associations as a whole which can be managed in the Secondary Context of the primary context.
+
+Start with modelling the data layer of the application. Every application is in it's.
 
 ### Secondary Context
 Every Primary Context has an associated Secondary Context. It is mostly named as the plural of the Primary context. It's primary role is to contain the lower order functions of the Primary Context. This means everyting from listing, to creation, to updation of the individual context is done here. It should be moslty top layer if it is used by multiple contexts, but as a sub context if it is only part of one primary context.
