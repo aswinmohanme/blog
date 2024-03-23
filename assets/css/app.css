@@ -9,42 +9,19 @@
   }
 
   article {
-    @apply prose mt-12 max-w-none prose-p:text-primary-700 prose-strong:text-primary-800 prose-headings:text-base prose-headings:text-primary-800
-                                                                                                                           prose-h1:font-semibold prose-h1:mt-12 prose-h2:mt-8 prose-h3:mt-6 prose-h2:font-semibold
-                                                                                                                                                                                                      prose-h3:text-base prose-h3:md:text-lg prose-h3:font-medium prose-h4:text-base prose-h4:font-medium prose-a:font-normal prose-a:text-gray-800
-                                                                                                                                                                                                                                                                                                                                      prose-a:no-underline prose-pre:rounded-none prose-pre:bg-stone-100 prose-pre:text-gray-800
-                                                                                                                                                                                                                                                                                                                                                                                                                   prose-p:md:text-lg
-                                                                                                                                                                                                                                                                                                                                                                                                                              prose-li:md:text-lg;
+    @apply prose mt-12 max-w-none md:prose-lg;
   }
 
   a {
     @apply text-blue-700 hover:text-blue-800;
   }
 
-  h1,
-  h2,
-  h3 {
-    @apply block;
-  }
-
-  h1 {
-    @apply text-xl font-semibold md:text-2xl;
-  }
-
-  h2 {
-    @apply text-lg font-medium md:text-xl;
-  }
-
-  h3 {
-    @apply inline-block;
-  }
-
   code {
-    @apply font-normal text-sm;
+    @apply font-normal;
   }
 
   pre {
-    @apply mb-8 mt-4 border rounded-lg border-primary-200 p-4 font-mono text-sm shadow-sm;
+    @apply mb-8 mt-4 border rounded-lg border-primary-200 p-4 font-mono shadow-sm bg-primary-100 text-primary-900;
   }
 
   img {

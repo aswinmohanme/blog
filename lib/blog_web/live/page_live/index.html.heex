@@ -64,17 +64,17 @@
     <div class="mt-4 flex flex-wrap items-center">
       <.link patch={~p"/"}>
         <p class={[
-          "text-primary-500 block shrink-0 rounded px-2 py-1 text-sm hover:text-primary-900 hover:bg-yellow-300 md:text-base",
-          is_nil(@selected_tag) && "!text-primary-900 bg-yellow-300"
+          "text-primary-500 block shrink-0 border px-2 py-1 text-sm hover:text-primary-900 hover:bg-yellow-300 md:text-base",
+          is_nil(@selected_tag) && "!text-primary-900 border-yellow-300 bg-yellow-300"
         ]}>
-          all
+          all-posts
         </p>
       </.link>
       <%= for tag <- @tags do %>
         <.link patch={~p"/?tag=#{tag}"}>
           <p class={[
-            "text-primary-500 block shrink-0 rounded px-2 py-1 text-sm hover:text-primary-900 hover:bg-yellow-300 md:text-base",
-            @selected_tag == tag && "!text-primary-900 bg-yellow-300"
+            "text-primary-500 block shrink-0 border px-2 py-1 text-sm hover:text-primary-900 hover:bg-yellow-300 md:text-base",
+            @selected_tag == tag && "!text-primary-900 border-yellow-300 bg-yellow-300"
           ]}>
             <%= tag %>
           </p>

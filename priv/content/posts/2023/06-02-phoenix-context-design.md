@@ -7,16 +7,21 @@
 }
 ---
 
-When I was starting to learn Phoenix the most trouble I had was how to organize the code with Contexts. It also didn't help the generators make heavy use of Contexts, which meant you needed a thorough enough understanding to even get started. This blog posts outlines the guidelines that I follow with Phoenix Contexts. Keep in mind that this is a personal opinionated guide and used in small to medium projects that I work on. It's a combination of rules from the Devon Estes blog post and the Designing Elixir Apps with OTP book. If you want a deeper dive, the book is highly recommended.
+![Organized Things](/images/organized-things.jpeg)
 
-First let's see why we need Contexts.
+Organizing code with contexts is hard, especially when you are starting out. This blog post outlines the guidelines that I follow when creating new Phoenix apps to create contexts that make sense, are maintainable and easy to change in the future.
 
-## Phoenix is not your Application
-The reason why Contexts exists and is recommended instead of directly accessing the Ecto Schemas in the Controllers and LiveView is because Phoenix is Boundary that exists to deliver the business logic in your Core to your customers. Contexts exist to decouple your internal business logic from the external means of delivery. 
+Let's start with why we need contexts.
 
-Let's say that your business logic is not decoupled and exists inside your LiveView, where you directly call Ecto and manipulate the schemas as you please. Due to the success of your webapp you are asked to build out a nerves based hardware as well. Turns out you are writing the same code twice. It would have been great if you had the Core of youre. This is our first point. Phoenix is not your application. You should have a core that is independent of the delivery mechanism. It shouldn't matter whether it's a JSON api or Web based API, or LiveView. That is where the need for contexts arise. It's a first degree of separation between your data layer and your presentation layer acting as your boundary.
+## Why we need contexts
+We need contexts because your application might require to be accessed through different frontends and because your application will change in the future.
 
-Since we have established why we need contexts, let's see some rules to organising your code with contexts.
+### Phoenix is not your application
+Contexts exist to decouple your internal business logic from the external means of delivery. 
+
+Consider that your business logic exists inside your LiveView, where you directly interact with the database through Ecto and manipulate the schemas as you please. If you later decide to expand to hardware and use Nerves, you'd have to either duplicate the logic or extract it out. Contexts help you to extract out the business logic to modules that are independent of the method of delivery. Contexts and Schemas form the core of your application that can be accessed through LiveView, a JSON Api or a Nerves frontend. Contexts are a first degree of separation between your data layer and your presentation layer acting as your boundary.
+
+### Your application can and will change
 
 ## Rules for Contexts
 These are the guidelines that I keep in mind when I am working on my Elixir and Phoenix apps. True to the words these are just guidelines so keep that in mind when you are working with this. It's up to you to know when to use this and when to not use this. But in my case 90% of my usecases have been covered by these that I do not deviate far from this.
