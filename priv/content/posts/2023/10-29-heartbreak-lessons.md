@@ -15,24 +15,24 @@ I have debated with myself whether I should post this or not since the informati
 
 This post touches everything from getting dates, to choosing your partner, to maintaining healthy relationships, to how to handle breakups and how to let go, reconcile and move on. This post is written as advice my 23 year self from my current 24 year self, the tone is brotherly, personal, honest and rash. But feel free to adapt it to your circumstances. Also this is my perspective and the things and the advice that resonated with me. This is no way the best way forward and I hope you can see it too. This post is centered around getting into and maintaining long term healthy monogamous relationships. Also I am not liable nor responsible for any pain, loss or gain that you get from following this post, relationships are deeply personal undertakings, and you are the judge of what is best for you. This is a long post that covers a lot of information so reading it is going to take a lot of effort, just like amaintaining a long and healrhty relaitonship which would be a source of happiness for the rest of your life.
 
-# We need other Humans
+## We need other Humans
 I earned my first internet dollar when I was 18 years old and as a college first-year. The feeling was extraordinary and the oppurtunities it opened for me were immense. So I decided that work was going to be the most important factor and goal of my life. Work suddenly became the most important factor of my life and I was fulfilled by it as well. Combined with the effortless social life afforded in the College and the glimmers of first love, I wrongly attributed my happiness and fulfillment to work and saw the rest as extra luxuries. Only after losing the social life and the relationship and getting achieving a dream career that I came to the conclusion that career was not the source of my fullfilment but it was the supporting factor here. What my work did was let me have the freedom to spend time with my friends and family, go on trips and do the things that I wanted to do. It was never the end goal.
 
 Fulfilling relationships are not the result of a happy life, but the cause of it. Human beings are not designed to survive in isolation. We need company, we need people to share our life with, we need friends to laugh with, family to love and a partner to share the ups and downs of life with. Even in all of the most studies that studies the causes of happiness and fulfillment in life, quality human relationships rank at the highest of the chart. 
 
 You need people to support you and motivate you, or share the happiness of success with and soften the blow of failures with. Design a life, supported with your career in such a way that you have the means, ability and time to do the things you want to do with the people you love spending time with. It's okay to sacrifice, but use that sparingly only. Remember the purpose of money is so you can spend it doing the thing you love.
 
-# Understanding Yourself
+## Understanding Yourself
 Since we have established that quality relationships contribute to a long and happy life, we need to optimise the only factor that is common across all your relationships, you. The first step is to understanding yourself, who you are, what side of you comes out in your relationship, and how you can optimise yourself for a better you in your relationships.
 
 ## Dating tendencies
-### Maximiser
+* Maximiser
 You want the best partner out there. Not the partner that is perfect for you. You have a list of qualities that your partner have to fulfill. 
 
-### Hesitator
+* Hesitator
 Puts off dating for a long time until they have hit milestones in their lives.
 
-### Romanitisier
+* Romanitisier
 Has a bollywood romantic life that they want to.
 
 Keep in mind that these are in the end of the day, just tendencies and not core behavioural traits that cannot be changed. Humans are the only species that have the ability for self-reflection and change. Use that ability.

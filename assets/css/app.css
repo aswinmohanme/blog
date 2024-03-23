@@ -9,11 +9,11 @@
   }
 
   article {
-    @apply prose prose-stone mt-12 max-w-none md:prose-lg;
+    @apply prose prose-stone mt-12 max-w-none prose-h1:text-base prose-h2:text-base prose-h3:text-base md:prose-lg md:prose-h1:text-lg md:prose-h2:text-lg prose-h2:font-semibold prose-h3:font-medium md:prose-h3:text-lg prose-h1:font-normal prose-h2:font-normal prose-h3:font-normal;
   }
 
   a {
-    @apply text-blue-700 hover:text-blue-800;
+    @apply text-blue-700 hover:text-blue-800 font-normal no-underline;
   }
 
   code {

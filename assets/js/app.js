@@ -22,8 +22,38 @@ import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
 import topbar from "../vendor/topbar"
 
+let Hooks = {}
+Hooks.PrependHashesToHeadings = {
+  mounted() {
+    let h1Tags = this.el.querySelectorAll('h1');
+    h1Tags.forEach(tag => {
+      let span = document.createElement('span');
+      span.textContent = 'ooo';
+      span.classList.add("mr-2","md:-ml-10", "text-yellow-600")
+      tag.insertBefore(span, tag.firstChild);
+    });
+
+    let h2Tags = this.el.querySelectorAll('h2');
+    h2Tags.forEach(tag => {
+      let span = document.createElement('span');
+      span.textContent = 'oo';
+      span.classList.add("mr-2", "md:-ml-7", "text-yellow-600")
+      tag.insertBefore(span, tag.firstChild);
+    });
+
+    let h3Tags = this.el.querySelectorAll('h3');
+    h3Tags.forEach(tag => {
+      let span = document.createElement('span');
+      span.textContent = 'o';
+      span.classList.add("mr-2", "text-yellow-600")
+      tag.insertBefore(span, tag.firstChild);
+    });
+  }
+}
+
+
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
-let liveSocket = new LiveSocket("/live", Socket, {params: {_csrf_token: csrfToken}})
+let liveSocket = new LiveSocket("/live", Socket, {hooks: Hooks, params: {_csrf_token: csrfToken}})
 
 // Show progress bar on live navigation and form submits
 topbar.config({ barColors: { 0: "#fde047" }, shadowColor: "rgba(0, 0, 0, .3)" })
