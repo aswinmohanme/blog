@@ -24,7 +24,13 @@ import topbar from "../vendor/topbar"
 
 let Hooks = {}
 Hooks.PrependHashesToHeadings = {
+  updated() {
+    this.prependHashes()
+  },
   mounted() {
+    this.prependHashes()
+  },
+  prependHashes() {
     let h1Tags = this.el.querySelectorAll('h1');
     h1Tags.forEach(tag => {
       let span = document.createElement('span');
@@ -49,6 +55,7 @@ Hooks.PrependHashesToHeadings = {
       tag.insertBefore(span, tag.firstChild);
     });
   }
+
 }
 
 
