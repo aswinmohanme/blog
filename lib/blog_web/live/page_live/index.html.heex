@@ -48,7 +48,7 @@
         <div class="">
           <.link navigate={~p"/#{post.id}"}>
             <h3 class="">
-              <%= String.duplicate("🌟", post.rating) %> <%= post.title %>
+              <span class="mr-2 text-yellow-600"><%= String.duplicate("&", post.rating) %></span><%= post.title %>
             </h3>
           </.link>
           <p class="text-primary-600 mt-2 text-base">
@@ -86,8 +86,8 @@
         <div class="">
           <.link navigate={~p"/#{post.id}"}>
             <h3>
-              <span :if={Posts.draft?(post)}>✍️</span>
-              <%= String.duplicate("🌟", post.rating) %> <%= post.title %>
+              <span :if={Posts.draft?(post)}>@️</span>
+              <span class="mr-2 text-yellow-600"><%= String.duplicate("&", post.rating) %></span><%= post.title %>
             </h3>
           </.link>
           <p class="text-primary-600 mt-2 text-base">
