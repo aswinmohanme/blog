@@ -35,7 +35,8 @@ Hooks.PrependHashesToHeadings = {
     h1Tags.forEach(tag => {
       let span = document.createElement('span');
       span.textContent = 'ooo';
-      span.classList.add("mr-2","md:-ml-10", "text-yellow-600")
+      tag.classList.add("relative", "ml-10" , "md:ml-0")
+      span.classList.add("absolute","-left-10","md:-left-10", "text-yellow-600")
       tag.insertBefore(span, tag.firstChild);
     });
 
@@ -43,7 +44,8 @@ Hooks.PrependHashesToHeadings = {
     h2Tags.forEach(tag => {
       let span = document.createElement('span');
       span.textContent = 'oo';
-      span.classList.add("mr-2", "md:-ml-7", "text-yellow-600")
+      tag.classList.add("relative", "ml-7" , "md:ml-0")
+      span.classList.add("absolute","-left-7","md:-left-7", "text-yellow-700")
       tag.insertBefore(span, tag.firstChild);
     });
 
@@ -51,7 +53,8 @@ Hooks.PrependHashesToHeadings = {
     h3Tags.forEach(tag => {
       let span = document.createElement('span');
       span.textContent = 'o';
-      span.classList.add("mr-2", "text-yellow-600")
+      tag.classList.add("relative", "ml-4" , "md:ml-4")
+      span.classList.add("absolute","-left-4","md:-left-4", "text-yellow-600")
       tag.insertBefore(span, tag.firstChild);
     });
   }
