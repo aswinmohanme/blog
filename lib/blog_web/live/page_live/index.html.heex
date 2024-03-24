@@ -47,13 +47,14 @@
       <%= for post <- @top_posts do %>
         <div class="">
           <.link navigate={~p"/#{post.id}"}>
-            <h3 class="">
+            <h3 class="font-medium">
               <span :if={post.rating > 0} class="mr-1 text-yellow-600">
                 <%= String.duplicate("&", post.rating) %>
-              </span><%= post.title %>
+              </span>
+              <%= post.title %>
             </h3>
           </.link>
-          <p class="text-primary-600 mt-2 text-base">
+          <p class="text-primary-600 mt-2">
             <%= post.description %>
           </p>
         </div>
@@ -87,7 +88,7 @@
       <%= for post <- @posts do %>
         <div class="">
           <.link navigate={~p"/#{post.id}"}>
-            <h3>
+            <h3 class="font-medium">
               <span :if={Posts.draft?(post)} class="text-yellow-600">@️</span>
               <span :if={post.rating > 0} class="mr-1 text-yellow-600">
                 <%= String.duplicate("&", post.rating) %>
@@ -95,8 +96,8 @@
               <%= post.title %>
             </h3>
           </.link>
-          <p class="text-primary-600 mt-2 text-base">
-            <span class="bg-primary-100 border-primary-200 mr-2 rounded border py-0.5 pr-0 pl-2 text-xs md:text-sm">
+          <p class="text-primary-600 mt-2">
+            <span class="bg-primary-100 border-primary-200 mr-2 rounded border py-0.5 pr-0 pl-2 text-sm md:text-base">
               <%= format_published_date(post.date) %>
             </span>
             <%= post.description %>
