@@ -1,6 +1,6 @@
 <div :if={@live_action == :index}>
   <section class="mt-12 md:mt-16">
-    <h2>Best Work</h2>
+    <h2 class="font-medium">Best Work</h2>
     <div class="mt-6 grid grid-cols-1 gap-x-4 gap-y-4 md:grid-cols-2 md:gap-6">
       <div class="bg-primary-100 border-primary-200 shadow-xs rounded-lg border px-4 py-2">
         <a href="https://modernresume.io" class="">ModernResume</a>
@@ -42,7 +42,7 @@
   </section>
 
   <section class="mt-20">
-    <h2>Top Posts</h2>
+    <h2 class="font-medium">Top Posts</h2>
     <div class="mt-4 space-y-12">
       <%= for post <- @top_posts do %>
         <div class="">
@@ -63,7 +63,7 @@
   </section>
 
   <section class="mt-20">
-    <h2>All Posts</h2>
+    <h2 class="font-medium">All Posts</h2>
     <div class="mt-4 flex flex-wrap items-center">
       <.link patch={~p"/"}>
         <p class={[
@@ -125,7 +125,7 @@
     </p>
   </section>
   <section>
-    <h2>What is this blog?</h2>
+    <h2 class="font-medium">What is this blog?</h2>
     <p>
       This blog is my corner on the Internet. I love to write, to share my
       thoughts with the world, to have great conversations with people and
@@ -138,7 +138,7 @@
     </p>
   </section>
   <section>
-    <h2>Timeline</h2>
+    <h2 class="font-medium">Timeline</h2>
     <div>
       <p>
         <span class="bg-primary-200 mr-1 rounded-full px-2">2023 Aug</span>
@@ -308,11 +308,11 @@
     This is my now page, inspired by <a href="https://sive.rs/now">Derek Siver's Now page</a>. It lists out
     what I'm currently working on and why.
   </p>
-  <h2>Work</h2>
+  <h2 class="font-medium">Work</h2>
   <p>
     Currently working as an Elixir Phoenix Consultant with pre MVP and Early Stage Startups. Primarily focused on Web and Mobile apps with the backend in Phoenix, web frontend in LiveView and mobile in React Native and styling with TailwindCSS.
   </p>
-  <h2>Archive</h2>
+  <h2 class="font-medium">Archive</h2>
   <ul>
     <li>
       <p>
@@ -344,7 +344,7 @@
 <article :if={@live_action == :talks} phx-hook="PrependHashesToHeadings" id="talks-section">
   <h1>Talks</h1>
   <p>Lists the talks I have presented at various conferences and events.</p>
-  <h2>Tech Talks</h2>
+  <h2 class="font-medium">Tech Talks</h2>
   <div class="mt-6 space-y-10">
     <div>
       <h3>
