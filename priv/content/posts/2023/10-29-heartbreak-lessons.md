@@ -9,39 +9,50 @@ rating: 2
 
 ![Please stay written on a stone](/images/please-stay.jpeg)
 
-Last year I broke up with my first long-term girlfriend. Even though the breakup was my own doing, it threw me heartbreak, frantically searching for answers and therapy for one and half years. I spent an inordinate amount of time watching Youtube videos, reading books, blog and reddit posts to better understand relationships, what works in the ones that last and how to cope with heartbreak. This blog post is the culmination of all the lessons that I learnt on how to get, maintain and be happy in long-term relationships.
+Last year I broke up with my first long-term girlfriend. It lead me down a path of frantic search for answers from books, reddit posts and youtube videos about how to cope, learn more abour romantic relationships and how to improve myself so I don't make the same mistakes ever agian. This post outlines all the advice which I think enable us to get, maintian and be happy in long-term monogamous romantic relationships.
 
 I have debated with myself whether I should post this or not since the information and lessons are personal enough to never see the light outside my notes. But I am deciding to publish this, because if I had come across a resource like this earlier in my journey it would have saved me a lot of pain and stress.
 
-This post touches everything from getting dates, to choosing your partner, to maintaining healthy relationships, to how to handle breakups and how to let go, reconcile and move on. This post is written as advice my 23 year self from my current 24 year self, the tone is brotherly, personal, honest and rash. But feel free to adapt it to your circumstances. Also this is my perspective and the things and the advice that resonated with me. This is no way the best way forward and I hope you can see it too. This post is centered around getting into and maintaining long term healthy monogamous relationships. Also I am not liable nor responsible for any pain, loss or gain that you get from following this post, relationships are deeply personal undertakings, and you are the judge of what is best for you. This is a long post that covers a lot of information so reading it is going to take a lot of effort, just like amaintaining a long and healrhty relaitonship which would be a source of happiness for the rest of your life.
+Consider this an publication of my personal internal note. It's written for a 23 year old heterosexual guy, feel free to adapt the advice to your liking and circumstance. This post touches everything from getting dates, to choosing your partner, to maintaining healthy relationships, to how to handle breakups and how to let go, reconcile and move on. This is a long post and reading it would take sustained effort, just like maintaining a healthy long-term relaitonship.
 
 ## We need other Humans
-I earned my first internet dollar when I was 18 years old and as a college first-year. The feeling was extraordinary and the oppurtunities it opened for me were immense. So I decided that work was going to be the most important factor and goal of my life. Work suddenly became the most important factor of my life and I was fulfilled by it as well. Combined with the effortless social life afforded in the College and the glimmers of first love, I wrongly attributed my happiness and fulfillment to work and saw the rest as extra luxuries. Only after losing the social life and the relationship and getting achieving a dream career that I came to the conclusion that career was not the source of my fullfilment but it was the supporting factor here. What my work did was let me have the freedom to spend time with my friends and family, go on trips and do the things that I wanted to do. It was never the end goal.
+I made my first internet dollar when I was 18 as a college sophomore. It was extraordinary to make money on scale. So I decided that work would be the most fullfilling part of my life. Combined with the effortless social life in college and the glimmers of first love, I wrongly attributed my happiness and fulfillment to work and saw the rest as distractions. Only after losing the social life, the relationship but achieving my dream career that I concluded that career was not the source of my fullfilment but it was just a supporting factor. What work did was to enable me to do the things that I wanted to do with the people I wanted to do them with, and that was the source of my fullfilment.
 
-Fulfilling relationships are not the result of a happy life, but the cause of it. Human beings are not designed to survive in isolation. We need company, we need people to share our life with, we need friends to laugh with, family to love and a partner to share the ups and downs of life with. Even in all of the most studies that studies the causes of happiness and fulfillment in life, quality human relationships rank at the highest of the chart. 
+Fulfilling relationships are not the result of a happy life, but the cause of it. Human beings are not designed to survive in isolation. We need company, we need people to share our life with, we need friends to laugh with, family to love and a partner to share the ups and downs of life with. [The longest running study on long-term human happiness](https://www.theatlantic.com/ideas/archive/2023/01/harvard-happiness-study-relationships/672753/) rank fullfilling relationships as the major contributing factor.
 
-You need people to support you and motivate you, or share the happiness of success with and soften the blow of failures with. Design a life, supported with your career in such a way that you have the means, ability and time to do the things you want to do with the people you love spending time with. It's okay to sacrifice, but use that sparingly only. Remember the purpose of money is so you can spend it doing the thing you love.
+You need people to support you and motivate you, or share the happiness of success with and soften the blow of failures with. Design a life, supported with your career in such a way that you have the means, ability and time to do the things you want to do with the people you love spending time with. It's okay to sacrifice, but use that sparingly. Remember the purpose of money is so you can spend it doing the things you love.
 
 ## Understanding Yourself
 Since we have established that quality relationships contribute to a long and happy life, we need to optimise the only factor that is common across all your relationships, you. The first step is to understanding yourself, who you are, what side of you comes out in your relationship, and how you can optimise yourself for a better you in your relationships.
 
-## Dating tendencies
-* Maximiser
-You want the best partner out there. Not the partner that is perfect for you. You have a list of qualities that your partner have to fulfill. 
 
-* Hesitator
-Puts off dating for a long time until they have hit milestones in their lives.
+## Dating tendencies
+According to [How not to die alone, by Logan ury]() you fall into three categories when it comes to dating.
 
 * Romanitisier
-Has a bollywood romantic life that they want to.
+You think falling in love should be easy to perpetuity, and that if it's meant to be, there is no effort required on your part. You run when things get hard, because you equate the discomforts that come with any relationship as the lack of love. You have an idea of love and romance that is disconnected from reality.
 
-Keep in mind that these are in the end of the day, just tendencies and not core behavioural traits that cannot be changed. Humans are the only species that have the ability for self-reflection and change. Use that ability.
+* Maximiser
+You want the best partner out there and you want to be 100% sure that you have the best partner out there. You have a list of must have qualities that you are diligent about. You date multiple people, but are in the lookout for the perfect person out there.
 
-If you want to learn more about these, read uris book.
+* Hesitator
+Puts off dating for a long time until they have hit milestones in their lives. You might think you'll be ready to date when you get the promotion, when you'll have a place of your own, when you have a built a succesful startup to exit.
 
+If you don't understand and consiouly work around these traits, you'll be unknowingly filtering out people with whom you could build a beautiful realtionship with. 
+
+* Romanitisier
+Stop thinking love should be easy. A good relationship requires consistent effort from both sides and the test of true love is not when everything is going great, but when everything is burning and you still find it in yourself to wake up and love your partner, flaws and all.
+
+* Maximiser
+You cannot date the entirety of the dating pool as you are constrained by time. Explore for a while, and make a model of the partner that you want and when you meet someone who ticks those boxes, stop the search, commit and start to build a relationship with them. Love is not about finding the most beautiful meadow in the world, but about building and tending a garden where you can spend the rest of your life in.
+
+* Hesitator
+Realise that you'll never be ready for dating. You won't magically wake up one day think to yourself I have everything I need and I'll start dating. Do not waste your youth toiling away for material success, when you could toil away with someone by your side. Rather than walking alone, find a good partner, atleast you'll hear great stories on the way.
+
+Once you realise what is your dating tendency, and have reality expectation, let's get into attachment theory.
 
 ## Attachment Theory
-Who we are as adults are by default shaped by our experinences upto that point and no experience has a lasting impact on your life as the expereinces that you got when you were a child and at our most vulnerable. And since there is no globally accepted manual on parenting, and we are born to people who are doing this for the first time as well. This affects us in our most vital formative years and causes issues that surface back in the intimate forms of relationships. By no means is this a dig at our parents. Unless you have gone through actual abuse, neglect with your parents, it's always to be grateful for the sacrifices and the best effort that they did in raising you. My parents had me when they were my age, I can't fathom raising a kid at this age, but they tried their best and I am grateful for that.
+Who we are as adults are by default shaped by our experinences upto that point and no experience has a lasting impact on your life as the expereinces that you got when you were a child and at our most vulnerable. And since there is no globally accepted manual on parenting, and we are born to people who are doing this for the first time as well. This affects us in our most vital formative years and causes issues that surface back in the intimate forms of relationships. By no means is this a dig at our parents. Unless you have gone through actual abuse, neglect with your parents, it's always to be grateful for the sacrifices and the best effort that they did in raising you. 
 
 How our primary caretakers interacted with us in our formative years determine our atttachment style. This attachment style can cause us to act in certain ways that even me might brand as irrational, but causes us to act like that.
 
@@ -73,6 +84,8 @@ A relatioship is something that is independent from you and your partner. You ha
 If you have been exposed to tv in any point in your life, you might have grown up thinking about any disney fantasy of romantic love. It always end with the prince and pricess ending up with each other and being happy in the moment with the expectation that they live happily ever after. If the movie was extended to another 2 hours and showed hte prince gaining weight and becoming a couch potato and the princess growing frusturated and resentment due to raising two kids and the inevitable divorce, I think we as humans would have a better idea of love.
 
 Relationships are a lot of work. The chemicals of love designed to keep the species going is so strong that it makes the work literally invisible. Once the happy dance of chemicals and the novely of the relationship wears off, the amount of love just takes a dip. this exposes the amount of work that was required for the relationship to move forward. this makes it hard, and once it gets hard, we come to teh incorrect conclusion that relationships are coming to an end and love is not there, which makes us put even less effort in and love gets reduced which is an unhealthy death spiral. The person who have more residual feelings of love keeps putting in marginally more effort until the lack of love from the other wears them out and the relationship inevitably comes to an end. Then they move on to another relationship where hte initial spark of loves makes the work invisible again. And the spiral continues.
+
+Keep a consious effort to strike up love. To our luck, the dip is often followed by a high and even though it does not match the intial high of falling in love, it's more resilient and more muted.
 
 ## Choosing a Human Being
 We want everything in a partner. Not healthy.
