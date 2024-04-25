@@ -1,7 +1,7 @@
 defmodule BlogWeb.Layouts do
   use BlogWeb, :html
 
-  import Phoenix.HTML.Tag
+  import Phoenix.HTML
 
   embed_templates "layouts/*"
 
@@ -10,6 +10,7 @@ defmodule BlogWeb.Layouts do
   end
 
   def meta_tag(attrs) do
-    tag(:meta, Enum.into(attrs, []))
+    html_attrs = attributes_escape(Enum.into(attrs, [])) |> safe_to_string()
+    raw("<meta #{html_attrs} />")
   end
 end
