@@ -6,7 +6,7 @@ description: "Always delight people, especially at the pionts where they interac
 
 ---
 
-The world is a place where your opportunities are determined to an extent by how [lucky you are](/on-luck). The world is also run by people. So a surefire way to improve your luck is for them to remember and recommend you. And for them to remember and recommend you, you need to delight them.
+The world is a place where opportunities are determined to an extent by how [lucky you are](/on-luck). The world is also run by people. So a surefire way to improve your luck is for them to remember and recommend you to other people. And for them to remember and recommend you, you need to delight them.
 
 If you do what people want, in line with their expectations, they become satisfied. Satisfaction is a neutral expression hovering around happiness. The next time they want to recommend someone for themselves or to someone else, you'll be competing with everyone who has made them satisfied, which would be a lot since bare satisfaction is the highest goal most aim for and succeed.
 
@@ -16,6 +16,6 @@ Delight makes people remember you, it makes it a no-brainer for people to work w
 
 But delight is hard. It wouldn't be delightful if it was the default. Delight takes effort, to [find the edges](/edges) where you can delight, to put in the extra effort to delight, and to do it for every interaction. But the results combined with its compounding nature produce results so outstanding, that it doesn't make any sense not to do it.
 
-If delighting at every point is hard, strive to delight at the points of interaction. If it's hard to do for every point of interaction, strive to delight aat least for a single interaction.
+If delighting at every point is hard, strive to delight at the points of interaction. If it's hard to do for every point of interaction, strive to delight at least for a single interaction.
 
-Let every interaction be an exercise in delight, let every interaction be a positive marker that makes you a no-brainer to work with love and recommend. Delight, delight, delight!
+Let every interaction be an exercise in delight, let every interaction be a positive marker that makes you a no-brainer to work with and recommend. Delight, delight, delight!
