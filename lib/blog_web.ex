@@ -17,7 +17,7 @@ defmodule BlogWeb do
   those modules here.
   """
 
-  def static_paths, do: ~w(assets fonts images favicon.ico robots.txt resume.pdf)
+  def static_paths, do: ~w(assets fonts images favicon.ico robots.txt)
 
   def router do
     quote do
@@ -105,7 +105,7 @@ defmodule BlogWeb do
   end
 
   @doc """
-  When used, dispatch to the appropriate controller/view/etc.
+  When used, dispatch to the appropriate controller/live_view/etc.
   """
   defmacro __using__(which) when is_atom(which) do
     apply(__MODULE__, which, [])

@@ -17,7 +17,7 @@ config :blog, Blog.Repo,
 # you can enable the server option below.
 config :blog, BlogWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "Cch8v7puapnfwMEjYXD2g63NV/YQxlUtRT9IEgeb2stw1UuMIery9SboxOC6h0qJ",
+  secret_key_base: "n7jEK9KijLRoh31jxn2I6DUOxkAM63APNGAHO4ktEKxIoGX87fbA5LZHcCgIXLPz",
   server: false
 
 # In test we don't send emails.

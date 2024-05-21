@@ -7,7 +7,7 @@ defmodule BlogWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_blog_key",
-    signing_salt: "BLLxVxnY",
+    signing_salt: "4ys7lJOL",
     same_site: "Lax"
   ]
 

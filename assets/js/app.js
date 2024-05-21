@@ -22,55 +22,14 @@ import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
 import topbar from "../vendor/topbar"
 
-let Hooks = {}
-Hooks.PrependHashesToHeadings = {
-  updated() {
-    this.prependHashes()
-  },
-  mounted() {
-    this.prependHashes()
-  },
-  prependHashes() {
-    let h1Tags = this.el.querySelectorAll('h1');
-    h1Tags.forEach(tag => {
-      let span = document.createElement('span');
-      span.textContent = 'ooo';
-      tag.classList.add("relative", "ml-10" , "md:ml-0")
-      span.classList.add("absolute","-left-10","md:-left-10", "text-yellow-600")
-      tag.insertBefore(span, tag.firstChild);
-    });
-
-    let h2Tags = this.el.querySelectorAll('h2');
-    h2Tags.forEach(tag => {
-      let span = document.createElement('span');
-      span.textContent = 'oo';
-      tag.classList.add("relative", "ml-7" , "md:ml-0")
-      span.classList.add("absolute","-left-7","md:-left-7", "text-yellow-600")
-      tag.insertBefore(span, tag.firstChild);
-    });
-
-    let h3Tags = this.el.querySelectorAll('h3');
-    h3Tags.forEach(tag => {
-      let span = document.createElement('span');
-      span.textContent = 'o';
-      tag.classList.add("relative", "ml-4" , "md:ml-4")
-      span.classList.add("absolute","-left-4","md:-left-4", "text-yellow-600")
-      tag.insertBefore(span, tag.firstChild);
-    });
-  }
-
-}
-
-
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 let liveSocket = new LiveSocket("/live", Socket, {
   longPollFallbackMs: 2500,
-hooks: Hooks,
   params: {_csrf_token: csrfToken}
 })
 
 // Show progress bar on live navigation and form submits
-topbar.config({ barColors: { 0: "#fde047" }, shadowColor: "rgba(0, 0, 0, .3)" })
+topbar.config({barColors: {0: "#29d"}, shadowColor: "rgba(0, 0, 0, .3)"})
 window.addEventListener("phx:page-loading-start", _info => topbar.show(300))
 window.addEventListener("phx:page-loading-stop", _info => topbar.hide())
 

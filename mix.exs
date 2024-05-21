@@ -57,13 +57,9 @@ defmodule Blog.MixProject do
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
-      {:plug_cowboy, "~> 2.5"},
-      {:nimble_publisher, "~> 0.1.1"},
-      {:plug_redirect, "~> 1.0"},
-      {:plug_canonical_host, "~> 2.0"},
       {:bandit, "~> 1.2"},
-      {:tailwind_formatter, "~> 0.4.0", runtime: false},
-      {:mix_test_interactive, "~> 1.0", only: :dev, runtime: false}
+      # Custom Dependencies
+      {:nimble_publisher, "~> 0.1.1"},
     ]
   end
 
@@ -80,8 +76,12 @@ defmodule Blog.MixProject do
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
-      "assets.build": ["tailwind blog", "esbuild default"],
-      "assets.deploy": ["tailwind blog --minify", "esbuild default --minify", "phx.digest"]
+      "assets.build": ["tailwind blog", "esbuild blog"],
+      "assets.deploy": [
+        "tailwind blog --minify",
+        "esbuild blog --minify",
+        "phx.digest"
+      ]
     ]
   end
 end

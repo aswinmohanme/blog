@@ -1,4 +1,5 @@
 import Config
+
 # Configure your database
 config :blog, Blog.Repo,
   username: "postgres",
@@ -22,7 +23,7 @@ config :blog, BlogWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "GN9UU1yIE2DqnSlq7oUwJl0ABHXKKSOi3PD1SPDffuhs6Y0Ampbd+UPLWr+FsR7X",
+  secret_key_base: "LGYtoaWAAa0m1sJjhA5rItnEoGs5jJgIuljR+/k18DVtFq6v8Ylcvx5cjO/gxEr+",
   watchers: [
     esbuild: {Esbuild, :install_and_run, [:blog, ~w(--sourcemap=inline --watch)]},
     tailwind: {Tailwind, :install_and_run, [:blog, ~w(--watch)]}
@@ -74,14 +75,11 @@ config :phoenix, :stacktrace_depth, 20
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
 
-# Include HEEx debug annotations as HTML comments in rendered markup
 config :phoenix_live_view,
+  # Include HEEx debug annotations as HTML comments in rendered markup
   debug_heex_annotations: true,
   # Enable helpful, but potentially expensive runtime checks
   enable_expensive_runtime_checks: true
 
 # Disable swoosh api client as it is only required for production adapters.
 config :swoosh, :api_client, false
-
-# Show drafts in development mode
-config :blog, show_drafts: true
