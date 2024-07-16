@@ -4,10 +4,16 @@ defmodule Mix.Tasks.Post.New do
 
   def run(_) do
     [_mix_task_name, file_name] = System.argv()
-    %{day: day, month: month, year: year} = Date.utc_today()
+
+    date =
+      Date.utc_today()
+
+    date_path =
+      :io_lib.format("~4..0B/~2..0B-~2..0B", [date.year, date.month, date.day])
+      |> IO.iodata_to_binary()
 
     content_path =
-      Path.join("priv/content/posts", "/#{year}/#{month}-#{day}-#{file_name}.md")
+      Path.join("priv/content/posts", "/#{date_path}-#{file_name}.md")
       |> IO.inspect()
 
     File.mkdir_p!(Path.dirname(content_path))

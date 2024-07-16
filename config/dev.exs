@@ -63,7 +63,7 @@ config :blog, BlogWeb.Endpoint,
   ]
 
 # Enable dev routes for dashboard and mailbox
-config :blog, dev_routes: true
+config :blog, dev_routes: true, show_drafts: true
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
