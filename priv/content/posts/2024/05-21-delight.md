@@ -1,7 +1,7 @@
 %{
 title: "Delight, Not Satisfy",
 tags: ~w(work life people),
-description: "Always delight people, especially at the pionts where they interact with you.",
+description: "Always delight people, especially at the points where they interact with you.",
 }
 
 ---

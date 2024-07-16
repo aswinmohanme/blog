@@ -21,11 +21,20 @@
   </head>
   <body>
     <header>
-      <h2 class="font-medium">Aswin Mohan</h2>
-      <p class="mt-1">
-        handcrafted by someone who loves code (mobile, frontend, backend), design
-        and life.
-      </p>
+      <div class="flex flex-row items-center gap-4">
+        <img
+          src="/images/profile-picture.jpeg"
+          alt="Profile picture of Aswin Mohan"
+          class="rounded-full h-16 w-16 md:h-20 md:w-20 border border-primary-200 shadow-sm bg-primary-100 shrink-0"
+        />
+        <div>
+          <h2 class="font-medium">Aswin Mohan</h2>
+          <p class="mt-1">
+            handcrafted by someone who loves code (mobile, frontend, backend), design
+            and life.
+          </p>
+        </div>
+      </div>
       <div class="mt-4 flex flex-col items-start space-y-2 md:flex-row md:items-center md:justify-between md:space-y-0">
         <div class="-ml-2 flex flex-row items-center space-x-2">
           <.link patch={~p"/"} class="px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black">
