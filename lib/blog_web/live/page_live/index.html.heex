@@ -1,4 +1,30 @@
 <div :if={@live_action == :index}>
+  <section class="mt-12">
+    <h2 class="font-medium">About</h2>
+    <div class="mt-4">
+      <p>
+        Currently living in Kerala, India. Works at
+        <a href="https://returnqueen.com">ReturnQueen</a>
+        and with Elixir, Phoenix and React Native.
+      </p>
+      <p class="mt-6">Problems I care about</p>
+      <ul class="list-disc flex flex-col gap-3 mt-3 pl-6">
+        <li>
+          <strong class="font-medium">Moving money is slow</strong>: Cross-border and domestic payments should not take more time to settle than a suitcase full of cash on a flight.
+        </li>
+        <li>
+          <strong class="font-medium">Access to clean, safe and abudant energy</strong>: Humans should have access to almost-free, abundant and clean energy. Nuclear might be an answer.
+        </li>
+        <li>
+          <strong class="font-medium">Reversing climate change</strong>: Climate change is here, we missed the boat to stop it, we should be looking for ways to reverse it.
+        </li>
+      </ul>
+      <p class="mt-6">
+        If any of these sound interesting to you, or would just love to talk, you can email me at <a href="mailto:hey@aswinmohan.me">hey@aswinmohan.me</a>.
+      </p>
+    </div>
+  </section>
+
   <section class="mt-12 md:mt-16">
     <h2 class="font-medium">Best Work</h2>
     <div class="mt-6 grid grid-cols-1 gap-x-4 gap-y-4 md:grid-cols-2 md:gap-6">
@@ -49,7 +75,7 @@
       <%= for post <- @top_posts do %>
         <div class="">
           <.link navigate={~p"/#{post.id}"}>
-            <h3 class="font-medium">
+            <h3 class="font-medium text-lg">
               <span :if={post.rating > 0} class="mr-1 text-yellow-600">
                 <%= String.duplicate("&", post.rating) %>
               </span>
@@ -90,7 +116,7 @@
       <%= for post <- @posts do %>
         <div class="">
           <.link navigate={~p"/#{post.id}"}>
-            <h3 class="font-medium">
+            <h3 class="font-medium text-lg">
               <span :if={Posts.draft?(post)} class="text-yellow-600">@️</span>
               <span :if={post.rating > 0} class="mr-1 text-yellow-600">
                 <%= String.duplicate("&", post.rating) %>

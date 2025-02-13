@@ -1,6 +1,7 @@
 %{
 title: "How to be more lucky in your life.",
 tags: ~w(life),
+  rating: 2,
 description: "The role luck plays in your life and your career and how you can improve the chances of you being lucky in life.",
 }
 ---
