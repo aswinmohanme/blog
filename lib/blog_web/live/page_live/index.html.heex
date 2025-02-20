@@ -19,8 +19,14 @@
           <strong class="font-medium">Reversing climate change</strong>: Climate change is here, we missed the boat to stop it, we should be looking for ways to reverse it.
         </li>
       </ul>
+      <p class="mt-6">Collections</p>
+      <ul class="list-disc flex flex-col gap-3 mt-3 pl-6">
+        <li>
+          <.link patch={~p"/obsessive"} class="font-medium">Obsessive</.link>: People who were obsessed with things that had a net positive outcome for everyone.
+        </li>
+      </ul>
       <p class="mt-6">
-        If any of these sound interesting to you, or would just love to talk, you can email me at <a href="mailto:hey@aswinmohan.me">hey@aswinmohan.me</a>.
+        If any of these sound interesting to you, or would just love to talk, add any resource to my collections page, you can email me at <a href="mailto:hey@aswinmohan.me">hey@aswinmohan.me</a>.
       </p>
     </div>
   </section>
@@ -471,4 +477,56 @@
       </p>
     </div>
   </div>
+</article>
+
+<article :if={@live_action == :obsessive} id="obsessive-section" class="">
+  <h1>Obsessive people being obsessed about things</h1>
+  <p>
+    Lists the things that came out of people being obsessed about something against rationality and coming out with something net-postiive for the world. If you have something to add to this list, please
+    <a href="mailto:hey@aswinmohan.me">hey@aswinmohan.me</a>
+  </p>
+  <ul class="">
+    <li>
+      <h2>
+        <a
+          target="_blank"
+          href="https://www.quantamagazine.org/after-20-years-math-couple-solves-major-group-theory-problem-20250219/"
+        >
+          Britta Späth and Marc Cabanes, McKay conjecture, 20 years
+        </a>
+      </h2>
+      <p>
+        In 2003, a German graduate student named Britta Späth encountered the McKay conjecture, one of the biggest open problems in the mathematical realm known as group theory. At first her goals were relatively modest: She hoped to prove a theorem or two that would make incremental progress on the problem, as many other mathematicians had done before her. But over the years, she was drawn back to it, again and again. Whenever she tried to focus on something else, she said, “it didn’t connect.”
+      </p>
+    </li>
+    <li>
+      <h2>
+        <a
+          target="_blank"
+          href="https://hackaday.com/2024/02/14/shuji-nakamura-the-man-who-gave-us-the-blue-led-despite-all-odds/"
+        >
+          Shuji Nakamura, Blue LED, 10+ years
+        </a>
+      </h2>
+      <p>
+        In the late ’80s, blue LEDs were a dead end. Gallium nitride was impossible. Nichia sent Shuji Nakamura to study MOCVD; he came back, ripped apart their machine, and rebuilt it. Management told him to stop. He ignored them. Years of tweaking, annealing, and sheer stubbornness later, in 1992, he cracked it—1,500 µW of blue light. It changed the world. Nichia barely acknowledged him. He left, sued, won. Now he’s working on nuclear fusion.
+      </p>
+    </li>
+    <li>
+      <h2>
+        <a target="_blank" href="https://www.redhat.com/en/blog/unix-linux-history">
+          Ken Thompson, Text Editor, Assembler and Kernel for Unix, 3 weeks
+        </a>
+      </h2>
+      <p>
+        In 1969, Ken Thompson, a researcher at Bell Labs, was experimenting with operating system designs. Bell Labs had a PDP-7 computer with an interesting peripheral device: a very fast (for the time) disk drive. Ken experimented by writing a custom interface to maximize throughput for the drive.
+
+        At some point, Ken realized he had put so much work into the interface that it was almost an operating system itself.
+        <br />
+        Thompson figured he needed three more weeks to make it into a prototype operating system: one week each to write an editor, an assembler, and a kernel.
+
+        That prototype was the start of the Unix system.
+      </p>
+    </li>
+  </ul>
 </article>
