@@ -7,6 +7,8 @@
 
 ---
 
+I have been using Github Copilot from the time it came out to a couple weeks ago. 
+
 When I code with an LLM, I feel like the code is machine produced, there are edges poking out, you can notice that out there, but when I write code by myself, it feels like I bought made a pottery can out there.
 
 It's like pottery, AI is a machine that can produce a pot then and there. The first pot I made sucked, there was a lot of issues that my instructor had to get it over with.
