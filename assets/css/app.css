@@ -5,7 +5,7 @@
 /* This file is for your main application CSS */
 @layer base {
   body {
-    @apply mx-auto max-w-3xl bg-white  text-justify text-base leading-6 text-primary-700 subpixel-antialiased;
+    @apply mx-auto max-w-3xl bg-white  text-justify text-base leading-6 text-primary-900;
   }
 
   article {
@@ -17,11 +17,11 @@
   }
 
   code {
-    @apply text-sm font-normal;
+    @apply text-sm bg-primary-100 font-normal;
   }
 
   pre {
-    @apply mb-8 mt-4 border border-primary-200 p-4 font-mono bg-primary-100 text-primary-900;
+    @apply mb-8 mt-4 border border-primary-200 p-4 rounded-none font-mono bg-primary-100 text-primary-900;
   }
 
   img {
