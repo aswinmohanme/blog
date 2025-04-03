@@ -9,7 +9,7 @@
   }
 
   article {
-    @apply prose prose-stone mt-12 max-w-none prose-h1:font-medium prose-h1:text-xl prose-h2:text-base prose-h3:text-base md:prose-h2:text-lg prose-h2:font-medium prose-h3:font-medium;
+    @apply prose prose-stone mt-12 max-w-none prose-h1:font-bold prose-h1:text-base prose-h2:text-base prose-h2:font-semibold prose-h3:text-base prose-h3:font-medium;
   }
 
   a {
@@ -17,15 +17,15 @@
   }
 
   code {
-    @apply font-normal;
+    @apply text-sm font-normal;
   }
 
   pre {
-    @apply mb-8 mt-4 border rounded-lg border-primary-200 p-4 font-mono shadow-sm bg-primary-100 text-primary-900;
+    @apply mb-8 mt-4 border border-primary-200 p-4 font-mono bg-primary-100 text-primary-900;
   }
 
   img {
-    @apply rounded-lg border border-primary-200 shadow;
+    @apply  border border-primary-200;
   }
 
   @font-face {

@@ -36,45 +36,39 @@
             </p>
           </div>
         </div>
-        <div class="mt-4 flex flex-col items-start space-y-2 md:flex-row md:items-center md:justify-between md:space-y-0">
-          <div class="-ml-2 flex flex-row items-center space-x-2">
-            <.link patch={~p"/"} class="px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black">
+        <div class="mt-4 flex flex-col items-stretch divide-y md:divide-x md:divide-y-0 md:flex-row md:items-center md:justify-between md:space-y-0 border">
+          <div class="flex flex-row items-center divide-x">
+            <.link patch={~p"/"} class="px-2 py-1 hover:bg-primary-100">
               home
             </.link>
-            <.link
-              patch={~p"/about"}
-              class="px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black"
-            >
+            <.link patch={~p"/about"} class="px-2 py-1 hover:bg-primary-100">
               about
             </.link>
-            <.link
-              patch={~p"/now"}
-              class="px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black"
-            >
+            <.link patch={~p"/now"} class="px-2 py-1 hover:bg-primary-100">
               now
             </.link>
-            <.link
-              patch={~p"/talks"}
-              class="px-2 py-1 hover:bg-yellow-200 rounded-md hover:text-black"
-            >
+            <.link patch={~p"/talks"} class="px-2 py-1 hover:bg-primary-100 border-r">
               talks
             </.link>
           </div>
-          <div class="-ml-2 flex flex-row items-center space-x-2">
+          <div class="flex flex-row items-center divide-x">
             <a
-              class="rounded-md px-2 py-1 hover:bg-yellow-200 hover:text-black"
+              class="px-2 py-1 hover:bg-primary-100"
+              target="_blank"
               href="mailto:hey@aswinmohan.me"
             >
               email
             </a>
             <a
-              class="rounded-md px-2 py-1 hover:bg-yellow-200 hover:text-black"
+              class="px-2 py-1 hover:bg-primary-100"
+              target="_blank"
               href="https://github.com/aswinmohanme"
             >
               github
             </a>
             <a
-              class="rounded-md px-2 py-1 hover:bg-yellow-200 hover:text-black"
+              class="px-2 py-1 hover:bg-primary-100"
+              target="_blank"
               href="https://twitter.com/aswinmohanme"
             >
               twitter

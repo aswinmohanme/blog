@@ -34,13 +34,13 @@
   <section class="mt-12 md:mt-16">
     <h2 class="font-medium">Best Work</h2>
     <div class="mt-6 grid grid-cols-1 gap-x-4 gap-y-4 md:grid-cols-2 md:gap-6">
-      <div class="bg-primary-50 border-primary-200 shadow-xs rounded-lg border px-4 py-2">
+      <div class="bg-primary-50 border-primary-200 shadow-xs border px-4 py-2">
         <a target="_blank" href="https://modernresume.io" class="">ModernResume</a>
         <p class="text-primary-700 mt-1 text-sm md:text-base">
           A resume builder for Software Engineers, written in Phoenix LiveView.
         </p>
       </div>
-      <div class="bg-primary-50 border-primary-200 shadow-xs rounded-lg border px-4 py-2">
+      <div class="bg-primary-50 border-primary-200 shadow-xs border px-4 py-2">
         <a target="_blank" href="https://www.producthunt.com/products/indiepaper" class="">
           IndiePaper
         </a>
@@ -48,13 +48,13 @@
           A self-publishing platform for Indie Authors.
         </p>
       </div>
-      <div class="bg-primary-50 border-primary-200 shadow-xs rounded-lg border px-4 py-2">
+      <div class="bg-primary-50 border-primary-200 shadow-xs border px-4 py-2">
         <a target="_blank" href="https://github.com/coronasafe/coronaRM">CoronaRM</a>
         <p class="text-primary-700 mt-1 text-sm md:text-base">
           A CRM for contact tracing implemented in Pathanamthitta, Kerala.
         </p>
       </div>
-      <div class="bg-primary-50 border-primary-200 shadow-xs rounded-lg border px-4 py-2">
+      <div class="bg-primary-50 border-primary-200 shadow-xs border px-4 py-2">
         <a
           href="https://play.google.com/store/apps/details?id=me.aswinmohan.nophone&hl=en_IN&gl=US"
           class=""
@@ -66,7 +66,7 @@
           downloads.
         </p>
       </div>
-      <div class="bg-primary-50 border-primary-200 shadow-xs rounded-lg border px-4 py-2">
+      <div class="bg-primary-50 border-primary-200 shadow-xs border px-4 py-2">
         <a class="" href="https://github.com/aswinmohanme/ultronOS">Ultron OS</a>
         <p class="text-primary-700 mt-1 text-sm md:text-base">
           A bootable Operating System as my high-school project.
@@ -81,7 +81,7 @@
       <%= for post <- @top_posts do %>
         <div class="">
           <.link navigate={~p"/#{post.id}"}>
-            <h3 class="font-medium text-lg">
+            <h3 class="font-medium">
               <span :if={post.rating > 0} class="mr-1 text-yellow-600">
                 <%= String.duplicate("&", post.rating) %>
               </span>
@@ -101,7 +101,7 @@
     <div class="mt-4 flex flex-wrap items-center">
       <.link patch={~p"/"}>
         <p class={[
-          "text-primary-500 block shrink-0 border px-2 py-1 text-sm hover:text-primary-900 hover:bg-yellow-300 md:text-base",
+          "text-primary-500 block shrink-0 border px-2 py-1 text-sm hover:text-primary-900 hover:bg-yellow-300",
           is_nil(@selected_tag) && "!text-primary-900 border-yellow-300 bg-yellow-300"
         ]}>
           all-posts
@@ -110,7 +110,7 @@
       <%= for tag <- @tags do %>
         <.link patch={~p"/?tag=#{tag}"}>
           <p class={[
-            "text-primary-500 block shrink-0 border px-2 py-1 text-sm hover:text-primary-900 hover:bg-yellow-300 md:text-base",
+            "text-primary-500 block shrink-0 border px-2 py-1 text-sm hover:text-primary-900 hover:bg-yellow-300",
             @selected_tag == tag && "!text-primary-900 border-yellow-300 bg-yellow-300"
           ]}>
             <%= tag %>
@@ -122,7 +122,7 @@
       <%= for post <- @posts do %>
         <div class="">
           <.link navigate={~p"/#{post.id}"}>
-            <h3 class="font-medium text-lg">
+            <h3 class="font-medium">
               <span :if={Posts.draft?(post)} class="text-yellow-600">@️</span>
               <span :if={post.rating > 0} class="mr-1 text-yellow-600">
                 <%= String.duplicate("&", post.rating) %>
@@ -131,7 +131,7 @@
             </h3>
           </.link>
           <p class="text-primary-600 mt-2">
-            <span class="bg-primary-50 border-primary-200 mr-2 rounded border py-0.5 pr-0 pl-2 text-sm md:text-base">
+            <span class="bg-primary-50 border-primary-200 mr-2 border py-0.5 pr-0 pl-2 text-sm">
               <%= format_published_date(post.date) %>
             </span>
             <%= post.description %>
@@ -529,14 +529,14 @@
     <li>
       <h2>
         <a target="_blank" href="https://x.com/hamptonism/status/1892829234948694183">
-    Magnus Carlsen, Chess</a>
+          Magnus Carlsen, Chess
+        </a>
       </h2>
       <p>
         <blockquote>
-If you want to be great at something you have to be obsessed with it. It has to come from within.
+          If you want to be great at something you have to be obsessed with it. It has to come from within.
         </blockquote>
       </p>
     </li>
-
   </ul>
 </article>
