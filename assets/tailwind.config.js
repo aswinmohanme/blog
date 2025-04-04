@@ -13,7 +13,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Univers Next Pro", "Avenir Next", "Figtree", ...defaultTheme.fontFamily.sans],
+        sans: ["UniversNextPro", "Avenir Next", "Figtree", ...defaultTheme.fontFamily.sans],
         mono: ["Berkeley Mono", "AnkaCoder", ...defaultTheme.fontFamily.mono],
       },
       colors: {
