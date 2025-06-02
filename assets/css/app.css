@@ -5,7 +5,7 @@
 /* This file is for your main application CSS */
 @layer base {
   body {
-    @apply max-w-3xl bg-white  text-justify text-base leading-6 text-primary-900 subpixel-antialiased;
+    @apply max-w-3xl mx-auto border border-neutral-100 bg-white  text-justify text-base leading-6 text-primary-900 subpixel-antialiased;
   }
 
   article {
