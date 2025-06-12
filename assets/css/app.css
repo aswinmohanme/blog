@@ -9,7 +9,7 @@
   }
 
   article {
-    @apply prose prose-stone mt-12 max-w-none prose-h1:font-bold prose-h1:text-base prose-h2:text-base prose-h2:font-semibold prose-h3:text-base prose-h3:font-medium;
+    @apply prose prose-stone mt-12 max-w-none prose-h1:font-bold prose-h1:text-base prose-h2:text-base prose-h2:underline prose-h2:underline-offset-4 prose-h3:text-base prose-h3:font-medium;
   }
 
   a {
@@ -28,24 +28,19 @@
     @apply  border border-primary-200;
   }
 
+
   @font-face {
-    font-family: "UniversNextPro"; font-display: swap;
-    font-style: normal;
-    font-stretch: normal;
+    font-family: U001;
     font-weight: 400;
+    src: url(../fonts/u001-reg.ttf) format("truetype");
+    font-display: swap;
   }
 
   @font-face {
-    font-family: "UniversNextPro"; font-display: swap;
-    font-style: normal;
-    font-stretch: normal;
-    font-weight: 500;
-  }
-  @font-face {
-    font-family: "UniversNextPro"; font-display: swap;
-    font-style: normal;
-    font-stretch: normal;
+    font-family: U002;
     font-weight: 700;
+    src: url(../fonts/u001-bol.ttf) format("truetype");
+    font-display: swap;
   }
 
   @font-face {
