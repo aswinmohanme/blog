@@ -88,10 +88,11 @@ config :digital_ocean_deploy, DigitalOceanDeploy.Repo,
   ssl: true,
   url: database_url,
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
-  socket_options: maybe_ipv6
+  socket_options: maybe_ipv6,
+  ssl_opts: [verify: :verify_none]
       </pre>
       <p>
-        Uncomment <code>ssl: true</code>. If you have
+        Uncomment <code>ssl: true</code>, and add <code>ssl_opts: [verify: :verify_none]</code> If you have
         <code>socket_options: [:inet6]</code> instead of the
         <code>maybe_ipv6</code> shown here, you have to replace it with
         <code>socket_options: [ ]</code>. Doing so makes Ecto connect to the
