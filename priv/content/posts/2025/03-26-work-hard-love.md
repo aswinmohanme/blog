@@ -22,4 +22,4 @@ You have to trust your judgement on this, because it's the only valid indicator 
 ## Work hard on the thing you love
 Once you have found the thing you love to work on, the next step is to work hard at it. This is much easier as you're working on the things you love to work on, so you're intrinsic motiviation will be doing half the work for you. Try to work as hard as you can, for as long as you can, so you can work more on the thing you love.
 
-Love breeds [obsession](/obessive) and that brings out the best work in you out into the world. If you do all this, even if it doesn't work out on any other metric, you'd have spend a couple hours doing the thing you love. What is a good life but a collection of great moments you love.
+Love breeds [obsession](/obsessive) and that brings out the best work in you out into the world. If you do all this, even if it doesn't work out on any other metric, you'd have spend a couple hours doing the thing you love. What is a good life but a collection of great moments you love.
