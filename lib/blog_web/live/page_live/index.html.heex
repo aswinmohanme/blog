@@ -1,28 +1,49 @@
 <div :if={@live_action == :index}>
   <section class="mt-12">
-    <h2 class="font-medium">About</h2>
     <div class="mt-4">
       <p>
-        Currently living in Kerala, India. Works at
-        <a href="https://returnqueen.com">ReturnQueen</a>
-        and with Elixir, Phoenix and React Native.
+        loves making products, mostly mobile, web, and design.
       </p>
+      <p class="mt-6">Experience</p>
+      <ul class="list-disc flex flex-col gap-3 mt-3 pl-6">
+        <li>
+          <a href="https://returnqueen.com">ReturnQueen (2024-)</a>: working on the Mobile App with React Native, web app with React and backend with Elixir and Phoenix.
+        </li>
+        <li>
+          <a href="https://indiepaper.me">IndiePaper (2021-2022)</a>: built and lauched an entire self-publishing platform for self-published authors, wound it down due to lack of customers.
+        </li>
+        <li>
+          <a href="https://buymeacoffee.com">Buy Me a Coffee (2020-2021)</a>: part of the team that rewrote the mobile app into React Native.
+        </li>
+      </ul>
+      <p class="mt-6">Projects</p>
+      <ul class="list-disc flex flex-col gap-3 mt-3 pl-6">
+        <li>
+          <a href="https://play.google.com/store/apps/details?id=me.aswinmohan.nophone&hl=en_IN&gl=US">LessPhone</a>:  distraction free android-launcher, created as 19 y/o, scaled to 250,000 users.
+        </li>
+        <li>
+          <a href="https://github.com/coronasafe/coronaRM">CoronaRM</a>:  built the first CRM for managing Covid patients, at peak was helping make 8,000 calls per day.
+        </li>
+        <li>
+          <a href="https://github.com/aswinmohanme/ultronOS">Ultron OS</a>:  built as 16 y/o, fully bootable OS built in high-school.
+        </li>
+      </ul>
       <p class="mt-6">Problems I care about</p>
       <ul class="list-disc flex flex-col gap-3 mt-3 pl-6">
         <li>
-          <strong class="font-medium">Moving money is slow</strong>: Cross-border and domestic payments should not take more time to settle than a suitcase full of cash on a flight.
+          <strong class="font-bold">Moving money is slow</strong>: Cross-border and domestic payments should not take more time to settle than a suitcase full of cash on a flight.
         </li>
         <li>
-          <strong class="font-medium">Access to clean, safe and abudant energy</strong>: Humans should have access to almost-free, abundant and clean energy. Nuclear might be an answer.
+          <strong class="font-bold">Access to clean, safe and abudant energy</strong>: Humans should have access to almost-free, abundant and clean energy. Nuclear might be an answer.
         </li>
         <li>
-          <strong class="font-medium">Reversing climate change</strong>: Climate change is here, we missed the boat to stop it, we should be looking for ways to reverse it.
+          <strong class="font-bold">Reversing climate change</strong>: Climate change is here, we missed the boat to stop it, we should be looking for ways to reverse it.
         </li>
       </ul>
       <p class="mt-6">Collections</p>
       <ul class="list-disc flex flex-col gap-3 mt-3 pl-6">
         <li>
-          <.link patch={~p"/obsessive"} class="font-medium">Obsessive</.link>: People who were obsessed with things that had a net positive outcome for everyone.
+          <.link patch={~p"/obsessive"} class="font-bold">Obsessive</.link>: People who were obsessed with things that had a net positive outcome for everyone.
         </li>
       </ul>
       <p class="mt-6">
@@ -31,11 +52,11 @@
     </div>
   </section>
 
-  <section class="mt-12 md:mt-16">
-    <h2 class="font-medium">Best Work</h2>
+  <section class="mt-12 md:mt-16 hidden">
+    <h2 class="font-bold">Best Work</h2>
     <div class="mt-6 grid grid-cols-1 gap-x-4 gap-y-4 md:grid-cols-2 md:gap-6">
       <div class="bg-primary-50 border-primary-200 shadow-xs border px-4 py-2">
-        <a target="_blank" href="https://modernresume.io" class="font-medium">ModernResume</a>
+        <a target="_blank" href="https://modernresume.io" class="font-bold">ModernResume</a>
         <p class="text-primary-700 mt-1">
           A resume builder for Software Engineers, written in Phoenix LiveView.
         </p>
@@ -44,7 +65,7 @@
         <a
           target="_blank"
           href="https://www.producthunt.com/products/indiepaper"
-          class="font-medium"
+          class="font-bold"
         >
           IndiePaper
         </a>
@@ -53,7 +74,7 @@
         </p>
       </div>
       <div class="bg-primary-50 border-primary-200 shadow-xs border px-4 py-2">
-        <a target="_blank" href="https://github.com/coronasafe/coronaRM" class="font-medium">
+        <a target="_blank" href="https://github.com/coronasafe/coronaRM" class="font-bold">
           CoronaRM
         </a>
         <p class="text-primary-700 mt-1">
@@ -63,7 +84,7 @@
       <div class="bg-primary-50 border-primary-200 shadow-xs border px-4 py-2">
         <a
           href="https://play.google.com/store/apps/details?id=me.aswinmohan.nophone&hl=en_IN&gl=US"
-          class="font-medium"
+          class="font-bold"
         >
           LessPhone
         </a>
@@ -73,7 +94,7 @@
         </p>
       </div>
       <div class="bg-primary-50 border-primary-200 shadow-xs border px-4 py-2">
-        <a href="https://github.com/aswinmohanme/ultronOS" class="font-medium">
+        <a href="https://github.com/aswinmohanme/ultronOS" class="font-bold">
           Ultron OS
         </a>
         <p class="text-primary-700 mt-1">
@@ -84,12 +105,12 @@
   </section>
 
   <section class="mt-20">
-    <h2 class="font-medium">Top Posts</h2>
+    <h2 class="font-bold">Top Posts</h2>
     <div class="mt-4 space-y-12">
       <%= for post <- @top_posts do %>
         <div class="">
           <.link navigate={~p"/#{post.id}"}>
-            <h3 class="font-medium">
+            <h3 class="font-bold">
               <span :if={post.rating > 0} class="mr-1 text-yellow-600">
                 <%= String.duplicate("&", post.rating) %>
               </span>
@@ -105,7 +126,7 @@
   </section>
 
   <section class="mt-20">
-    <h2 class="font-medium">All Posts</h2>
+    <h2 class="font-bold">All Posts</h2>
     <div class="mt-4 flex flex-wrap items-center">
       <.link patch={~p"/"}>
         <p class={[
@@ -131,7 +152,7 @@
       <%= for post <- @posts do %>
         <div class="">
           <.link navigate={~p"/#{post.id}"}>
-            <h3 class="font-medium">
+            <h3 class="font-bold">
               <span :if={Posts.draft?(post)} class="text-yellow-600">@️</span>
               <span :if={post.rating > 0} class="mr-1 text-yellow-600">
                 <%= String.duplicate("&", post.rating) %>
@@ -168,7 +189,7 @@
     </p>
   </section>
   <section>
-    <h2 class="font-medium">What is this blog?</h2>
+    <h2 class="font-bold">What is this blog?</h2>
     <p>
       This blog is my corner on the Internet. I love to write, to share my
       thoughts with the world, to have great conversations with people and
@@ -184,7 +205,7 @@
     </p>
   </section>
   <section>
-    <h2 class="font-medium">Timeline</h2>
+    <h2 class="font-bold">Timeline</h2>
     <div>
       <p>
         <span class="mr-1 bg-yellow-200 px-2">2024 Mar</span>
@@ -386,14 +407,14 @@
     This is my now page, inspired by <a target="_blank" href="https://sive.rs/now">Derek Siver's Now page</a>. It lists out
     what I'm currently working on and why.
   </p>
-  <h2 class="font-medium">Work</h2>
+  <h2 class="font-bold">Work</h2>
   <p>
     Working as a React Native / Elixir engineer at <a
       href="https://returnqueen.com"
       target="_blank"
     >ReturnQueen</a>.
   </p>
-  <h2 class="font-medium">Archive</h2>
+  <h2 class="font-bold">Archive</h2>
   <ul>
     <li>
       <p>
@@ -430,7 +451,7 @@
   <div class="mt-6 space-y-10">
     <div>
       <h3>
-        <a class="font-medium" target="_blank" href="https://www.youtube.com/watch?v=hkHI0nFB0CM">
+        <a class="font-bold" target="_blank" href="https://www.youtube.com/watch?v=hkHI0nFB0CM">
           🌟 Open Source Product From Kerala and Tech Culture, Podcast with Felix Josemon.
         </a>
       </h3>
@@ -442,7 +463,7 @@
       <h3>
         <a
           target="_blank"
-          class="font-medium"
+          class="font-bold"
           href="https://www.elixirconf.eu/talks/getting-to-phoenix-liveview-a-journey-through-nextjs-hasura-faunadb-supabase-rails-and-vanilla-phoenix/"
         >
           🌟 The Joy of Building your Startup with Phoenix LiveView -
@@ -466,7 +487,7 @@
     </div>
     <div>
       <h3>
-        <a class="font-medium" target="_blank" href="https://www.youtube.com/watch?v=L4JTPaY_aWw">
+        <a class="font-bold" target="_blank" href="https://www.youtube.com/watch?v=L4JTPaY_aWw">
           Building the Map Frontend for Kerala Rescue - FOSSMeet '19
         </a>
       </h3>
@@ -494,7 +515,7 @@
   <ul class="">
     <li>
       <h2>
-        <a class="font-medium" target="_blank" href="https://www.youtube.com/watch?v=AF8d72mA41M">
+        <a class="font-bold" target="_blank" href="https://www.youtube.com/watch?v=AF8d72mA41M">
           Shuji Nakamura, Blue LED, 10+ years
         </a>
       </h2>
@@ -505,7 +526,7 @@
     <li>
       <h2>
         <a
-          class="font-medium"
+          class="font-bold"
           target="_blank"
           href="https://www.quantamagazine.org/after-20-years-math-couple-solves-major-group-theory-problem-20250219/"
         >
@@ -519,7 +540,7 @@
     <li>
       <h2>
         <a
-          class="font-medium"
+          class="font-bold"
           target="_blank"
           href="https://www.redhat.com/en/blog/unix-linux-history"
         >
@@ -540,7 +561,7 @@
     <li>
       <h2>
         <a
-          class="font-medium"
+          class="font-bold"
           target="_blank"
           href="https://x.com/hamptonism/status/1892829234948694183"
         >
