@@ -7,3 +7,13 @@
   </div>
   <%= raw(@post.body) %>
 </article>
+<div class="mt-12 border-t pt-4">
+  <p>Other posts</p>
+  <div class="flex flex-col items-start gap-2 mt-4">
+    <div :for={post <- @posts}>
+      <.link navigate={~p"/#{post.id}"}>
+        - <%= post.title %>
+      </.link>
+    </div>
+  </div>
+</div>
