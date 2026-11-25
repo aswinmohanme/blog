@@ -2,7 +2,6 @@
   title: "Theory of constraints and building a startup",
   tags: ~w(startup),
   description: "How to apply the theory of constraints to build a startup and where to focus first. TL;DR: Sell first before building.",
-  published: true
 }
 
 ---
