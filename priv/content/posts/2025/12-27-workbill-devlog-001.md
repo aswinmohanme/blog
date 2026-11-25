@@ -1,6 +1,6 @@
 %{
   title: "WorkBill Devlog 001",
-  tags: ~w(workbill devlog),
+  tags: ~w(workbill),
   description: "First devlog about WorkBill, talk about why I am building WorkBill, and how I am building it.",
   draft: true
 }

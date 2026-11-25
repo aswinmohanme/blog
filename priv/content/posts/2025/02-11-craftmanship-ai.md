@@ -1,6 +1,6 @@
 %{
   title: "Craftmanship in the Age of AI",
-  tags: ~w(ai code),
+  tags: ~w(ai software),
   description: "The improved short-term productivity gains from AI may come at the expense of our ability to create long-term growth.",
   draft: true
 }

@@ -28,6 +28,36 @@
     @apply  border border-primary-200;
   }
 
+  article img:not(a img) {
+    cursor: zoom-in;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+  }
+
+  @media (hover: hover) {
+    article img:not(a img):hover {
+      position: relative;
+      z-index: 10;
+      transform: scale(1.5);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  dialog.lightbox {
+    @apply m-auto max-w-none max-h-none w-screen h-screen p-4 bg-transparent border-0 outline-none flex items-center justify-center cursor-zoom-out;
+  }
+
+  dialog.lightbox:not([open]) {
+    display: none;
+  }
+
+  dialog.lightbox::backdrop {
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  dialog.lightbox img {
+    @apply max-w-full max-h-full object-contain bg-white;
+  }
+
 
   @font-face {
     font-family: U001;

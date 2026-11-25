@@ -58,6 +58,7 @@ config :blog, BlogWeb.Endpoint,
     patterns: [
       ~r"priv/static/(?!uploads/).*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
+      ~r"priv/content/.*(md)$",
       ~r"lib/blog_web/(controllers|live|components)/.*(ex|heex)$"
     ]
   ]

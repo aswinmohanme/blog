@@ -1,6 +1,6 @@
 %{
   title: "AI is Not a Distribution Wave",
-  tags: ~w(ai),
+  tags: ~w(ai startup),
   description: "Unlike the advent of Web and Mobile, which gave rise to new companies, AI is not a distribution wave, which makes building companies and competition with existing companies much harder.",
   draft: true
 }

@@ -1,6 +1,6 @@
 %{
 title: "Outsized Results are Found at the Edges of the Problem Space",
-tags: ~w(life product),
+tags: ~w(startup philosophy),
 description: "Exponential results come from solving not the easy obvious things in center the problem space, but the overlooked edges.",
 }
 

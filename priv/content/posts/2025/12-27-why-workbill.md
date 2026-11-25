@@ -1,6 +1,6 @@
 %{
   title: "Why I am building a new accounting platform for small-businesses",
-  tags: ~w(workbill),
+  tags: ~w(workbill startup),
   description: "Why I am building WorkBill, and why it should exist.",
   draft: true,
 rating: 2

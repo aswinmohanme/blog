@@ -1,6 +1,6 @@
 %{
   title: "Why We Need More Hello World Programs",
-  tags: ~w(life code),
+  tags: ~w(life software),
   description: "A short post on why we need more random programs out in the world."
 }
 ---

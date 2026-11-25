@@ -1,6 +1,6 @@
 %{
   title: "Implementing Autocomplete Select in Rails 6",
-  tags: ~w(rails),
+  tags: ~w(web software),
   description: "Outlines how I got Select with autocomplete working with Rails 6."
 }
 ---

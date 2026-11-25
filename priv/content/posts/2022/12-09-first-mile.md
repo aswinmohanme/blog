@@ -1,6 +1,6 @@
 %{
   title: "First Mile vs Last Mile Advantage of Languages and Frameworks",
-  tags: ~w(software-development),
+  tags: ~w(software),
   description: "A rant about how you should not choose frameworks for the initial first-mile advantage, but for the long term advantage they give.",
 }
 ---

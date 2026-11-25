@@ -1,6 +1,6 @@
 %{
   title: "Compiling OpenSSL 1.0 for older package versions",
-  tags: ~w(code elixir python),
+  tags: ~w(elixir tooling),
   description: "This post explains how to compile older openssl packages when you want to run old runtimes from ASDF.",
 }
 ---

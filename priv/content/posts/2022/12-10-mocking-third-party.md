@@ -1,6 +1,6 @@
 %{
   title: "Mocking Third Party APIs in Elixir Phoenix",
-  tags: ~w(elixir testing phoenix),
+  tags: ~w(elixir phoenix software),
   description: "A guide on how I mock third party APIs while testing.",
   rating: 1,
   draft: true

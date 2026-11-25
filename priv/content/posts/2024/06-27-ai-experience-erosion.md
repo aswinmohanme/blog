@@ -1,6 +1,6 @@
 %{
   title: "AI and the Erosion of the Significance of Experience",
-  tags: ~w(ai),
+  tags: ~w(ai career),
   description: "With AI and LLMs being accesible to the general public, the most significant change would be how the notion of years of experience diminishes.",
   draft: true
 }

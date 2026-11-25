@@ -1,6 +1,6 @@
 %{
   title: "Simplicity Matters",
-  tags: ~w(code),
+  tags: ~w(software),
   description: "Keep your software simple.",
 }
 ---

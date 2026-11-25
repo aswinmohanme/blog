@@ -1,6 +1,6 @@
 %{
   title: "Stop being so polarized all the time.",
-  tags: ~w(code),
+  tags: ~w(software),
   description: "Everyone is so polarized everywhere. We should be calm and cool and encourage civil discourse.",
 }
 ---

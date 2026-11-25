@@ -1,8 +1,7 @@
 %{
   title: "Smart Servers, Dumb Clients",
-  tags: ~w(web-development code),
+  tags: ~w(web software),
   description: "I keep most of the logic of the apps I build on a monolothic server, this post explains why.",
-  draft: true
 }
 
 ---

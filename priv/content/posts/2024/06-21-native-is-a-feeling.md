@@ -1,6 +1,6 @@
 %{
   title: "Native is not a stack, it's a feeling",
-  tags: ~w(code),
+  tags: ~w(software mobile),
   description: "This post goes into what makes an app look and feel native and if the feeling can be achieved independent of the native tech-stack.",
   draft: true
 }

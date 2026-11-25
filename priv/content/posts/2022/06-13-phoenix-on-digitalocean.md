@@ -1,7 +1,7 @@
 
 %{
   title: "How to Deploy your Phoenix LiveView 1.6 app on Digital Ocean with Docker",
-  tags: ~w(phoenix liveview javascript),
+  tags: ~w(phoenix liveview tooling),
   description: "Learn how you can deploy your Phoenix and LiveView based Elixir apps on the Digital Ocean App platform with Docker.
 ",
 }

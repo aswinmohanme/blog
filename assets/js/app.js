@@ -34,6 +34,21 @@ window.addEventListener("phx:page-loading-start", _info => topbar.show(300))
 window.addEventListener("phx:page-loading-stop", _info => topbar.hide())
 
 // connect if there are any LiveViews on the page
+// Keep the scroll position across page reloads (e.g. dev live reload on save).
+// The browser's own restoration loses it because LiveView re-renders after load.
+const scrollKey = `scroll:${location.pathname}${location.search}`
+window.addEventListener("beforeunload", () => {
+  sessionStorage.setItem(scrollKey, String(window.scrollY))
+})
+const navType = performance.getEntriesByType("navigation")[0]?.type
+const savedScroll = sessionStorage.getItem(scrollKey)
+if (navType === "reload" && savedScroll !== null) {
+  history.scrollRestoration = "manual"
+  const restore = () => window.scrollTo(0, Number(savedScroll))
+  restore()
+  window.addEventListener("phx:page-loading-stop", restore, {once: true})
+}
+
 liveSocket.connect()
 
 // expose liveSocket on window for web console debug logs and latency simulation:
@@ -42,3 +57,22 @@ liveSocket.connect()
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket
 
+
+// Lightbox: click any image inside an article to view it full screen.
+// Delegated on document so it survives LiveView navigation.
+const lightbox = document.createElement("dialog")
+lightbox.className = "lightbox"
+lightbox.innerHTML = `<img alt="">`
+document.body.appendChild(lightbox)
+const lightboxImg = lightbox.querySelector("img")
+
+document.addEventListener("click", e => {
+  const img = e.target.closest("article img")
+  if (!img || img.closest("a")) return
+  lightboxImg.src = img.currentSrc || img.src
+  lightboxImg.alt = img.alt
+  lightbox.showModal()
+})
+
+// Close on any click inside the dialog (image or backdrop); Esc closes natively.
+lightbox.addEventListener("click", () => lightbox.close())

@@ -1,6 +1,6 @@
 %{
   title: "AI and Software Ergodicity",
-  tags: ~w(),
+  tags: ~w(ai software),
   description: "AI is going to affect the Ergodicity of Software.",
   draft: true
 }
