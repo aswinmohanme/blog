@@ -95,7 +95,7 @@ Once the money has reached Dam's Bank, his account is credited Rs.100 and his ba
 That is how a UPI transaction happens from start to finish. The amount of technical infrastructure holding everything up in place is phenomenal, and I have massive respect for the people who came up with and run these systems reliably for an entire Nation.
 
 Here is the entire flow of funds from Ramu's Account to Damu's Account via UPI, based on the UPI flowchart in Auth N Capture book.
-![UPI Flow](../images/upi_diagram.png)
+![UPI payment flow: Ramu's UPI app, payer PSP, NPCI UPI switch, payee PSP, remitter bank and beneficiary bank, in ten numbered steps](/images/upi-flow.png)
 
 
 ## Failure Points
