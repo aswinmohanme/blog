@@ -2,6 +2,7 @@
   title: "ChatGPT and Prompt Based Development",
   tags: ~w(ai),
   description: "Since the release of ChatGPT API, there are multiple apps that have up. Unlike other software platforms the core difference here are the prompts. In this post I explore how this changes Software Development.",
+  published: true
 }
 ---
 

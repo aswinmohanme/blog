@@ -2,7 +2,7 @@
 title: "How to find Startup Ideas that work ",
 tags: ~w(startup),
 description: "How you should go about finding out Startup Ideas in the wild.",
-draft: true
+
 }
 ---
 

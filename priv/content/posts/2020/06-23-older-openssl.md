@@ -2,6 +2,7 @@
   title: "Compiling OpenSSL 1.0 for older package versions",
   tags: ~w(elixir tooling),
   description: "This post explains how to compile older openssl packages when you want to run old runtimes from ASDF.",
+  published: true
 }
 ---
 

@@ -2,6 +2,7 @@
 title: "Delight, Not Satisfy",
 tags: ~w(career relationships),
 description: "Always delight people, especially at the points where they interact with you.",
+  published: true
 }
 
 ---

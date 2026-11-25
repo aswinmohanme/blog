@@ -1,7 +1,8 @@
 %{
   title: "SEO Friendly Persistent URL Slugs in Elixir Phoenix",
   tags: ~w(elixir phoenix web),
-  description: "Learn how to implement seo slugs in Elixir Phoenix"
+  description: "Learn how to implement seo slugs in Elixir Phoenix",
+  published: true
 }
 ---
 

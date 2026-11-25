@@ -3,6 +3,7 @@
   tags: ~w(tooling typography),
   description: "Learn how to setup Manjaro/Arch to get MacOS like fonts in the interface and Chrome.",
   rating: 3,
+  published: true
 }
 
 ---

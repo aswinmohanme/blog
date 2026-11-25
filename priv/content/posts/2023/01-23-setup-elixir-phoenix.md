@@ -2,6 +2,7 @@
   title: "How to setup Elixir, Phoenix and Postgresql on MacOS M1, M2",
   tags: ~w(elixir phoenix tooling),
   description: "Learn how to setup Elixir, Phoenix and Postgres on your m1 based mac. We'll be using Homebrew and ASDF.",
+  published: true
 }
 ---
 

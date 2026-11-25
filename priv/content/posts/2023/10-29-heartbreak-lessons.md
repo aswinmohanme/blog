@@ -2,7 +2,6 @@
 title: "What I Learnt About Love and Relationships in an Year and half of Heartbreak.",
 tags: ~w(life relationships),
 description: "A brief recap of lessons that I learnt in the year and half after my first major breakup.",
-draft: true,
 rating: 2
 }
 ---

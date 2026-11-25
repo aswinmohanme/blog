@@ -2,6 +2,7 @@
   title: "Work Hard On The Things You Love To Work On",
   tags: ~w(productivity career),
   description: "My philosophy of work.",
+  published: true
 }
 
 ---

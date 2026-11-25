@@ -2,6 +2,7 @@
   title: "Math is a Simulation of Reality",
   tags: ~w(philosophy),
   description: "Math is reality, but simulated with symbols on paper. It's a low level language for the physical world, it's representation and manipulation.",
+  published: true
 }
 ---
 

@@ -1,7 +1,8 @@
 %{
   title: "Self Hosted NPM Fonts with Webpack",
   tags: ~w(javascript typography),
-  description: "Outlines how I got self hosted fonts working with webpack."
+  description: "Outlines how I got self hosted fonts working with webpack.",
+  published: true
 }
 ---
 

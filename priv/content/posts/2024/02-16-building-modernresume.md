@@ -2,7 +2,7 @@
   title: "How I built a LateX based resume builder in Phoenix LiveView",
   tags: ~w(elixir phoenix liveview),
   description: "This post outlines my experience building out modernresume.io in Phoenix LiveView.",
-  draft: true
+
 }
 ---
 

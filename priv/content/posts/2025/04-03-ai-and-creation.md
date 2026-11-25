@@ -2,7 +2,7 @@
   title: "AI and the Art of Creation",
   tags: ~w(ai),
   description: "Why you should not use AI to create only to consume.",
-  draft: true
+
 }
 
 ---

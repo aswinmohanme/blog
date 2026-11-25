@@ -2,6 +2,7 @@
   title: "The secret to willpower",
   tags: ~w(productivity),
   description: "How to increase your willpower.",
+  published: true
 }
 
 ---

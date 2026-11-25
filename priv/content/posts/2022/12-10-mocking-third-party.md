@@ -3,7 +3,7 @@
   tags: ~w(elixir phoenix software),
   description: "A guide on how I mock third party APIs while testing.",
   rating: 1,
-  draft: true
+
 }
 ---
 

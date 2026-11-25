@@ -2,6 +2,7 @@
   title: "How does UPI work ? A Technical Perspective.",
   tags: ~w(payments),
   description: "A technical look at how Unified Payments Interface (UPI) works under the hood.",
+  published: true
 }
 ---
 

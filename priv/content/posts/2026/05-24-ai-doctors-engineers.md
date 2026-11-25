@@ -2,7 +2,7 @@
   title: "AI is turning Engineers into Farmers, Doctors and Gardeners",
   tags: ~w(ai career),
   description: "Unlike engineers who create every intricate function of a codebase, we are now akin to farmers who grow codebases, doctors who make changes on these systems which they have not created and gardeners who try to the same process of farming to make the change.",
-  draft: false
+  published: true
 }
 
 ---

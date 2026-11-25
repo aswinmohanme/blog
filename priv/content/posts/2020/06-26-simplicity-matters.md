@@ -2,6 +2,7 @@
   title: "Simplicity Matters",
   tags: ~w(software),
   description: "Keep your software simple.",
+  published: true
 }
 ---
 

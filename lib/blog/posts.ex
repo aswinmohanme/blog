@@ -16,7 +16,7 @@ defmodule Blog.Posts do
     if @show_drafts do
       @posts
     else
-      @posts |> Enum.reject(fn post -> post.draft end)
+      @posts |> Enum.filter(fn post -> post.published end)
     end
   end
 
@@ -42,5 +42,5 @@ defmodule Blog.Posts do
     end
   end
 
-  def draft?(post), do: post.draft
+  def draft?(post), do: not post.published
 end

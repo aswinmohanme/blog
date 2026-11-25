@@ -1,7 +1,8 @@
 %{
   title: "Phoenix LiveView in Production",
   tags: ~w(phoenix liveview tooling),
-  description: "I used Phoenix LiveView in Production for my last startup IndiePaper. This blog post outlines why I used LiveView, issues I came across, the good parts and gotchas to look out for."
+  description: "I used Phoenix LiveView in Production for my last startup IndiePaper. This blog post outlines why I used LiveView, issues I came across, the good parts and gotchas to look out for.",
+  published: true
 }
 ---
 

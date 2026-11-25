@@ -1,7 +1,8 @@
 %{
   title: "Simple Productivity",
   tags: ~w(productivity),
-  description: "The simplest productivity system is the best."
+  description: "The simplest productivity system is the best.",
+  published: true
 }
 ---
 

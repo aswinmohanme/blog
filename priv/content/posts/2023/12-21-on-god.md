@@ -2,7 +2,7 @@
 title: "On god",
 tags: ~w(philosophy life),
 description: "What I believe about God, Spirituality and the world as a whole.",
-draft: true
+
 }
 ---
 

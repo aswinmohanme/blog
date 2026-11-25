@@ -2,7 +2,7 @@
   title: "Why I Love TailwindCSS",
   tags: ~w(design web),
   description: "TailwindCSS is my most used and loved tools in my toolbox. This is a totally biased post on why I love it so much and why I continue to use it for every project that I build.",
-  draft: true
+
 }
 ---
 

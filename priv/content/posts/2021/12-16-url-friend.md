@@ -1,7 +1,8 @@
 %{
   title: "Treat URLS as your Friend",
   tags: ~w(web),
-  description: "URLs are flexible and can be modelled for improving the UX of your app."
+  description: "URLs are flexible and can be modelled for improving the UX of your app.",
+  published: true
 }
 ---
 

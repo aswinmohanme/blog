@@ -2,7 +2,7 @@
 title: "There is no moat for software alone",
 tags: ~w(startup software),
 description: "Software alone cannot sustain a business, you need to provide a service bundled with the software that is hard to replicate.",
-draft: true
+
 }
 ---
 

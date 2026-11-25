@@ -2,7 +2,7 @@
 title: "Why (Almost) all Startup Advice is Wrong",
 tags: ~w(startup),
 description: "Why most of the startup advice written is right only for the time when the advice was first applied, but not apt for the current time the adice needs to be applied.",
-draft: true
+
 }
 
 ---

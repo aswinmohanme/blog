@@ -23,7 +23,7 @@ defmodule Mix.Tasks.Post.New do
       title: "Title",
       tags: ~w(),
       description: "Description",
-      draft: true
+      published: false
     }
 
     ---

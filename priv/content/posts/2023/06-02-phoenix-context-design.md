@@ -3,7 +3,7 @@
   tags: ~w(elixir phoenix design),
   description: "A set of guidelines, tips and tricks that I have used to organize small to medium size Elixir Phoenix projects using Contexts.",
   rating: 2,
-  draft: true
+
 }
 ---
 

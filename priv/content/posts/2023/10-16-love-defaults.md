@@ -2,6 +2,7 @@
 title: "Minimal Config, or How I Learnt to Love the Defaults.",
 tags: ~w(tooling productivity),
 description: "A brief post on how I stopped configuring the hell out of my tools, decided to settle for the defaults and finally started doing the work that really matters.",
+  published: true
 }
 
 ---

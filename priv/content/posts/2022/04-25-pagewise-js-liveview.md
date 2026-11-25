@@ -3,6 +3,7 @@
   rating: 1,
   tags: ~w(phoenix liveview javascript),
   description: "Learn how to split your LiveView Javascript pagewise with esbuild, so your main app.js file stays small and people only download and execute the javascript they require.",
+  published: true
 }
 ---
 

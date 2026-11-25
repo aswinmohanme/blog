@@ -1,7 +1,8 @@
 %{
   title: "How I Reduced the Size of My React Native App by 86%",
   tags: ~w(javascript mobile),
-  description: "How I converted my Expo app to vanilla React Native and reduced it's size from 25MB to 3.5MB."
+  description: "How I converted my Expo app to vanilla React Native and reduced it's size from 25MB to 3.5MB.",
+  published: true
 }
 ---
 
