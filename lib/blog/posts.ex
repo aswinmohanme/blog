@@ -8,7 +8,9 @@ defmodule Blog.Posts do
   use NimblePublisher,
     build: Post,
     from: Application.app_dir(:blog, "priv/content/posts/**/*.md"),
-    as: :posts
+    as: :posts,
+    # Earmark (NimblePublisher < 1.1) rendered curly quotes and dashes by default.
+    comrak_options: [parse: [smart: true]]
 
   @posts Enum.sort_by(@posts, & &1.date, {:desc, Date})
 

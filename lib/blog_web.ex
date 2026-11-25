@@ -43,7 +43,7 @@ defmodule BlogWeb do
         layouts: [html: BlogWeb.Layouts]
 
       import Plug.Conn
-      import BlogWeb.Gettext
+      use Gettext, backend: BlogWeb.Gettext
 
       unquote(verified_routes())
     end
@@ -85,7 +85,7 @@ defmodule BlogWeb do
       import Phoenix.HTML
       # Core UI components and translation
       import BlogWeb.CoreComponents
-      import BlogWeb.Gettext
+      use Gettext, backend: BlogWeb.Gettext
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS

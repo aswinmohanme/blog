@@ -3,7 +3,7 @@
     <div class="bg-primary-100 border-primary-200 border px-2 py-0.5 text-sm">
       <%= format_published_date(@post.date) %>
     </div>
-    <h1><%= @post.title %></h1>
+    <h1 class="mb-0"><%= @post.title %></h1>
   </div>
   <%= raw(@post.body) %>
 </article>
